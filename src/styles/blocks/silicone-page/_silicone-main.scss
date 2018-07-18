@@ -1,0 +1,62 @@
+.silicone-main {
+    padding-left: 170px;
+
+    @include breakpoint(medium) {
+        padding-left: 0;
+    }
+}
+
+.silicone-main__container {
+    display: flex;
+
+    @include breakpoint(medium) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+.silicone-main__content {
+    position: relative;
+    width: 550px;
+    flex-shrink: 0;
+    padding-top: 102px;
+    padding-left: 62px;
+
+    .silicone-box {
+        margin-left: -62px;
+        margin-bottom: -92px;
+    }
+
+    @include breakpoint(medium) {
+        width: 100%;
+        max-width: 650px;
+        padding-top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .silicone-box {
+            margin-left: 0;
+        }
+    }
+
+    @include breakpoint(extra-small) {
+
+        .silicone-box {
+            margin-bottom: -15px;
+        }
+    }
+}
+
+.silicone-main__image {
+    margin-left: -40px;
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    @include breakpoint(medium) {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,148 @@
+.homeslide__wrapper {
+    padding-top: 66px;
+    padding-bottom: 84px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: url('./sliderlogo.png');
+    background-color: $bg-gray;
+    background-size: 50%;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+
+    @media (max-width: 1600px) {
+        background-size: 740px;
+
+    }
+
+    @include breakpoint(medium) {
+        padding-top: 125px;
+        padding-bottom: 125px;
+        background-size: 80%;
+
+        @media (orientation: landscape) {
+            padding-top: 90px;
+            padding-bottom: 60px;
+        }
+    }
+
+    @include breakpoint(extra-small) {
+        background-size:100%;
+    }
+
+    @include breakpoint(mobile-landscape) {
+        padding-top: 90px;
+        padding-bottom: 60px;
+    }
+
+}
+
+.homeslide__title {
+    font-size: 285px;
+    font-weight: bold;
+    letter-spacing: 38.14px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: $main-font;
+
+    @include breakpoint(medium) {
+        font-size: 200px;
+        letter-spacing: 18.14px;
+    }
+
+    @include breakpoint(small) {
+        font-size: 140px;
+    }
+
+    @include breakpoint(mobile-landscape) {
+        letter-spacing:5px;
+    }
+
+    @include breakpoint(mobile-landscape) {
+        font-size: 110px;
+    }
+}
+
+.homeslide__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeslide__rightside {
+    width: 320px;
+    height: calc(100vh - 150px);
+    min-height: calc(100% - 150px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-left: 20px;
+
+
+    @include breakpoint(medium) {
+        width: 220px;
+        height: calc(100vh - 250px);
+        min-height: calc(100% - 250px);
+        margin-left: 0;
+
+        @media (orientation:landscape) {
+            height:100vh;
+        }
+    }
+
+    //@include breakpoint(mobile) {
+    //    display: none;
+    //}
+}
+
+.homeslide__btnrow {
+    padding-right: 30px;
+    text-align: right;
+    margin-top: -10px;
+
+    @include breakpoint(small) {
+        margin-top: 10px;
+        padding-right: 20px;
+    }
+
+    @include breakpoint(mobile) {
+        text-align: left;
+        padding:0;
+
+    }
+}
+
+.homeslide__subtitle {
+    font-size: 50px;
+    letter-spacing: 21.51px;
+    line-height: 49px;
+    font-family: $main-font;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 55px;
+
+    @include breakpoint(medium) {
+        margin-bottom: 25px;
+        line-height: 1;
+        letter-spacing: 10px;
+        font-size: 30px;
+    }
+
+    @include breakpoint(mobile-landscape) {
+        letter-spacing: 5px;
+    }
+
+    @include breakpoint(mobile) {
+        letter-spacing: 0;
+        margin-bottom: 15px;
+    }
+
+    //@include breakpoint(small) {
+    //    letter-spacing: 5px;
+    //    font-size: 25px;
+    //    margin-bottom: 15px;
+    //}
+}
+
+//.homeslide__leftside{
+//    margin-top:-10px;
+//}

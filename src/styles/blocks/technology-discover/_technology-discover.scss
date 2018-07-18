@@ -1,0 +1,29 @@
+.template-technology-discover {
+    background-color: $dark-bg;
+
+    .content {
+        padding-top: 27px;
+        padding-bottom: 0;
+    }
+}
+
+.technology-discover {
+    background-color: #D8D8D8;
+
+    .btn {
+        padding: 11px 33px;
+    }
+}
+
+.technology-discover__title {
+    font-family: $main-font;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 4.3px;
+
+    @include breakpoint(extra-small) {
+        font-size: 52px;
+    }
+}

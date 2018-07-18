@@ -1,0 +1,155 @@
+<div class="link-section">
+    <div class="link-section__side-left">
+        <div class="link-section__block prod-in-home" style="background-image:url({{ section.settings.product_img | img_url: 'master' }});">
+                {% assign _product = all_products[section.settings.product] %}
+                <div class="prod-in-home__info">
+                    <div class="prod-in-home__collection">
+                        {% for tag in _product.tags -%}
+                            {%- assign first_letter = tag | first | upcase -%}
+                            {%- if first_letter == 'E' -%}
+                                {{ tag }}
+                            {%- endif -%}
+                        {% endfor %}
+                    </div>
+                    <div class="prod-in-home__title">
+                        {{ _product.title }}
+                    </div>
+                    <p class="prod-in-home__prices">
+                            <span class="prod-in-home__price prod-in-home__price--compared">{{ _product.price | money }}{{ _product.compare_at_price | money }}</span>
+                            <span class="prod-in-home__price">{{ _product.price | money }}</span>
+
+                        {% if _product.compare_at_price_max == _product.price %}
+                        {% else %}
+                            {% comment %}<span class="prod-in-home__price">{{ _product.price | money }}</span>{% endcomment %}
+                        {% endif %}
+                    </p>
+                    <a class="btn" href="{{ _product.url }}">Shop mens</a>
+                </div>
+        </div>
+    </div>
+    <div class="link-section__side-right">
+        <div class="link-section__block link-block" style="background-image:url({{ section.settings.img_1 | img_url: 'master' }});">
+            <div class="link-block__info">
+                <h4 class="link-block__title">{{ section.settings.title1 }}</h4>
+                {% if section.settings.link_name_1 %}
+                    <a href="{{ section.settings.url_1 }}" class="link-block__link">{{ section.settings.link_name_1 }}</a>
+                {% endif %}
+                {% if section.settings.link_name_2 %}
+                    <a href="{{ section.settings.url_2 }}" class="link-block__link">{{ section.settings.link_name_2 }}</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="link-section__block link-block" style="background-image:url({{ section.settings.img_2 | img_url: 'master' }});">
+            <div class="link-block__info">
+                <h4 class="link-block__title">{{ section.settings.title2 }}</h4>
+                {% if section.settings.link_name_3 %}
+                    <a href="{{ section.settings.url_3 }}" class="link-block__link">{{ section.settings.link_name_3 }}</a>
+                {% endif %}
+                {% if section.settings.link_name_4 %}
+                    <a href="{{ section.settings.url_4 }}" class="link-block__link">{{ section.settings.link_name_4 }}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Link Section",
+    "settings": [
+        {
+            "type":      "header",
+            "content":   "Block 1"
+        },
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+        },
+        {
+            "type": "image_picker",
+            "id": "product_img",
+            "label": "Prod Image"
+        },
+        {
+            "type":      "header",
+            "content":   "Block 2"
+        },
+        {
+            "type": "image_picker",
+            "id": "img_1",
+            "label": "Block Image 1"
+        },
+        {
+            "type": "richtext",
+            "id": "title1",
+            "label": "Block heading 1",
+            "default": "<p>Targeted</p><p>Protection</p>"
+        },
+        {
+            "type": "text",
+            "id": "link_name_1",
+            "label": "Link Title 1",
+            "default": "Shop Sleeves"
+        },
+        {
+            "type": "url",
+            "id": "url_1",
+            "label": "Link URL 1"
+        },
+        {
+            "type": "text",
+            "id": "link_name_2",
+            "label": "Link Title 2"
+        },
+        {
+            "type": "url",
+            "id": "url_2",
+            "label": "Link URL 2"
+        },
+        {
+            "type":      "header",
+            "content":   "Block 3"
+        },
+        {
+            "type": "image_picker",
+            "id": "img_2",
+            "label": "Block Image 2"
+        },
+        {
+            "type": "richtext",
+            "id": "title2",
+            "label": "Block heading 2",
+            "default": "<p>Be at the</p><p>TOP of your</p><p>game</p>"
+        },
+        {
+            "type": "text",
+            "id": "link_name_3",
+            "label": "Link Title 1",
+            "default": "Shop Men's Tops"
+        },
+        {
+            "type": "url",
+            "id": "url_3",
+            "label": "Link URL 1"
+        },
+        {
+            "type": "text",
+            "id": "link_name_4",
+            "label": "Link Title 2",
+            "default":"Shop Women's Tops"
+        },
+        {
+            "type": "url",
+            "id": "url_4",
+            "label": "Link URL 2"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Link List",
+            "category": "Homepage"
+        }
+    ]
+}
+{% endschema %}

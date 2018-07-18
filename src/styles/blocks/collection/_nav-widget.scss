@@ -1,0 +1,96 @@
+.nav-widget {
+    font-family: $main-font;
+    font-size: 20px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    border-bottom: 1px solid $lightGray;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    &:last-child{
+        border-bottom:none;
+    }
+}
+
+.nav-widget__block {
+    position: relative;
+
+    &:first-child {
+        margin-top: 5px;
+    }
+
+    & + .nav-widget__block {
+        margin-top: 22px;
+    }
+}
+
+.nav-widget__head {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 1.5;
+    padding-left: 40px;
+    cursor: pointer;
+    transition: color 300ms;
+
+    &.active{
+        color: $alt-color;
+        &::before, &::after {
+            border-color: $alt-color;
+        }
+
+        &::after {
+            opacity: 0;
+        }
+    }
+
+    &::before, &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        transition: border-color 300ms;
+    }
+
+    &::before {
+        border-top:2px solid $dark-bg;
+        width: 10px;
+        left:6px;
+        top: 20px
+    }
+
+    &::after {
+        border-left:2px solid $dark-bg;
+        height: 10px;
+        left:10px;
+        top:16px;
+        //
+    }
+}
+
+.nav-widget__body{
+    display: none;
+    position: relative;
+    top:-5px;
+}
+
+.nav-widget__name {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    transform: rotateZ(-90deg);
+    transform-origin: 100% 0;
+    padding-right: 5px;
+    color: $lightGray;
+}
+
+.nav-widget__linklist {
+    padding-left: 40px;
+}
+
+.nav-widget__link{
+    color: $dark-bg;
+    transition: color 300ms;
+    &:hover{
+        color: $alt-color;
+    }
+}

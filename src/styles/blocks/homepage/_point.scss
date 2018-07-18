@@ -1,0 +1,174 @@
+.point {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    cursor: pointer;
+    width: 74px;
+    height: 74px;
+    z-index: 1;
+
+    @media (min-width: 481px) {
+        &:hover, &.point--clicked {
+            .point__circle {
+                transform: translateX(-50%) translateY(-50%) scale(1.1) translateZ(0);
+            }
+            .point__inner {
+
+                border-color: $alt-color;
+            }
+
+            .point__title {
+                color: $alt-color;
+            }
+
+            .point__plus {
+                opacity: 1;
+            }
+        }
+    }
+
+    &.point--clicked {
+        z-index: 3;
+    }
+
+    &.point--mob-point {
+        display: block;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        .point__inner {
+            width: 62px;
+            height: 62px;
+        }
+    }
+}
+
+.point--left {
+    .point__title {
+        left: auto;
+        right: 125px;
+        text-align: right;
+
+        @include breakpoint(extra-small) {
+            right: 85px;
+        }
+
+        @include breakpoint(small-table-portrait) {
+            right: 75px;
+        }
+
+    }
+}
+
+.point__circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 5px solid rgba(gray, 0.6);
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(1) translateZ(0);
+    transition: transform 400ms;
+}
+
+.point__inner {
+    position: relative;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    color: #fff;
+    transition: border-color 400ms;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    @include breakpoint(extra-small) {
+        width: 42px;
+        height: 42px;
+        border: none
+    }
+}
+
+.point__plus {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transition: opacity 300ms;
+    transform: translateX(-50%) translateY(-50%);
+
+    &::before, &::after {
+        content: '';
+        display: block;
+        position: absolute;
+    }
+
+    &::before {
+        top: 50%;
+        left: 0;
+        right: 0;
+        border-top: 1px solid #fff;
+        width: 100%;
+    }
+
+    &::after {
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        border-left: 1px solid #fff;
+        height: 100%;
+    }
+    
+    @include breakpoint(extra-small){
+        display: none;
+    }
+}
+
+.point__title {
+    color: #fff;
+    text-align: left;
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    letter-spacing: 3px;
+    line-height: 1;
+    font-family: $main-font;
+    transition: color 300ms;
+
+    @include breakpoint(extra-small) {
+        left: 85px;
+        font-size: 20px;
+    }
+
+    @include breakpoint(small-table-portrait) {
+        left: 75px;
+        font-size: 17px;
+    }
+}
+
+.point__new-label {
+    height: 25px;
+    line-height: 25px;
+    text-transform: uppercase;
+    width: 50px;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 0;
+    font-weight: 300;
+    font-family: $main-font;
+    background-color: $alt-color;
+    margin-bottom: 5px;
+}
+
+.point--left {
+    .point__new-label {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}

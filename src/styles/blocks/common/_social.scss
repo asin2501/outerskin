@@ -1,0 +1,39 @@
+.social {
+    display: flex;
+}
+
+.social__item {
+    display: block;
+    & + .social__item {
+        margin-left: 32px;
+    }
+}
+
+.social__link {
+    display: block;
+    svg {
+        display: block;
+        height: 22px;
+        width: 22px;
+        fill: $alt-color;
+        transition: fill 300ms;
+        * {
+            transition: fill 300ms;
+            fill: $alt-color;
+        }
+    }
+
+    svg:hover{
+        fill: #fff;
+        * {
+            fill: #fff;
+        }
+    }
+
+    &.social__link--youtube {
+        svg {
+            width: 28px;
+
+        }
+    }
+}

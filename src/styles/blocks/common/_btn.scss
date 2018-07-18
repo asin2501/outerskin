@@ -1,0 +1,32 @@
+.btn {
+    background-color: $alt-color;
+    color: #fff;
+    font-family: $main-font;
+    font-size: 25px;
+    border: none;
+    border-radius: 0;
+    padding: 12px 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    transition-property: color, background-color;
+    transition-duration: .3s;
+
+    &:hover{
+        background-color: darken($alt-color, 10%);
+    }
+
+    @include breakpoint(mobile-landscape){
+        font-size:20px;
+        padding:8px 14px;
+    }
+
+    &.btn--black {
+        background-color: #000;
+        &:hover,
+        &:focus {
+            background-color: $font-gray;
+        }
+    }
+}

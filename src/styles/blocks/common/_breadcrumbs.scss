@@ -1,0 +1,27 @@
+.breadcrumb {
+    padding-top: 15px;
+    font-size: 12px;
+    padding-bottom:15px;
+    font-family:$alt-font;
+
+    @include breakpoint(mobile-landscape){
+        display: none;
+    }
+
+    a {
+        color: $font-gray;
+        transition: color 300ms;
+        &:hover {
+            color: #000;
+        }
+    }
+    span {
+        color: rgba(#000, 0.5);
+    }
+
+    .breadcrumb__arrow {
+        font-size: 18px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}

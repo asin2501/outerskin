@@ -1,0 +1,23 @@
+.add-to-cart-btn{
+    background-color: $alt-color;
+    color: #fff;
+    font-family:$main-font;
+    font-size:25px;
+    border: none;
+    border-radius:0;
+    padding-top:6px;
+    padding-right:10px;
+    padding-bottom:6px;
+    padding-left:10px;
+    font-weight:300;
+    text-transform: uppercase;
+    letter-spacing:3px;
+    text-align: center;
+    width:100%;
+    cursor: pointer;
+    transition: background-color 300ms;
+
+    &:hover{
+        background-color: darken($alt-color, 10%);
+    }
+}

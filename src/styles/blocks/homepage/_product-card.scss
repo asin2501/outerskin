@@ -1,0 +1,142 @@
+.product-card__title {
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height:1;
+    margin-bottom: 8px;
+
+    @include breakpoint(medium){
+        font-size:20px;
+    }
+}
+
+.product-card {
+    color: #000;
+    transition: color 300ms;
+    width:100%;
+}
+.product-card__info {
+    padding-left: 34px;
+    padding-right: 34px;
+
+    @include breakpoint(medium){
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    @include breakpoint(mobile){
+        padding-right:34px;
+        padding-left:34px;
+    }
+}
+
+.product-card__price {
+    font-size: 24px;
+    line-height: 1;
+    font-family: $main-font;
+    color: #000;
+}
+
+.product-card--selected{
+    color: $alt-color;
+}
+
+.product-card__price--compared{
+    position: relative;
+    color: $lightGray;
+    &::before{
+        display: block;
+        content: '';
+        position: absolute;
+        left:-2px;
+        right:-2px;
+        margin-top:-2px;
+        top: 50%;
+        border-top:2px solid $lightGray;
+    }
+}
+
+.product-card__price + .product-card__price{
+    margin-left:5px;
+}
+
+.product-card__collection {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 3.33px;
+    text-transform: uppercase;
+    line-height:1.2;
+    min-height: 24px;
+}
+
+.product-card__img {
+    position: relative;
+    margin-bottom: 20px;
+
+    img {
+        display: block;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba($alt-color, 0.7);
+        opacity: 0;
+        transition: opacity 400ms;
+    }
+}
+
+.product-card__plus {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    opacity: 0;
+    transition: opacity 400ms 100ms;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 0;
+        border-right: 2px solid #fff;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 10px;
+        left: 0;
+        right: 0;
+        border-top: 2px solid #fff;
+        z-index: 1;
+
+    }
+}
+
+.product-card:hover {
+    color: $alt-color;
+
+    .product-card__plus {
+        opacity: 1;
+    }
+
+    .product-card__img::before {
+        opacity: 1;
+    }
+}

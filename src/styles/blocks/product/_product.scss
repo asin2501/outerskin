@@ -1,0 +1,123 @@
+.product{
+    display: flex;
+    @include breakpoint(small){
+        display: block;
+    }
+    
+}
+
+.product__col-images{
+    width:60%;
+
+    @include breakpoint(medium){
+        width:50%;
+    }
+
+    @include breakpoint(small){
+        width:100%;
+        margin-bottom:60px;
+    }
+}
+
+.product__info-col {
+    padding-top:7px;
+    width: 40%;
+    padding-left: 70px;
+
+    @include breakpoint(medium){
+        padding-left:30px;
+        width:50%;
+    }
+    @include breakpoint(small){
+        width:100%;
+        padding-left: 0;
+    }
+
+}
+
+.product__collection {
+    font-size: 24px;
+    font-weight: 300;
+    font-family: $main-font;
+    letter-spacing: 4px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.product__title {
+    font-size: 50px;
+    line-height: 45px;
+    font-weight: 400;
+    font-family: $main-font;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.product__prices {
+    display: flex;
+    font-family: $main-font;
+    font-size: 44px;
+    line-height: 36px;
+    margin-bottom: 14px;
+}
+
+.product__price--selected{
+    color: $alt-color;
+}
+
+.product__price--compared{
+    position: relative;
+    color: #AAA;
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        left:0;
+        right:0;
+        top: 50%;
+        margin-top:-2px;
+        background-color: #AAA;
+        height:2px;
+    }
+}
+
+.product__price + .product__price {
+    margin-left: 17px;
+}
+
+.product__description {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.product__controls{
+    display: flex;
+    margin-bottom:44px;
+}
+.product__controls{
+    @include breakpoint(mobile-landscape){
+        display: block;
+    }
+}
+.product__controls-right.product__controls-right{
+    @include breakpoint(mobile-landscape){
+        display: block;
+        width:100%;
+        padding-left:0;
+        margin-top:20px;
+    }
+}
+
+.product__controls-right{
+
+}
+
+.product__controls-left{
+    width:100%;
+    max-width: 290px;
+
+    @include breakpoint(mobile-landscape){
+        max-width: 100%;
+    }
+}

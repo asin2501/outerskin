@@ -1,0 +1,281 @@
+.collection {
+
+    //padding-top:300px;
+    //padding-bottom:300px;
+}
+
+.collection__img {
+    padding-top: 19%;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: 60px;
+    width: 100%;
+
+    @include breakpoint(medium) {
+        width: calc(100% + 68px);
+        margin-left: -34px;
+        margin-right: -34px;
+        padding-top: 30%;
+    }
+
+    @include breakpoint(extra-small) {
+        margin-bottom: 20px;
+    }
+
+    @include breakpoint(mobile-landscape){
+        width: calc(100% + 40px);
+        padding-top: 50%;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+
+.collection__title {
+    font-family: $main-font;
+    font-size: 70px;
+    font-weight: 400;
+    letter-spacing: 10.34px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    @include breakpoint(medium) {
+        font-size: 50px;
+        letter-spacing: 6px;
+    }
+
+    @include breakpoint(extra-small) {
+        margin-bottom: 20px;
+    }
+
+    @include breakpoint(mobile-landscape) {
+        font-size: 35px;
+        letter-spacing: 3px;
+    }
+}
+
+.collection__heading {
+    position: relative;
+    margin-bottom: 20px;
+    padding-right: 250px;
+
+    @include breakpoint(extra-small) {
+        padding-right: 0;
+
+    }
+}
+
+.collection__sort-by {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -10px;
+
+    @include breakpoint(extra-small) {
+        position: static;
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile-landscape) {
+        margin-top:30px!important;
+        display: flex;
+        justify-content:space-between;
+
+        .sort-by__label{
+            white-space: nowrap;
+        }
+    }
+}
+
+.collection__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(extra-small) {
+        display: block;
+    }
+}
+
+.collection__body {
+    max-width: 905px;
+    width:100%;
+}
+
+.collection__filter-buttons{
+    @include breakpoint(mobile-landscape){
+        width:100%;
+    }
+}
+.collection__sidebar {
+    margin-top: -18px;
+    flex-basis: 290px;
+    padding-right: 50px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+
+    @include breakpoint(medium) {
+        flex-basis: 250px;
+        padding-right: 60px;
+    }
+
+    @include breakpoint(extra-small) {
+        display: none;
+        padding-right: 0;
+        padding-bottom:20px;
+    }
+}
+
+.bc-sf-filter-option-block-size .bc-sf-filter-block-title{
+    position: relative;
+}
+
+#range-slider-left-number, #range-slider-right-number{
+    display: none;
+}
+
+.collection__size-link {
+    display: none;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 35px;
+    text-decoration: underline;
+    font-family:$main-font;
+    color: $dark-bg;
+    //bottom: 100%;
+    //margin-bottom: 143px;
+}
+
+.noUi-pips-horizontal{
+    display: none !important;
+}
+
+#bc-sf-filter-wrapper .bc-sf-filter-option-block-price span#range-slider-left-number{
+    display: inline-block !important;
+    transform: translate(calc(0% + 5px), 0);
+}
+
+#bc-sf-filter-wrapper .bc-sf-filter-option-block-price span#range-slider-right-number{
+    display: inline-block !important;
+    transform: translate(calc(-100% - 3px), 0);
+}
+
+@media screen and (max-width: 767px){
+    #bc-sf-filter-wrapper .bc-sf-filter-option-block-price .bc-sf-filter-block-content{
+        width: calc(100% - 30px) !important;
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 1199px){
+    #bc-sf-filter-wrapper .bc-sf-filter-option-block-price .bc-sf-filter-block-content {
+        margin-top: 35px !important;
+    }
+    
+    #bc-sf-filter-wrapper .bc-sf-filter-option-block-price span.range-slider-left-number-reverse{
+        transform: translate(calc(0% + 5px), -50px) !important;
+    }
+
+    #bc-sf-filter-wrapper .bc-sf-filter-option-block-price span.range-slider-right-number-reverse{
+        transform: translate(calc(-100% - 3px), 0);
+    } 
+}
+
+@media screen and (min-width: 1200px){
+    .bc-sf-filter-block-content{
+        margin-top: 15px !important;
+    }
+    
+    #bc-sf-filter-wrapper .bc-sf-filter-option-block-price span.range-slider-left-number-reverse{
+        transform: translate(calc(-100% - 3px), 0) !important;
+    }
+
+    #bc-sf-filter-wrapper .bc-sf-filter-option-block-price span.range-slider-right-number-reverse{
+        transform: translate(calc(0% + 5px), 0) !important;
+    }    
+}
+
+.collection__size-footer{
+    position: relative;
+    padding-top: 20px;
+    border-top:1px solid $font-gray;
+}
+
+.bc-sf-filter-option-range-amount-min:disabled, .bc-sf-filter-option-range-amount-max:disabled{
+    background: none;
+    color: #25222E;
+}
+
+.range-slider-arrow-number{
+    color: #FCAF17;
+    font-size: 17px;
+    line-height: 35px;
+    font-family: Teko;
+    animation: fadeInFromNone 1s ease-out;
+    display: none;
+}
+
+.bc-sf-filter-option-range-amount{
+    display: none !important;
+}
+
+.bc-sf-filter-option-range-amount-min, .bc-sf-filter-option-range-amount-max{
+    animation: fadeInFromNone 1s ease-out;
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    20% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.bc-sf-filter-block-content.bc-sf-filter-block-content .noUi-connect{
+    background-color: $alt-color;
+    height:3px;
+    box-shadow: none;
+}
+
+.collection__navs-list {
+    margin-bottom: 55px;
+
+    @include breakpoint(extra-small) {
+        margin-bottom: 20px;
+    }
+}
+
+.collection__mobile-row{
+    @include breakpoint(extra-small){
+        display: flex;
+        width:100%;
+        justify-content:space-between;
+        align-items:center;
+        margin-bottom:30px;
+    }
+
+    @include breakpoint(mobile-landscape){
+        display: block;
+    }
+}
+
+.collection__filter-buttons{
+    display: none;
+
+    @include breakpoint(extra-small){
+
+        display: block;
+
+    }
+}

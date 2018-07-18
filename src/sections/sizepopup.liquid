@@ -1,0 +1,194 @@
+<div class="size-popup" id="size-popup">
+    <div class="size-popup__inner">
+        <div class="size-popup__container">
+            <button class="size-popup__close js-close">{% include 'icon-close-grey' %}</button>
+        {%- assign cat_list = '' -%}
+        {% comment %}{%- assign subcat_list = '' -%}{% endcomment %}
+        
+        {%- for block in section.blocks -%}
+            {%- unless cat_list contains block.settings.category -%}
+                {%- assign cat_list = cat_list | append: ',' | append: block.settings.category -%}
+            {%- endunless -%}
+            {% comment %}
+                {%- unless subcat_list contains block.settings.category -%}
+                    {%- assign subcat_list = subcat_list | append: ',' | append: block.settings.subcategory -%}
+                {%- endunless -%}
+            {% endcomment %}
+        {%- endfor -%}
+        {%- assign cat_list = cat_list | remove_first: ',' -%}
+        {%- assign cat_list_arr = cat_list | split:',' -%}
+        <ul class="size-popup__header">
+            {% for cat in cat_list_arr %}
+                <li class="size-popup__item js-cat-tab {% if forloop.index == 1 %}size-popup__item--active{% endif %}">{{ cat }}</li>
+            {% endfor %}
+        </ul>
+        {% for cat in cat_list_arr %}
+            <div class="size-popup__cat-tab js-cat-tab-body">
+                <ul class="size-popup__cat-header">
+                    {% for block in section.blocks %}
+                        {% if block.settings.category == cat %}
+                            <li class="size-popup__subcategory  js-subcat-tab">{{ block.settings.subcategory }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                {% for block in section.blocks %}
+                    {% if block.settings.category == cat %}
+                        <div class="size-popup__subcat-tab js-subcat-tab-body">
+                            {% if block.settings.image_1 or  block.settings.text_1 %}
+                                <div class="size-popup__step size-step">
+                                    <div class="size-step__uppertitle">{{ block.settings.upper_title_1 }}</div>
+                                    <h4 class="size-step__title">{{ block.settings.title_1 }}</h4>
+                                    {% if block.settings.image_1 %}
+                                        <img class="size-step__img" src="{{ block.settings.image_1 | img_url:'master' }}" alt="">
+                                    {% endif %}
+                                    <div class="size-step__description">{{ block.settings.text_1 }}</div>
+                                </div>
+                            {% endif %}
+                            {% if block.settings.image_2 or  block.settings.text_2 %}
+                                <div class="size-popup__step size-step">
+                                    <div class="size-step__uppertitle">{{ block.settings.upper_title_2 }}</div>
+                                    <h4 class="size-step__title">{{ block.settings.title_2 }}</h4>
+                                    {% if block.settings.image_2 %}
+                                        <img class="size-step__img" src="{{ block.settings.image_2 | img_url:'master' }}" alt="">
+                                    {% endif %}
+                                    <div class="size-step__description">{{ block.settings.text_2 }}</div>
+                                </div>
+                            {% endif %}
+                            {% if block.settings.image_3 != blank or  block.settings.text_3  != blank %}
+
+                                <div class="size-popup__step size-step">
+                                    <div class="size-step__uppertitle">{{ block.settings.upper_title_3 }}</div>
+                                    <h4 class="size-step__title">{{ block.settings.title_3 }}</h4>
+                                    {% if block.settings.image_3 %}
+                                        <img class="size-step__img" src="{{ block.settings.image_3 | img_url:'master' }}" alt="">
+                                    {% endif %}
+                                    <div class="size-step__description">{{ block.settings.text_3 }}</div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+            <div class="size-popup__footer">
+                <h5 class="size-popup__footer-title">{{ section.settings.footer_title }}</h5>
+               <div class="size-popup__footer-description">
+                   {{ section.settings.footer_text }}
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Size Popup",
+    "settings":[{
+        "type":"text",
+        "id":"footer_title",
+        "label":"Footer title",
+        "default":"Need help?"
+    },
+    {
+        "type":"richtext",
+        "id":"footer_text",
+        "label":"Footer text",
+        "default":"<p>Still not sure what you need? Our Enerskin staff can help you find the perfect size.</p><p>Email us at <a href='mailto:cs@enerskin.com'>cs@enerskin.com</a></p>"
+    }],
+    "blocks":[{
+        "type":"size_chart",
+        "name":"Size Chart",
+        "settings":[
+            {
+                "type":"text",
+                "id": "category",
+                "label": "category"
+            },
+            {
+                "type":"text",
+                "id": "subcategory",
+                "label": "subcategory"
+            },
+            {
+                "type":"header",
+                "content":"Step 1"
+            },
+            {
+                "type":"text",
+                "id": "upper_title_1",
+                "label": "Upper Title",
+                "default":"Step 1"
+            },
+            {
+                "type":"text",
+                "id": "title_1",
+                "label": "Title",
+                "default":"Measure yourself"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_1",
+                "label": "Picture"
+            },
+            {
+                "type":"textarea",
+                "id": "text_1",
+                "label": "Photo Description",
+                "default":"Notice: This is performance gear, not apparel. Please measure your size as accurately as possible. When choosing a size, please keep in mind that Enerskin's compression gear is designed to be tight fitting."
+            },
+            {
+                "type":"header",
+                "content":"Step 2"
+            },
+            {
+                "type":"text",
+                "id": "upper_title_2",
+                "label": "Upper Title",
+                "default":"Step 2"
+            },
+            {
+                "type":"text",
+                "id": "title_2",
+                "label": "Title",
+                "default":"Find your size"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_2",
+                "label": "Picture"
+            },
+            {
+                "type":"textarea",
+                "id": "text_2",
+                "label": "Photo Description"
+            },
+            {
+                "type":"header",
+                "content":"Step 3"
+            },
+            {
+                "type":"text",
+                "id": "upper_title_3",
+                "label": "Upper Title",
+                "default":"Step 2"
+            },
+            {
+                "type":"text",
+                "id": "title_3",
+                "label": "Title",
+                "default":"Find your size"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_3",
+                "label": "Picture"
+            },
+            {
+                "type":"textarea",
+                "id": "text_3",
+                "label": "Photo Description"
+            }
+        ]
+    }]
+}
+{% endschema %}

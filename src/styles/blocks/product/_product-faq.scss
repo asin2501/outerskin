@@ -1,0 +1,64 @@
+.product-faq {
+
+}
+
+.product-faq__item{
+    position: relative;
+}
+
+.product-faq__a {
+    display: none;
+    position: relative;
+    font-size: 15px;
+    line-height: 24px;
+    padding-top:5px;
+    padding-bottom:10px;
+}
+
+.product-faq__q {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 18px;
+    padding-top:10px;
+    padding-bottom:5px;
+    cursor: pointer;
+
+    transition: color 300ms;
+
+    &.active{
+        color: $alt-color;
+        &:before, &:after {
+            border-color: $alt-color;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: -14px;
+        top: 16px;
+        border-right: 1px solid #000;
+        bottom: 0;
+        height:9px;
+        z-index: 1;
+        transition: border-color 300ms;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 20px;
+        left: -18px;
+        width:9px;
+        border-top: 1px solid #000;
+        z-index: 1;
+        transition: border-color 300ms;
+
+    }
+}

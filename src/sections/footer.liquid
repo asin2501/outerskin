@@ -1,0 +1,147 @@
+<footer class="footer">
+    {% capture form_bg %}
+        {% if section.settings.form_bg %}
+            {{ section.settings.form_bg | img_url: 'master' }}
+        {% else %}
+            {{ 'subscribe_bg.png' | asset_img_url: 'master' }}
+        {% endif %}
+    {% endcapture %}
+    <div class="subscribe-form footer__subscribe-form">
+        <div class="container">
+            <div class="subscribe-form__inner" style="background-image:url({{ form_bg }});">
+                <div class="subscribe-form__left">
+                    <h3 class="subscribe-form__title">{{ section.settings.subscribe__title }}</h3>
+                    <p class="subscribe-form__subtitle">{{ section.settings.subscribe__subtitle }}</p>
+                </div>
+                <form class="subscribe-form__form" id="subscribe-form" action="{{ section.settings.form-action }}">
+                    <input name="EMAIL" class="subscribe-form__input email" placeholder="{{ 'custom.enter_email' | t }}">
+                    <button class="subscribe-form__btn">{{ 'custom.subscribe' | t }}</button>
+                    <div class="subscribe-form__error" id="subscribe-form-error">{% include 'information' %}<span>Please enter a valid email address</span></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="container">
+            <a class="footer__logo" href="/">
+                {% if section.settings.logo != blank %}
+                    <img src="{{ section.settings.logo | img_url: image_size }}" itemprop="logo">
+                {% else %}
+                    {% include 'enerskin_logo_footer' %}
+                {% endif %}
+            </a>
+            <div class="footer__row">
+                {% for i in (1..4) %}
+                    <div class="footer__col">
+                        {% assign id_name = 'footer_linklist_' | append: i %}
+                        {% assign menu = linklists[section.settings[id_name]] %}
+                        <h5 class="footer__menu-title js-accordion-heading">{{ menu.title }}
+                            <span class="footer__menu-title-icon plus-icon">
+                            <span class="plus-icon__vertical"></span>
+                            <span class="plus-icon__horisontal"></span>
+                        </span>
+                        </h5>
+                        <ul class="footer-menu js-accordion-body">
+                            {% for link in menu.links %}
+                                <li class="footer-menu__item">
+                                    <a href="{{ link.url }}" class="footer-menu__link">{{ link.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="footer__bottom">
+                {%- assign social_accounts = 'Facebook, Twitter, YouTube, Pinterest, Instagram, Snapchat, Tumblr, Vimeo,' | split: ', ' -%}
+                <ul class="social">
+                    {% for social in social_accounts %}
+                        {%- assign social_handle = social | handleize -%}
+                        {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
+                        {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
+                        {% capture social_icon_class %}social__link--{{ social_handle }}{% endcapture %}
+
+                        {% if settings[social_link] != blank %}
+                            <li class="social__item">
+                                <a class="social__link {{ social_icon_class }}" href="{{ settings[social_link] }}"
+                                   title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
+                                    {% include social_icon %}
+                                </a>
+                            </li>
+                        {% endif %}
+
+                    {% endfor %}
+                </ul>
+                <div class="footer__copyright">
+                    <p>&copy; {{ 'now' | date: "%Y" }} {{ shop.name }}</p>
+                    <p>{{ section.settings.address }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+    {
+        "type":      "header",
+        "content":   "Subscribe Form"
+    },
+    {
+        "type": "image_picker",
+        "id": "form_bg",
+        "label": "Form Background"
+    },
+    {
+        "type": "text",
+        "id":"subscribe__title",
+        "label":"Subscribe Title",
+        "default":"GET 10% OFF INSTANTLY"
+    },
+    {
+        "type": "text",
+        "id":"subscribe__subtitle",
+        "label":"Subscribe Subtitle",
+        "default":"Send us your e-mail for special promotions and offers"
+    },
+    {
+        "type": "text",
+        "id":"form-action",
+        "label":"Form Action"
+    },
+    {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo image"
+    },
+      {
+        "type": "link_list",
+        "id": "footer_linklist_1",
+        "label": "First menu"
+      },
+    {
+        "type": "link_list",
+        "id": "footer_linklist_2",
+        "label": "Second menu"
+    },
+    {
+        "type": "link_list",
+        "id": "footer_linklist_3",
+        "label": "Third menu"
+    },
+    {
+        "type": "link_list",
+        "id": "footer_linklist_4",
+        "label": "Fourth menu"
+    },
+    {
+        "type":"text",
+        "id":"address",
+        "label":"address",
+        "default":"833 S. SPRING ST., FL 4 LOS ANGELES, CA 90014"
+    }
+    ]
+  }
+
+{% endschema %}

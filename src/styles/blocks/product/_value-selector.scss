@@ -1,0 +1,35 @@
+.value-selector {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: 1px solid #E5E5E5;
+    border-bottom:none;
+}
+
+.value-selector__radio {
+    display: none;
+}
+
+.value-selector__radio:checked + .value-selector__label {
+    color: $alt-color;
+}
+
+.value-selector__label {
+    color: #AAAAAA;
+    font-family: $main-font;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 35px;
+    padding: 5px 6px;
+    cursor: pointer;
+    transition: color 300ms;
+    &:hover{
+        color: #000;
+    }
+}
+
+.value-selector__item + .value-selector__item{
+    //margin-left:8px;
+}

@@ -1,0 +1,71 @@
+.fda {
+
+    background-color: #161618;
+    .technology-discover__title {
+        color: #fff;
+    }
+}
+
+.fda__container {
+    position: relative;
+    display: flex;
+    //max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @include breakpoint(extra-small) {
+        padding: 0;
+    }
+}
+
+.fda__inner {
+    width: 100%;
+    padding-top: 76%;
+    background-color: #161618;
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 23% 50%;
+
+    @include breakpoint(small) {
+        padding-top: 0;
+    }
+
+    @include breakpoint(extra-small) {
+        padding: 0 20px;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+}
+
+.fda__content {
+    position: absolute;
+    right: 16%;
+    top: 25.5%;
+    max-width: 405px;
+    
+    .btn {
+        margin-top: 33px;
+    }
+
+    @include breakpoint(medium) {
+        right: 50%;
+        transform: translateX(50%);
+        text-align: center;
+    }
+
+    @include breakpoint(small) {
+        position: static;
+        margin: 0 auto;
+        padding: 100px 0;
+        transform: none;
+    }
+}
+
+.fda__text {
+    margin-top: 12px;
+    font-size: 17px;
+    letter-spacing: 0.2px;
+    line-height: 2.1;
+    color: #fff;
+}

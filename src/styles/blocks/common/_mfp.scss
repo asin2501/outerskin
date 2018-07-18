@@ -1,0 +1,9 @@
+.mfp-close.mfp-close.mfp-close.mfp-close{
+    left:40px;
+    color:#000;
+    opacity: 1;
+
+    @include breakpoint(medium){
+        left:0;
+    }
+}

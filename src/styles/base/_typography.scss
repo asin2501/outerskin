@@ -1,0 +1,26 @@
+//typography: base styles for fonts, p, a, standard h1, h2 ...
+
+body {
+    font-family: $alt-font;
+}
+
+.h2 {
+    font-family: $main-font;
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    p {
+        line-height: 1;
+    }
+
+    @include breakpoint(extra-small) {
+        font-size: 52px;
+    }
+
+    @include breakpoint(small-tablet-portrait) {
+        font-size: 40px;
+    }
+}

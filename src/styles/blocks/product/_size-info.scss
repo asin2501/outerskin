@@ -1,0 +1,44 @@
+.size-info {
+    flex-basis: 140px;
+    flex-shrink: 0;
+    width: 140px;
+    padding-left: 25px;
+    padding-top:9px;
+}
+
+.size-info__title {
+    font-family: $main-font;
+    font-size: 20px;
+    letter-spacing: 1.18px;
+    line-height: 18px;
+    color: $alt-color;
+    font-weight:400;
+    text-transform: uppercase;
+    margin-bottom:5px;
+}
+
+.size-info__description {
+    font-size: 14px;
+    line-height: 17px;
+    color: $font-gray;
+    margin-bottom: 5px;
+}
+
+.size-info__link{
+    position: relative;
+    font-size: 20px;	line-height: 35px;
+    text-decoration: underline;
+    font-family:$main-font;
+    color: #000;
+    margin-left:22px;
+
+    svg{
+        display: block;
+        position: absolute;
+        top: 7px;
+        right:100%;
+        margin-right:5px;
+        width:16px;
+        height:16px;
+    }
+}

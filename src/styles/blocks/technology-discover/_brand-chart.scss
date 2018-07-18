@@ -1,0 +1,30 @@
+.brand-chart {
+    padding-top: 100px;
+    padding-bottom: 230px;
+    background-color: $dark-bg;
+    color: #fff;
+    text-align: center;
+
+    .technology-discover__title {
+        margin-bottom: 40px;
+        color: #fff;
+    }
+
+    @include breakpoint(medium) {
+        padding-top: 50px;
+    }
+
+    @include breakpoint(extra-small) {
+        padding-bottom: 50px;
+    }
+}
+
+.brand-chart__container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @include breakpoint(extra-small) {
+        padding: 0 20px;
+    }
+}

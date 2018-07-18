@@ -1,0 +1,248 @@
+<div class="technology-discover">
+    <section class="silicone-muscle">
+        <div class="silicone-muscle__container">
+            <div class="silicone-muscle__content">
+                <h2 class="technology-discover__title">{{ section.settings.silicone_title }}</h2>
+                <div class="silicone-muscle__text">
+                    {{ section.settings.silicone_text }}
+                </div>
+                {% if section.settings.silicone_button_url and section.settings.silicone_button_text %}
+                	<a href="{{ section.settings.silicone_button_url }}" class="btn">{{ section.settings.silicone_button_text }}</a>
+                {% endif %}
+            </div>
+
+            <div class="silicone-muscle__image">
+                {% if section.settings.silicone_image %}
+					<img src="{{ section.settings.silicone_image | img_url: "1400x" }}" alt="">
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <section class="celtec-technology">
+        <div class="celtec-technology__container">
+            <div class="celtec-technology__image">
+                {% if section.settings.celtec_image %}
+					<img src="{{ section.settings.celtec_image | img_url: "1400x" }}" alt="">
+                {% endif %}
+            </div>
+            <div class="celtec-technology__content">
+                <h2 class="technology-discover__title">{% if section.settings.celtec_label %}<span class="celtec-technology__label">{{ section.settings.celtec_label }}</span>{% endif %}{{ section.settings.celtec_title }}</h2>
+                <div class="celtec-technology__text">
+                    {{ section.settings.celtec_text }}
+                </div>
+                {% if section.settings.celtec_button_url and section.settings.celtec_button_text %}
+                    <a href="{{ section.settings.celtec_button_url }}" class="btn">{{ section.settings.celtec_button_text }}</a>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+	<section class="enerflex">
+		<div class="enerflex__container">
+			<div class="enerflex__content">
+				<h2 class="technology-discover__title">{{ section.settings.enerflex_title }}</h2>
+				<div class="enerflex__text">
+					{{ section.settings.enerflex_text }}
+				</div>
+
+                {% if section.settings.enerflex_button_url %}
+					<a href="{{ section.settings.enerflex_button_url }}" class="btn">{{ section.settings.enerflex_button_text }}</a>
+                {% endif %}
+
+			</div>
+			<div class="enerflex__image">
+				{% if section.settings.enerflex_image %}
+					<img src="{{ section.settings.enerflex_image | img_url: "1400x" }}" alt="">
+				{% endif %}
+			</div>
+		</div>
+	</section>
+
+	<section class="fda">
+		<div class="fda__container">
+			<div class="fda__inner" style="background-image: url({{ section.settings.fda_image | img_url:"2048x" }});">
+				<div class="fda__content">
+					<h2 class="technology-discover__title">{{ section.settings.fda_title }}</h2>
+					<div class="fda__text">
+                        {{ section.settings.fda_text }}
+					</div>
+                    {% if section.settings.fda_button_url and section.settings.fda_button_text %}
+						<a href="section.settings.fda_button_url" class="btn">{{ section.settings.fda_button_text }}</a>
+                    {% endif %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="brand-chart">
+		<div class="brand-chart__container">
+			<h2 class="technology-discover__title">{{ section.settings.chart_title }}</h2>
+
+			{% if section.settings.chart_image %}
+				<img src="{{ section.settings.chart_image | img_url: "1600x" }}" class="brand-chart__image" alt="{{ section.settings.chart_image.alt }}">
+			{% endif %}
+
+		</div>
+	</section>
+</div>
+
+
+
+{% schema %}
+{
+	"name": "Technology discover",
+	"settings": [
+	{
+		"type": "header",
+		"content": "Silicone Muscle Mapping"
+	},
+	{
+		"type": "richtext",
+		"id": "silicone_title",
+		"label": "Silicone muscle title",
+		"default": "<p>SILICONE</p><p>MUSCLE MAPPING</p>"
+	},
+	{
+		"type": "textarea",
+		"id": "silicone_text",
+		"label": "Silicone muscle text",
+		"default": "Thanks to our patented silicone printing technology, Enerskin combines the stability of therapeutic taping with the durability of compression clothing to form the ultimate performance gear."
+	},
+	{
+		"type": "url",
+		"id": "silicone_button_url",
+		"label": "Button url"
+	},
+	{
+		"type": "text",
+		"id": "silicone_button_text",
+		"label": "Button text",
+		"default": "Find out more"
+	},
+	{
+		"type": "image_picker",
+		"id": "silicone_image",
+		"label": "Silicone image"
+	},
+	{
+		"type": "header",
+		"content": "Celtec Technology"
+	},
+	{
+		"type": "richtext",
+		"id": "celtec_title",
+		"label": "Celtec title",
+		"default": "<p>Celtec</p><p>Technology</p>"
+	},
+	{
+		"type": "text",
+		"id": "celtec_label",
+		"label": "Celtec title label",
+		"default": "NEW!"
+	},
+	{
+		"type": "richtext",
+		"id": "celtec_text",
+		"label": "Celtec text",
+		"default": "<p>The technology behind Enerskin is one-of-a-kind hybrid product that revolutionizes compression gear.</p><p>Enerskin fits your muscles like a second skin supporting your ligaments and optimizing blood flow; all of which enhances your performance while stabilizing your muscles to prevent unwanted injuries. </p>"
+	},
+	{
+		"type": "url",
+		"id": "celtec_button_url",
+		"label": "Button url"
+	},
+	{
+		"type": "text",
+		"id": "celtec_button_text",
+		"label": "Button text",
+		"default": "Find out more"
+	},
+	{
+		"type": "image_picker",
+		"id": "celtec_image",
+		"label": "Celtec image"
+	},
+	{
+		"type": "header",
+		"content": "Enerflex Compression"
+	},		
+	{
+		"type": "richtext",
+		"id": "enerflex_title",
+		"label": "Enerflex title",
+		"default": "<p>Enerflex</p><p>Compression</p>"
+	},
+	{
+		"type": "richtext",
+		"id": "enerflex_text",
+		"label": "Eneflex text",
+		"default": "<p>Enerskin fits your muscles like a second skin supporting your ligaments and optimizing blood flow; all of which enhances your performance while stabilizing your muscles to prevent unwanted injuries. </p>"
+	},
+	{
+		"type": "url",
+		"id": "enerflex_button_url",
+		"label": "Button url"
+	},
+	{
+		"type": "text",
+		"id": "enerflex_button_text",
+		"label": "Button text",
+		"default": "Find out more"
+	},
+	{
+		"type": "image_picker",
+		"id": "enerflex_image",
+		"label": "Enerflex image"
+	},
+	{
+		"type": "header",
+		"content": "FDA Approved"
+	},
+	{
+		"type": "richtext",
+		"id": "fda_title",
+		"label": "FDA title",
+		"default": "<p>FDA</p><p>approved</p>"
+	},
+	{
+		"type": "richtext",
+		"id": "fda_text",
+		"label": "FDA text",
+		"default": "<p>Thanks to our patented silicone printing technology, Enerskin combines the stability of therapeutic taping with the durability of compression clothing to form the ultimate performance gear.</p>"
+	},
+	{
+		"type": "url",
+		"id": "fda_button_url",
+		"label": "Button url"
+	},
+	{
+		"type": "text",
+		"id": "fda_button_text",
+		"label": "Button text",
+		"default": "Find out more"
+	},
+	{
+		"type": "image_picker",
+		"id": "fda_image",
+		"label": "Enerflex image"
+	},
+	{
+		"type": "header",
+		"content": "Brand Comprasio chart"
+	},
+	{
+		"type": "richtext",
+		"id": "chart_title",
+		"label": "Chart title",
+		"default": "<p>Brand Comprassion chart</p>"
+	},
+	{
+		"type": "image_picker",
+		"id": "chart_image",
+		"label": "Chart image"
+	}
+	]
+
+}
+{% endschema %}

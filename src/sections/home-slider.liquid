@@ -1,0 +1,78 @@
+<section class="homeslider" id="homeslider">
+    {% for slide in section.blocks %}
+        <div class="homeslider__slide homeslide js-homeslide">
+            <div class="homeslider__btn homeslider__btn--next js-next-btn">
+                <span class="homeslider__word">next</span>
+                <span class="homeslider__line"></span>
+                <div class="homeslider__microslide homeslider__microslide--right">
+                    <div class="homeslider__microslide-inner js-next-slide"></div>
+                </div>
+            </div>
+            <div class="homeslider__btn homeslider__btn--prev js-prev-btn">
+                <span class="homeslider__word">prev</span>
+                <span class="homeslider__line"></span>
+                <div class="homeslider__microslide homeslider__microslide--left">
+                    <div class="homeslider__microslide-inner js-prev-slide"></div>
+                </div>
+            </div>
+            <div class="homeslide__wrapper">
+                <div class="homeslide__inner">
+                    <div class="homeslide__leftside">
+                        <h4 class="homeslide__subtitle">{{ slide.settings.subtitle }}</h4>
+                        <h1 class="homeslide__title">{{ slide.settings.title }}</h1>
+                        <div class="homeslide__btnrow">
+                            <a class="btn" href="{{ slide.settings.btnurl }}">{{ slide.settings.btntext }}</a>
+                        </div>
+                    </div>
+                    <div class="homeslide__rightside" style="background-image:url({{ slide.settings.img | img_url:'master' }});"></div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+{% schema %}
+{
+    "name": "Link Section",
+    "blocks":[
+        {
+            "name":"Slide",
+            "type":"slide",
+            "settings":[
+                {
+                    "type":"richtext",
+                    "label":"Subtitle",
+                    "id":"subtitle"
+                },
+                {
+                    "type":"text",
+                    "label":"Big Title",
+                    "id":"title"
+                },
+                {
+                    "type":"text",
+                    "label":"Btn Title",
+                    "id":"btntext",
+                    "default":"Shop men's"
+                },
+                {
+                    "type":"url",
+                    "label":"URL",
+                    "id":"btnurl"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "img",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Homeslider",
+            "category": "Homepage"
+        }
+    ]
+}
+{% endschema %}

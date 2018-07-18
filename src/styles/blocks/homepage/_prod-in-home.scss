@@ -1,0 +1,115 @@
+.prod-in-home {
+    position: relative;
+    padding-top: 95%;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    @media (max-width:1500px){
+        padding-top: 105%;
+    }
+
+
+}
+
+.prod-in-home__info {
+    position: absolute;
+    left: 90px;
+    top: 65px;
+    bottom: 20px;
+    right: 50px;
+
+    @include breakpoint(medium){
+        top: 35px;
+        left: 60px;
+        right:30px;
+    }
+
+    @include breakpoint(small){
+        left:30px;
+    }
+
+    @include breakpoint(extra-small){
+        left: 90px;
+        top: 65px;
+        bottom: 20px;
+        right: 50px;
+    }
+
+    @include breakpoint(small-tablet-portrait){
+        left:30px;
+        right:30px;
+    }
+
+    @include breakpoint(mobile){
+        top:20px;
+        left:15px;
+        right:10px;
+    }
+}
+
+.prod-in-home__collection{
+    text-transform: uppercase;
+    font-size: 24px;	font-weight: 300;	letter-spacing: 4px;	line-height: 22px;
+    font-family:$main-font;
+    margin-bottom:5px;
+}
+
+.prod-in-home__title {
+    max-width: 270px;
+    font-size: 50px;
+    line-height: 45px;
+    text-transform: uppercase;
+    font-family: $main-font;
+    margin-bottom:22px;
+
+    @include breakpoint(medium){
+        max-width: 180px;
+        font-size: 35px;
+        line-height: 30px;
+    }
+
+    @include breakpoint(extra-small){
+        font-size: 45px;
+        line-height: 40px;
+        max-width: 250px;
+    }
+
+    @include breakpoint(mobile-landscape) {
+        max-width: 180px;
+        font-size: 35px;
+        line-height: 30px;
+    }
+
+    @include breakpoint(mobile) {
+        max-width: 150px;
+        font-size: 30px;
+        line-height: 27px;
+        margin-bottom:12px;
+    }
+}
+
+.prod-in-home__price {
+    font-size: 40px;
+    line-height: 36px;
+    font-family: $main-font;
+    color: $alt-color;
+    display: block;
+
+    @include breakpoint(small){
+        font-size:30px;
+        line-height:27px;
+    }
+}
+
+.prod-in-home__prices {
+    margin-bottom: 15px;
+}
+
+.prod-in-home__price--compared {
+    font-size: 24px;
+    line-height: 30px;
+    font-family: $main-font;
+    color: $font-gray;
+    text-decoration: line-through;
+}

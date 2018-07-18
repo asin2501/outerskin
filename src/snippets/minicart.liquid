@@ -1,0 +1,32 @@
+{% comment %} Vue minicart {% endcomment %}
+
+<div id="minicart" class="minicart" :class="[ 'minicart', {'minicart--opened': opened} ]" >
+
+    <div class="minicart__body">
+        <div class="minicart-item" v-for="item in cartData.items" :key="item.id">
+            <div class="minicart-item__image">
+                <div class="minicart-item__thumb" :style="{ 'background-image': 'url(' + item.image + ')' }">
+                    <a :href="item.url"></a>
+                </div>
+            </div>
+            <div class="minicart-item__info">
+                <button class="minicart-item__remove js-item-remove" v-on:click="remove(item.id)">{% include "icon-close-minicart" %}</button>
+                <div class="minicart-item__collection">{% raw %} {{ item.properties.collection }} {% endraw %}</div>
+                <h4 class="minicart-item__title"><a :href="item.url">{% raw %}{{ item.product_title }}{% endraw %}</a></h4>
+                <div class="minicart-item__price">{% raw %}{{ window.slate.Currency.formatMoney(item.price) }}{% endraw %}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="minicart__footer">
+        <div class="minicart__subtotal">
+           <span></span>Subtotal <span class="minicart__subtotal-value">{% raw %}{{ window.slate.Currency.formatMoney(cartData.total_price) }}{% endraw %}</span>
+        </div>
+        <p class="minicart__text-info">Shipping & taxes calculated at checkout</p>
+        <div class="minicart__buttons">
+            <a href="/checkout" class="btn">Checkout</a>
+            <a href="/cart" class="btn btn--black">View Cart</a>
+        </div>
+    </div>
+
+</div>

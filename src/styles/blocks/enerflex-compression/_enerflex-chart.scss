@@ -1,0 +1,118 @@
+.enerflex-chart {
+    padding-top: 102px;
+    background-color: $bg-gray;
+
+    @include breakpoint(medium) {
+        padding-top: 50px;
+    }
+    
+    .h2 {
+        text-align: center;
+        color: #000;
+        @include breakpoint(medium) {
+            font-size: 52px;
+        }
+
+        @include breakpoint(small-tablet-portrait) {
+            font-size: 40px;
+        }
+    }
+
+    &.enerflex-chart--pb {
+        padding-bottom: 100px;
+        @include breakpoint(medium) {
+            padding-bottom: 50px;
+        }
+    }
+
+
+    .enerflex-chart__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .enerflex-chart__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        margin-top: 78px;
+        margin-bottom: 52px;
+
+        @include breakpoint(medium) {
+            margin-top: 50px;
+        }
+    }
+
+    .enerflex-chart__col {
+        width: 50%;
+        padding: 0 15px;
+        text-align: center;
+
+        img {
+            width: 91%;
+        }
+
+        @include breakpoint(extra-small) {
+            width: 100%;
+
+            + .enerflex-chart__col {
+                margin-top: 50px;
+            }
+
+            img {
+                width: 100%;
+                max-width: 600px;
+            }
+        }
+    }
+
+    .enerflex-chart__title {
+        margin-bottom: 25px;
+        font-family: $main-font;
+        font-size: 36px;
+        font-weight: 500;
+        letter-spacing: 1.2px;
+        text-align: center;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #000;
+
+        @include breakpoint(medium) {
+            font-size: 30px;
+        }
+    }
+
+    .enerflex-chart__options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .enerflex-chart__option {
+        margin-bottom: 13px;
+        padding: 0 25px;
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: $lightGray;
+        }
+
+        &.enerflex-chart__option--active {
+            &::before {
+                background-color: $alt-color;
+            }
+        }
+    }
+
+    .enerflex-chart__info {
+        max-width: 760px;
+        margin: 0 auto;
+        letter-spacing: 0.15px;
+        text-align: center;
+    }
+}

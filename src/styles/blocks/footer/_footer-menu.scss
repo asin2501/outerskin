@@ -1,0 +1,38 @@
+.footer-menu {
+    @media (min-width:768px) {
+        display: block!important;
+    }
+    @include breakpoint(medium){
+        margin-bottom:30px;
+    }
+
+    @include breakpoint(extra-small){
+        display: none;
+    }
+}
+
+.footer-menu__item {
+    & + .footer-menu__item {
+        margin-top: 10px;
+    }
+}
+
+.footer-menu__link {
+    transition: color 300ms;
+    font-family: $alt-font;
+    font-size: 15px;
+    color: $font-gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @include breakpoint(medium){
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+
+    }
+
+    &:hover {
+        color: #fff;
+    }
+}

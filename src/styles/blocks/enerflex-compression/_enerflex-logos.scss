@@ -1,0 +1,45 @@
+.enerflex-logos {
+    padding-top: 90px;
+    padding-bottom: 85px;
+    background-color: #fff;
+
+    @include breakpoint(extra-small) {
+        padding: 30px 0;
+    }
+
+    .enerflex-logos__container {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 30px;
+
+        @include breakpoint(extra-small) {
+            padding: 0 20px;
+        }
+    }
+
+    .enerflex-logos__row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 0 -30px;
+        @include breakpoint(extra-small) {
+            margin: 0 -20px;
+        }
+    }
+
+    .enerflex-logos__item {
+        padding: 10px 30px;
+        text-align: center;
+        @include breakpoint(extra-small) {
+            width: 50%;
+            padding: 20px 15px;
+        }
+    }
+
+    .enerflex-logos__image {
+        //max-width: 202px;
+        //width: 100%;
+        vertical-align: middle;
+    }
+}

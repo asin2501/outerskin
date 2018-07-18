@@ -1,0 +1,140 @@
+.footer {
+    position: relative;
+    font-family:$main-font;
+}
+
+.footer__inner{
+    background-image: url('./footer_grey_bg.svg');
+    background-color: $dark-bg;
+    color: #fff;
+
+    background-size: cover;
+    background-position: 50% 50%;
+    padding-top: 170px;
+    padding-bottom: 70px;
+
+    @include breakpoint(medium){
+        padding-top: 140px;
+        padding-bottom: 40px;
+    }
+
+    @include breakpoint(extra-small){
+        padding-top: 60px;
+    }
+}
+
+.footer__subscribe-form{
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    transform: translateY(-50%);
+}
+
+.footer__logo {
+    display: block;
+    max-width: 80px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.footer__row {
+    margin-top: 62px;
+    display: flex;
+    @include breakpoint(extra-small){
+        margin-top:30px;
+        display: block;
+        text-align: center;
+    }
+}
+
+.footer__col {
+    width: 25%;
+
+    &:nth-child(1){
+        width:27.5%;
+    }
+    &:nth-child(2){
+        width:28%;
+    }
+    &:nth-child(3){
+        width:30.5%;
+    }
+    &:nth-child(4){
+        width:14%;
+    }
+
+    &:not(:first-child){
+        padding-left:15px;
+    }
+}
+
+.footer__col.footer__col.footer__col.footer__col{
+    @include breakpoint(extra-small){
+        width:100%;
+        padding-left:0;
+    }
+}
+
+.footer__menu-title-icon{
+    display: none;
+    top: 7px;
+    right:0;
+    position: absolute;
+
+    @include breakpoint(extra-small){
+        display: block;
+    }
+}
+
+.footer__menu-title {
+    text-transform: uppercase;
+    color: $alt-color;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom:37px;
+
+    @include breakpoint(medium){
+        margin-bottom:15px;
+    }
+
+    @include breakpoint(extra-small){
+        display: inline-block;
+        padding-right:20px;
+        position: relative;
+    }
+}
+
+.footer__bottom{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top:50px;
+    justify-content:space-between;
+    align-items:center;
+
+    @include breakpoint(medium){
+        margin-top:30px;
+    }
+
+    @include breakpoint(extra-small){
+        display: block;
+            text-align: center;
+        &>*+*{
+            margin-top:30px;
+        }
+
+        .social{
+            justify-content:center;
+        }
+    }
+}
+
+.footer__copyright{
+    font-family:$alt-font;
+    color: $font-gray;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height:1.6;
+}

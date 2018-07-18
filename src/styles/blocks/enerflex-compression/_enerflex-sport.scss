@@ -1,0 +1,98 @@
+.enerflex-sport {
+    display: flex;
+    flex-wrap: wrap;
+
+    .enerflex-sport__col {
+        width: 50%;
+
+        @include breakpoint(medium) {
+            width: 100%;
+        }
+    }
+
+    .enerflex-sport__item {
+        position: relative;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+
+    .enerflex-sport__item--half {
+        padding-top: 52%;
+        color: #000;
+
+        .enerflex-sport__title {
+            letter-spacing: 9px;
+        }
+
+        .enerflex-sport__text--left {
+            top: 23.5%;
+            @include breakpoint(extra-small) {
+                top: 50%;
+            }
+        }
+
+        @include breakpoint(extra-small) {
+            min-height: 320px;
+        }
+    }
+
+    .enerflex-sport__item--full {
+        padding-top: 104%;
+        color: #fff;
+
+        @include breakpoint(extra-small) {
+            min-height: 320px;
+        }
+    }
+
+    .enerflex-sport__text {
+        position: absolute;
+        @include breakpoint(extra-small) {
+            text-align: center;
+        }
+    }
+
+    .enerflex-sport__text--right {
+        right: 13.5%;
+        top: 27.5%;
+
+        @include breakpoint(extra-small) {
+            right: auto;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    .enerflex-sport__text--left {
+        left: 17.5%;
+        top: 13.5%;
+
+        @include breakpoint(extra-small) {
+            right: auto;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    .enerflex-sport__title {
+        font-family: $main-font;
+        font-size: 50px;
+        font-weight: normal;
+        letter-spacing: normal;
+        line-height: 1;
+        text-transform: uppercase;
+        + * {
+            margin-top: 8px;
+        }
+    }
+
+    .enerflex-sport__description {
+        max-width: 205px;
+        line-height: 2.1;
+        letter-spacing: 0.15px;
+    }
+}

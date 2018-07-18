@@ -1,0 +1,18 @@
+.size-message {
+    display: none;
+}
+
+.size-message__title {
+    font-family: $main-font;
+    font-size: 20px;
+    line-height: 18px;
+    color:$alt-color;
+    text-transform: uppercase;
+    font-weight:400;
+}
+
+.size-message__description {
+    color: $lightGray;
+    font-size: 14px;
+    line-height: 17px;
+}

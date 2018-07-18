@@ -1,0 +1,204 @@
+.spr-badge{
+    display: block;
+    margin-top:-3px;
+}
+#shopify-product-reviews {
+    margin-top:0;
+    margin-right:-10px!important;
+
+    @include breakpoint(mobile){
+        margin-left:-20px!important;
+    }
+
+    .spr-header {
+        *:not(.spr-summary-actions):not(.spr-summary):not(.spr-summary-actions-newreview) {
+            display: none !important;
+        }
+    }
+
+    .spr-reviews {
+        display: block !important;
+    }
+
+    .spr-container {
+        padding: 0;
+        border: none;
+    }
+
+     .spr-review-header   .spr-icon {
+        color: #000;
+        font-size: 18px;
+
+         @include breakpoint(mobile){
+             font-size:16px;
+         }
+    }
+
+    .spr-starratings {
+        margin-bottom: 10px;
+    }
+
+    .spr-review {
+        position: relative;
+    }
+
+    .spr-review-footer {
+        display: none;
+    }
+
+    .spr-review-header-byline {
+        position: absolute;
+        right: 0;
+        top: 15px;
+
+        text-align: right;
+        font-style: normal;
+        font-size:0;
+        color: transparent;
+
+        strong {
+            color: #000;
+            font-size: 12px;
+            line-height: 24px;
+            font-weight: normal;
+
+            &:first-child::after{
+                content: '|';
+                margin-right:10px;
+                margin-left:10px;
+            }
+        }
+    }
+
+    .spr-review {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: none;
+    }
+
+    .spr-review-content {
+        margin-bottom: 0;
+    }
+
+    .spr-review-header-title {
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+
+    .spr-review-content-body {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .spr-summary-actions-newreview {
+        font-family: $main-font;
+        font-size: 30px;
+        line-height: 35px;
+        text-transform: uppercase;
+        color: #000;
+        text-decoration: underline;
+        transition: $alt-color 300ms;
+
+        &:hover{
+            color: $alt-color;
+        }
+    }
+
+    .spr-icon{
+        color: #000;
+    }
+
+    .spr-pagination{
+        border-top:none;
+        font-family: $main-font;
+        font-size:22px;
+
+        a{
+            color: #000;
+        }
+
+        .spr-pagination-page{
+            color: $alt-color;
+        }
+
+    }
+
+    .spr-form{
+        position: relative;
+        border-top:none;
+        padding-top:0;
+    }
+    
+    .spr-form-label{
+        display: none;
+    }
+    
+    .spr-form-title{
+        display: none;
+    }
+
+    .spr-form-review-rating{
+        position: absolute;
+        left:0;
+        bottom:0;
+        margin-bottom:4px;
+
+        @include breakpoint(small-tablet-portrait){
+            margin-bottom:8px;
+        }
+
+        .spr-icon{
+            font-size:29px;
+
+            @include breakpoint(medium){
+                font-size:28px;
+            }
+
+            @include breakpoint(small-tablet-portrait){
+                font-size:20px;
+            }
+
+            @include breakpoint(mobile){
+                font-size:18px;
+            }
+        }
+    }
+
+    .spr-form-input-text, .spr-form-input-email{
+        line-height:50px;
+        border-radius:3px;
+        padding-left:20px;
+        padding-right:20px;
+        border: 1px solid #C0C0C0;
+        box-shadow: none;
+
+        @include placeholder{
+            color: #868686;
+        }
+    }
+
+    .spr-form-input-textarea{
+        padding:20px;
+        border: 1px solid #C0C0C0;
+        box-shadow: none;
+        resize: none;
+        height:90px;
+        border-radius:3px;
+        font-family:$alt-font;
+
+        @include placeholder{
+            color: #868686;
+        }
+    }
+
+    .spr-button{
+        padding-top:8px;
+        padding-bottom:4px;
+    }
+
+    .spr-form-contact-name, .spr-form-contact-email, .spr-form-contact-location, .spr-form-review-title{
+        margin-bottom:10px;
+    }
+}

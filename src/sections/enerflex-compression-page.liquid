@@ -1,0 +1,544 @@
+<div class="enerflex-compression">
+
+    <section class="enerflex-compression__top">
+        <div class="enerflex-compression__container">
+            <div class="enerflex-compression__content">
+                <h2 class="h2">{{ section.settings.enerflex_title }}</h2>
+                {% if section.settings.enerflex_text %}
+                    <div class="enerflex-compression__subtitle">
+                        <p>{{ section.settings.enerflex_text }}</p>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="enerflex-compression__image">
+                {% if section.settings.enerflex_image %}
+                    <img src="{{ section.settings.enerflex_image | img_url: "master" }}" alt="">
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <section class="enerflex-compression__bottom">
+        <div class="enerflex-compression__bottom-container">
+            <div class="enerflex-compression__bottom-image">
+                {% if section.settings.enerflex_image_bottom %}
+                    <img src="{{ section.settings.enerflex_image_bottom | img_url: "master" }}" alt="">
+                {% endif %}
+            </div>
+
+            <div class="enerflex-compression__bottom-content">
+                <div class="enerflex-compression__bottom-text">
+                    {{ section.settings.enerflex_text_bottom }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section class="enerflex-feature" style="background-image: url({{ section.settings.enerflex_feature_bg | img_url: "1440x" }});">
+		<div class="enerflex-feature__container">
+			<div class="enerflex-feature__row">
+				<div class="enerflex-feature__item">
+					<span class="enerflex-feature__icon">
+						<img src="{{ 'icon-speedometr.svg' | asset_url }}" alt="">
+					</span>
+					<span class="enerflex-feature__title">{{ section.settings.feature_title_1 }}</span>
+				</div>
+
+				<div class="enerflex-feature__item">
+					<span class="enerflex-feature__icon">
+						<img src="{{ 'icon-dumbbel.svg' | asset_url }}" alt="">
+					</span>
+					<span class="enerflex-feature__title">{{ section.settings.feature_title_2 }}</span>
+				</div>
+
+				<div class="enerflex-feature__item">
+					<span class="enerflex-feature__icon">
+						<img src="{{ 'icon-arrow-reduce.svg' | asset_url }}" alt="">
+					</span>
+					<span class="enerflex-feature__title">{{ section.settings.feature_title_3 }}</span>
+				</div>
+
+				<div class="enerflex-feature__item">
+					<span class="enerflex-feature__icon">
+						<img src="{{ 'icon-heart-dynamic.svg' | asset_url }}" alt="">
+					</span>
+					<span class="enerflex-feature__title">{{ section.settings.feature_title_4 }}</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="enerflex-logos">
+		<div class="enerflex-logos__container">
+			<div class="enerflex-logos__row">
+                {% for block in section.blocks  %}
+					<div class="enerflex-logos__item">
+						<img src="{{ block.settings.brand_logo | img_url: "300x" }}" class="enerflex-logos__image" alt="">
+					</div>
+                {% endfor %}
+			</div>
+		</div>
+	</section>
+
+	<section class="enerflex-sport">
+		<div class="enerflex-sport__col">
+			<div class="enerflex-sport__item enerflex-sport__item--half" style="background-image: url({{ section.settings.enerflex_sport_img_01 | img_url: "1500x" }});">
+				<div class="enerflex-sport__text enerflex-sport__text--left">
+                    {% if section.settings.enerflex_sport_title_1 %}
+						<h3 class="enerflex-sport__title">{{ section.settings.enerflex_sport_title_1 }}</h3>
+                    {% endif %}
+                    {% if section.settings.enerflex_sport_text_1 %}
+						<div class="enerflex-sport__description">
+							<p>{{ section.settings.enerflex_sport_text_1 }}</p>
+						</div>
+                    {% endif %}
+				</div>
+			</div>
+			<div class="enerflex-sport__item enerflex-sport__item--half" style="background-image: url({{ section.settings.enerflex_sport_img_02 | img_url: "1500x" }});">
+				<div class="enerflex-sport__text enerflex-sport__text--right">
+                    {% if section.settings.enerflex_sport_title_2 %}
+						<h3 class="enerflex-sport__title">{{ section.settings.enerflex_sport_title_2 }}</h3>
+                    {% endif %}
+                    {% if section.settings.enerflex_sport_text_2 %}
+						<div class="enerflex-sport__description">
+							<p>{{ section.settings.enerflex_sport_text_2 }}</p>
+						</div>
+                    {% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="enerflex-sport__col">
+			<div class="enerflex-sport__item enerflex-sport__item--full" style="background-image: url({{ section.settings.enerflex_sport_img_03 | img_url: "2200x" }});">
+				<div class="enerflex-sport__text enerflex-sport__text--left">
+                    {% if section.settings.enerflex_sport_title_3 %}
+						<h3 class="enerflex-sport__title">{{ section.settings.enerflex_sport_title_3 }}</h3>
+                    {% endif %}
+                    {% if section.settings.enerflex_sport_text_3 %}
+						<div class="enerflex-sport__description">
+							<p>{{ section.settings.enerflex_sport_text_3 }}</p>
+						</div>
+                    {% endif %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="enerflex-sport">
+		<div class="enerflex-sport__col">
+			<div class="enerflex-sport__item enerflex-sport__item--full" style="background-image: url({{ section.settings.enerflex_sport_img_04 | img_url: "2200x" }});">
+				<div class="enerflex-sport__text enerflex-sport__text--left">
+                    {% if section.settings.enerflex_sport_title_4 %}
+						<h3 class="enerflex-sport__title">{{ section.settings.enerflex_sport_title_4 }}</h3>
+                    {% endif %}
+                    {% if section.settings.enerflex_sport_text_4 %}
+						<div class="enerflex-sport__description">
+							<p>{{ section.settings.enerflex_sport_text_4 }}</p>
+						</div>
+                    {% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="enerflex-sport__col">
+			<div class="enerflex-sport__item enerflex-sport__item--half" style="background-image: url({{ section.settings.enerflex_sport_img_05 | img_url: "1500x" }});">
+				<div class="enerflex-sport__text enerflex-sport__text--right">
+                    {% if section.settings.enerflex_sport_title_5 %}
+						<h3 class="enerflex-sport__title">{{ section.settings.enerflex_sport_title_5 }}</h3>
+                    {% endif %}
+                    {% if section.settings.enerflex_sport_text_5 %}
+						<div class="enerflex-sport__description">
+							<p>{{ section.settings.enerflex_sport_text_5 }}</p>
+						</div>
+                    {% endif %}
+				</div>
+			</div>
+			<div class="enerflex-sport__item enerflex-sport__item--half" style="background-image: url({{ section.settings.enerflex_sport_img_06 | img_url: "1500x" }});">
+				<div class="enerflex-sport__text enerflex-sport__text--left">
+                    {% if section.settings.enerflex_sport_title_6 %}
+						<h3 class="enerflex-sport__title">{{ section.settings.enerflex_sport_title_6 }}</h3>
+                    {% endif %}
+                    {% if section.settings.enerflex_sport_text_6 %}
+						<div class="enerflex-sport__description">
+							<p>{{ section.settings.enerflex_sport_text_6 }}</p>
+						</div>
+                    {% endif %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+    {% if section.settings.chart_section_title_1 %}
+		<section class="enerflex-chart">
+			<div class="enerflex-chart__container">
+				<h2 class="h2">{{ section.settings.chart_section_title_1 }}</h2>
+				<div class="enerflex-chart__row">
+					<div class="enerflex-chart__col">
+						<h4 class="enerflex-chart__title">{{ section.settings.chart_title_1 }}</h4>
+						<img src="{{ section.settings.chart_image_1 | img_url:"1025x" }}" alt="">
+					</div>
+					<div class="enerflex-chart__col">
+						<h4 class="enerflex-chart__title">{{ section.settings.chart_title_2 }}</h4>
+						<img src="{{ section.settings.chart_image_2 | img_url:"1025x" }}" alt="">
+					</div>
+				</div>
+
+                {% if section.settings.chart_option_1 or section.settings.chart_option_2 %}
+					<div class="enerflex-chart__options">
+						<div class="enerflex-chart__option enerflex-chart__option--active">{{ section.settings.chart_option_1 }}</div>
+						<div class="enerflex-chart__option">{{ section.settings.chart_option_2 }}</div>
+					</div>
+                {% endif %}
+
+                {% if section.settings.chart_info %}
+					<div class="enerflex-chart__info">
+						{{ section.settings.chart_info }}
+					</div>
+                {% endif %}
+			</div>
+		</section>
+    {% endif %}
+
+    {% if section.settings.chart_section_title_2 %}
+		<section class="enerflex-chart enerflex-chart--pb">
+			<div class="enerflex-chart__container">
+				<h2 class="h2">{{ section.settings.chart_section_title_2 }}</h2>
+				<div class="enerflex-chart__row">
+					<div class="enerflex-chart__col">
+						<h4 class="enerflex-chart__title">{{ section.settings.chart_title_3 }}</h4>
+						<img src="{{ section.settings.chart_image_3 | img_url:"1025x" }}" alt="">
+					</div>
+					<div class="enerflex-chart__col">
+						<h4 class="enerflex-chart__title">{{ section.settings.chart_title_4 }}</h4>
+						<img src="{{ section.settings.chart_image_4 | img_url:"1025x" }}" alt="">
+					</div>
+				</div>
+
+                {% if section.settings.chart_option_1 or section.settings.chart_option_2 %}
+					<div class="enerflex-chart__options">
+						<div class="enerflex-chart__option enerflex-chart__option--active">{{ section.settings.chart_option_1 }}</div>
+						<div class="enerflex-chart__option">{{ section.settings.chart_option_2 }}</div>
+					</div>
+                {% endif %}
+
+                {% if section.settings.chart_info_2 %}
+					<div class="enerflex-chart__info">
+                        {{ section.settings.chart_info_2 }}
+					</div>
+                {% endif %}
+			</div>
+		</section>
+	{% endif %}
+
+
+    {% if section.settings.comparison_title or section.settings.comparison_image  %}
+		<section class="brand-chart">
+			<div class="brand-chart__container">
+				<h2 class="h2">{{ section.settings.comparison_title }}</h2>
+                {% if section.settings.comparison_image %}
+					<img src="{{ section.settings.comparison_image | img_url: "1600x" }}" class="brand-chart__image" alt="{{ section.settings.comparison_image.alt }}">
+                {% endif %}
+			</div>
+		</section>
+    {% endif %}
+
+
+
+</div>
+
+
+{% schema %}
+{
+	"name": "Enerflex page",
+	"settings": [
+	{
+		"type": "header",
+		"content": "Enerflex compression"
+	},
+	{
+		"type": "richtext",
+		"id": "enerflex_title",
+		"label": "Enerflex title",
+		"default": "<p>Enerflex</p><p>Compression</p>"
+	},
+	{
+		"type": "textarea",
+		"id": "enerflex_text",
+		"label": "Enerflex muscle text",
+		"default": "Push the borders of limitation with the next generation in compression wear."
+	},
+	{
+		"type": "image_picker",
+		"id": "enerflex_image",
+		"label": "Enerflex image"
+	},
+	{
+		"type": "image_picker",
+		"id": "enerflex_image_bottom",
+		"label": "Enerflex bottom image"
+	},
+	{
+		"type": "richtext",
+		"id": "enerflex_text_bottom",
+		"label": "Enerflex bottom text",
+		"default": "<p>The technology behind Enerskin is one-of-a-kind hybrid product that revolutionez compression gear. Enerskin fits your muscles like a second skin supporting your ligaments and optimizing blood flow; all of which enchances your performance while stabilizing your muscles to prevent unwanted injuries. Engineered specifically to support key muscle groups and promote uninhibited flexibility, providing stability without hindering performance; Enerskin is the most innovative compression gear on the market today.</p>"
+	},
+	{
+		"type": "header",
+		"content": "Enerflex features icons"
+	},
+	{
+		"type": "image_picker",
+		"id": "enerflex_feature_bg",
+		"label": "Enerflex features background"
+	},
+	{
+		"type": "text",
+		"id": "feature_title_1",
+		"label": "Feature title 1",
+		"default": "10 times more effective recovery"
+	},
+	{
+		"type": "text",
+		"id": "feature_title_2",
+		"label": "Feature title 2",
+		"default": "Stabilize and support joints"
+	},
+	{
+		"type": "text",
+		"id": "feature_title_3",
+		"label": "Feature title 3",
+		"default": "Reduce swelling and soreness"
+	},
+	{
+		"type": "text",
+		"id": "feature_title_4",
+		"label": "Feature title 4",
+		"default": "Improve dynamic balance and endurance"
+	},
+	{
+		"type": "header",
+		"content": "Enerflex sports preview first part"
+	},
+	{
+		"type": "image_picker",
+		"id": "enerflex_sport_img_01",
+		"label": "Sport image"
+	},
+	{
+		"type": "image_picker",
+		"id": "enerflex_sport_img_02",
+		"label": "Sport image"
+	},
+	{
+		"type": "image_picker",
+		"id": "enerflex_sport_img_03",
+		"label": "Sport image"
+	},
+	{
+		"type": "richtext",
+		"id": "enerflex_sport_title_1",
+		"label": "Sport title"
+	},
+	{
+		"type": "textarea",
+		"id": "enerflex_sport_text_1",
+		"label": "Sport text"
+	},
+	{
+		"type": "richtext",
+		"id": "enerflex_sport_title_2",
+		"label": "Sport title",
+		"default": "<p>Fitness</p>"
+	},
+	{
+		"type": "textarea",
+		"id": "enerflex_sport_text_2",
+		"label": "Sport text",
+		"default": "Lift more with faster recovery and less soreness"
+	},
+	{
+		"type": "richtext",
+		"id": "enerflex_sport_title_3",
+		"label": "Sport title",
+		"default": "<p>Basketball</p>"
+	},
+	{
+		"type": "textarea",
+		"id": "enerflex_sport_text_3",
+		"label": "Sport text",
+		"default": "Shoot quicker with responsive muscle control."
+	},
+	{
+		"type": "header",
+		"content": "Enerflex sports preview second part"
+	},
+	{
+		"type": "image_picker",
+		"id": "enerflex_sport_img_04",
+		"label": "Sport image"
+	},
+		{
+		"type": "image_picker",
+		"id": "enerflex_sport_img_05",
+		"label": "Sport image"
+	},
+	{
+		"type": "image_picker",
+		"id": "enerflex_sport_img_06",
+		"label": "Sport image"
+	},
+	{
+		"type": "richtext",
+		"id": "enerflex_sport_title_4",
+		"label": "Sport title",
+		"default": "<p>Triathlon</p>"
+	},
+	{
+		"type": "textarea",
+		"id": "enerflex_sport_text_4",
+		"label": "Sport text",
+		"default": "Push harder with support for all movements."
+	},
+	{
+		"type": "richtext",
+		"id": "enerflex_sport_title_5",
+		"label": "Sport title",
+		"default": "<p>Dance</p>"
+	},
+	{
+		"type": "textarea",
+		"id": "enerflex_sport_text_5",
+		"label": "Sport text",
+		"default": "Move quicker and freely without any limitations."
+	},
+	{
+		"type": "richtext",
+		"id": "enerflex_sport_title_6",
+		"label": "Sport title",
+		"default": "<p>Martial</p><p>Arts</p>"
+	},
+	{
+		"type": "textarea",
+		"id": "enerflex_sport_text_6",
+		"label": "Sport text",
+		"default": "Hit faster with more power in each swing."
+	},
+	{
+		"type": "header",
+		"content": "Tested & Proven performance charts"
+	},
+	{
+		"type": "richtext",
+		"id": "chart_section_title_1",
+		"label": "Sport title",
+		"default": "<p>tested & Proven Performance</p><p>Enhancement</p>"
+	},
+	{
+		"type": "text",
+		"id": "chart_title_1",
+		"label": "Chart title 1",
+		"default": "Anaerobic power"
+	},
+	{
+		"type": "image_picker",
+		"id": "chart_image_1",
+		"label": "Chart image"
+	},
+	{
+		"type": "text",
+		"id": "chart_title_2",
+		"label": "Chart title 2",
+		"default": "Cardiorespiratory Endurance"
+	},
+	{
+		"type": "image_picker",
+		"id": "chart_image_2",
+		"label": "Chart image"
+	},
+	{
+		"type": "text",
+		"id": "chart_option_1",
+		"label": "Chart option",
+		"default": "Test resalts with Eneskin"
+	},
+	{
+		"type": "text",
+		"id": "chart_option_2",
+		"label": "Chart option",
+		"default": "Test resalts without Eneskin"
+	},
+	{
+		"type": "richtext",
+		"id": "chart_info",
+		"label": "Chart info",
+		"default": "<p>We put Enerskin to the test and saw what it could really do. The following data was gathered through public health trials and rehabilitation research centers in the United States and South Korea.</p>"
+	},
+	{
+		"type": "header",
+		"content": "Step into the next level of performance"
+	},
+	{
+		"type": "richtext",
+		"id": "chart_section_title_2",
+		"label": "Sport title",
+		"default": "<p>Step into the next level</p><p>of performance</p>"
+	},
+	{
+		"type": "text",
+		"id": "chart_title_3",
+		"label": "Chart title 3",
+		"default": "Basic physical 1"
+	},
+	{
+		"type": "image_picker",
+		"id": "chart_image_3",
+		"label": "Chart image"
+	},
+	{
+		"type": "text",
+		"id": "chart_title_4",
+		"label": "Chart title 4",
+		"default": "Basic physical 2"
+	},
+	{
+		"type": "image_picker",
+		"id": "chart_image_4",
+		"label": "Chart image"
+	},
+	{
+		"type": "richtext",
+		"id": "chart_info_2",
+		"label": "Chart info",
+		"default": "<p>We put Enerskin to the test and saw what it could really do. The following data was gathered through public health trials and rehabilitation research centers in the United States and South Korea.</p>"
+	},
+	{
+		"type": "header",
+		"content": "Brand comparison chart"
+	},
+	{
+		"type": "richtext",
+		"id": "comparison_title",
+		"label": "Comparison chart title",
+		"default": "<p>Brand Comparison Chart</p>"
+	},
+	{
+		"type": "image_picker",
+		"id": "comparison_image",
+		"label": "Chart image"
+	}
+	],
+	"blocks": [
+		{
+			"type": "brand_logo",
+			"name": "Brand Logo",
+			"settings": [
+				{
+				"type": "image_picker",
+				"id": "brand_logo",
+				"label": "Brand logo"
+				}
+			]
+		}
+	]
+}
+
+{% endschema %}

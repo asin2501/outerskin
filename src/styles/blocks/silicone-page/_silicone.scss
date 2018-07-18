@@ -1,0 +1,81 @@
+.template-silicone-new {
+    .content {
+        padding-top: 150px;
+        padding-bottom: 0;
+    }
+}
+
+.silicone {
+    font-size: 17px;
+
+    .h2 {
+        color: #25222E;
+
+        &.title-underline {
+            &::after {
+                content: "";
+                display: block;
+                border-bottom: 1px solid $alt-color;
+                width: 120px;
+                margin-top: 15px;
+
+                @include breakpoint(medium) {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    .btn {
+        min-width: 207px;
+        padding: 11px 33px;
+    }
+}
+
+.silicone__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.silicone__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+
+    @include breakpoint(medium) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.silicone__col {
+    width: 50%;
+    padding: 0 20px;
+    @include breakpoint(medium) {
+        width: 100%;
+    }
+}
+
+.silicone__col--image {
+    @include breakpoint(medium) {
+        order: 2;
+    }
+}
+
+.silicone__subtitle {
+    margin-top: 8px;
+    font-family: $main-font;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $font-gray;
+
+    + * {
+        margin-top: 50px;
+    }
+}

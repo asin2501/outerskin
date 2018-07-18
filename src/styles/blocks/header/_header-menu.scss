@@ -1,0 +1,36 @@
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+
+    @include breakpoint(medium) {
+        left: 200px;
+    }
+}
+
+.header-menu--mobile {
+    //margin-top: 60px;
+    margin-bottom:40px;
+    display: block;
+    text-align: center;
+    @include breakpoint(medium){
+        @media (orientation:landscape) {
+            margin-bottom:0;
+        }
+    }
+
+    .header-menu__item + .header-menu__item {
+        margin-top: 25px;
+
+        @include breakpoint(medium){
+            @media (orientation:landscape) {
+                margin-top:8px;
+            }
+        }
+    }
+}
+

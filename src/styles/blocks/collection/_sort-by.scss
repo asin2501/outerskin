@@ -1,0 +1,36 @@
+.sort-by{
+}
+.sort-by__label{
+    color: $font-gray;
+    margin-right:10px;
+}
+.sort-by__select{
+    border: none;
+    position: relative;
+    font-size: 1.1rem;
+    cursor: pointer;
+    option {
+        outline: none;
+    }
+}
+.sort-by__replacer {
+    display: block;
+    position: absolute;
+    top: 130%;
+    right: 5px;
+    border: 1px solid $font-gray;
+    background: white;
+    padding: 20px 30px 20px 20px;
+    li {
+        padding-bottom: 3px;
+        cursor: pointer;
+    }
+    li:hover {
+        color: $alt-color;
+        transition: color .15s ease-in;
+    }
+    
+    @include breakpoint(extra-small) {
+        top: 100%;
+    }
+}

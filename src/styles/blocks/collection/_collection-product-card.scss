@@ -1,0 +1,110 @@
+.collection-product-card {
+    font-family: $main-font;
+    cursor: pointer;
+    transition: box-shadow 400ms;
+    box-shadow: 0 6px 19px 0 rgba(0, 0, 0, 0);
+
+    .product-card__title{
+        transition: color 300ms;
+        color: $dark-bg;
+    }
+
+    .collection-product-card__thumbnails {
+
+        max-width: 201px;
+    }
+}
+
+.product-card__img-bg{
+    padding-top:100%;
+    background-size:cover;
+    background-position: 50% 50%;
+}
+
+.collection-product-card__image-link {
+    display: block;
+}
+
+.collection-product-card__img {
+    padding-top: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: 0;
+}
+
+.collection-product-card__bottom {
+    padding-top: 16px;
+    padding-left: 35px;
+    padding-right: 35px;
+    height: 215px;
+
+    @include breakpoint(medium){
+        padding-right:15px;
+        padding-left:15px;
+    }
+
+    @include breakpoint(mobile){
+        height: 180px;
+        padding-right:34px;
+        padding-left:34px;
+    }
+}
+
+.bc-sf-filter-right-col.bc-sf-filter-right-col #bc-sf-filter-products {
+    width: auto;
+    float: none;
+}
+
+.collection-product-card--active {
+    position: relative;
+    box-shadow: 0 6px 19px 0 rgba(0, 0, 0, 0.12);
+    z-index: 1;
+
+    .collection-product-card__bottom {
+        background-color: #fff;
+    }
+
+    .collection-product-card__thumbnails {
+        max-height: 62px;
+    }
+
+    //.product-card__title{
+    //    color: $alt-color;
+    //}
+}
+
+.collection-product-card__thumbnails {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 400ms;
+}
+
+.collection-product-card__thubnail-col {
+    border: 1px solid transparent;
+    margin-bottom: 12px;
+}
+
+.collection-product-card__thubnail-img {
+    width: 48px;
+    height: 48px;
+    background-size: 100px;
+    background-position: 50% 50%;
+
+    @include breakpoint(mobile-landscape){
+        width:40px;
+        height:40px;
+    }
+
+    @include breakpoint(mobile){
+        width:48px;
+        height:48px;
+    }
+}
+
+.collection-product-card__thubnail-col--active {
+    border: 1px solid $alt-color;
+
+}

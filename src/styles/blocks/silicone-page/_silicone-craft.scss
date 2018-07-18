@@ -1,0 +1,135 @@
+.silicone-craft {
+    position: relative;
+    margin-top: 230px;
+    padding-bottom: 260px;
+    background-color: $dark-bg;
+    color: #fff;
+
+    .h2 {
+        color: #fff;
+    }
+
+    .btn {
+        margin-top: 40px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 28.5%;
+        width: 44vw;
+        height: 44vw;
+        background-image: url(celtec-shape-02.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        @include breakpoint(medium) {
+            display: none;
+        }
+    }
+
+    @include breakpoint(medium) {
+        margin-top: 100px;
+        padding-bottom: 200px;
+    }
+
+    @include breakpoint(extra-small) {
+        padding-bottom: 50px;
+    }
+}
+
+.silicone-craft__container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1210px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include breakpoint(medium) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+}
+
+.silicone-craft__image,
+.silicone-craft__content {
+    width: 50%;
+
+    @include breakpoint(medium) {
+        width: 100%;
+    }
+}
+
+.silicone-craft__image {
+    margin-top: -92px;
+    padding-left: 45px;
+
+    img {
+        display: block;
+    }
+
+    @include breakpoint(medium) {
+        order: 2;
+        margin-top: 0;
+        padding-left: 0;
+    }
+}
+
+.silicone-craft__content {
+    max-width: 430px;
+    padding-top: 100px;
+    padding-left: 58px;
+
+    @include breakpoint(medium) {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 50px;
+    }
+}
+
+.silicone-craft__text {
+    margin-top: 50px;
+    padding-left: 5px;
+
+    p {
+        max-width: 350px;
+        line-height: 2.1;
+        letter-spacing: 0.1px;
+    }
+
+    p + .silicone-craft__text-title {
+        margin-top: 35px;
+    }
+
+    @include breakpoint(medium) {
+        padding-left: 0;
+        p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.silicone-craft__text-title {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: $main-font;
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: $alt-color;
+
+    @include breakpoint(extra-small) {
+        font-size: 27px;
+    }
+}

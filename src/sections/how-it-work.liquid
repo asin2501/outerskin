@@ -1,0 +1,58 @@
+<section class="how-it-works">
+    <div class="how-it-works__leftside">
+        <h2 class="how-it-works__title">{{ section.settings.title }}</h2>
+        <div class="how-it-works__main-img" style="background-image:url({{ section.settings.mainimage  | img_url: 'master' }});"></div>
+    </div>
+    <div class="how-it-works__rightside">
+        <h2 class="how-it-works__title how-it-works__title--tablet">{{ section.settings.title }}</h2>
+        <a class="how-it-works__video-preview js-youtube-popup" href="{{ section.settings.video_url }}">
+            <span class="play-btn how-it-works__play-btn">
+
+            </span>
+            <img src="{{ section.settings.videopreview | img_url: 'master' }}" alt="">
+        </a>
+        <div class="how-it-works__description">{{ section.settings.description }}</div>
+    </div>
+</section>
+{% schema %}
+    {
+        "name": "How it works",
+        "settings":[
+            {
+                "type":"richtext",
+                "label":"Title",
+                "id":"title",
+                "default":"<p>HOW</p><p>ENERSKIN</p><p>WORKS</p>"
+            },
+            {
+                "type":"image_picker",
+                "label":"Main Image",
+                "id":"mainimage"
+            },
+            {
+                "type":"image_picker",
+                "label":"Videopreview",
+                "id":"videopreview"
+            },
+            {
+                "type":"video_url",
+                "label":"Video url",
+                "id":"video_url",
+                "accept": ["youtube", "vimeo"],
+                "default": "https://www.youtube.com/watch?v=gUg7stUIoZg"
+            },
+            {
+                "type":"richtext",
+                "label":"Description",
+                "id":"description",
+                "default":"<p>Enerskin is the only athletic gear of its kind on the market.</p><p>Powered by innovative technology, our cutting-edge products elevate your game in every aspect – from performance and resilience to endurance and recovery.</p>"
+            }
+        ],
+        "presets":[
+            {
+                "category":"Homepage",
+                "name":"How It works?"
+            }
+        ]
+    }
+{% endschema %}

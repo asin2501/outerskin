@@ -1,0 +1,54 @@
+.mobile-btn{
+    position: relative;
+    width:20px;
+    height:16px;
+    display: none;
+    z-index:11;
+
+    @include breakpoint(medium){
+        display: block;
+    }
+}
+
+.mobile-btn__line{
+    width:100%;
+    display: block;
+    position: absolute;
+    border-top:1px solid #000;
+
+    &:nth-child(1){
+        left:0;
+        top:0;
+
+        transition: top 300ms, transform 300ms;
+
+        .mobile-menu-opened &{
+            top: 6px;
+            transform: rotateZ(45deg);
+        }
+    }
+
+    &:nth-child(2){
+        top: 7px;
+        left:0;
+
+        transition: opacity 300ms, transform 300ms;
+
+        .mobile-menu-opened & {
+            transform: translateX(20px);
+            opacity: 0;
+        }
+    }
+
+    &:nth-child(3){
+        left:0;
+        top:14px;
+
+        transition: top 300ms, transform 300ms;
+
+        .mobile-menu-opened & {
+            top: 6px;
+            transform: rotateZ(-45deg);
+        }
+    }
+}

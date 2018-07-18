@@ -1,0 +1,47 @@
+.silicone-box {
+    padding-left: 63px;
+    padding-right: 63px;
+    padding-top: 77px;
+    padding-bottom: 80px;
+    background-color: #fff;
+    box-shadow: 0 52px 119px 0 rgba(0,0,0,0.2);
+    font-size: 17px;
+
+    p {
+        line-height: 2.1;
+    }
+
+    p + .silicone-box__title {
+        margin-top: 50px;
+    }
+
+    &.silicone-box--image {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 45px;
+        padding-bottom: 35px;
+    }
+
+    @include breakpoint(extra-small) {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        font-size: 15px;
+    }
+}
+
+.silicone-box__title {
+    margin-bottom: 13px;
+    font-size: 30px;
+    font-family: $main-font;
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: $alt-color;
+
+    @include breakpoint(extra-small) {
+        font-size: 27px;
+    }
+}

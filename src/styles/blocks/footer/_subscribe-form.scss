@@ -1,0 +1,232 @@
+.subscribe-form{
+    @include breakpoint(extra-small){
+        position: static;
+        transform: none;
+        //margin-bottom:20px;
+
+        .container{
+            padding-right:0;
+            padding-left:0;
+        }
+    }
+}
+
+.subscribe-form__inner {
+    padding-right: 85px;
+    padding-left: 95px;
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-size:cover;
+    background-position: 50% 50%;
+
+    @include breakpoint(small){
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+
+    @include breakpoint(extra-small){
+        display: block;
+        padding-top:45px;
+        padding-bottom:45px;
+    }
+
+    @include breakpoint(mobile-landscape){
+        padding-right:20px;
+        padding-left:20px;
+    }
+
+
+}
+
+.subscribe-form__title {
+    font-size: 40px;
+    letter-spacing: 5.4px;
+    line-height: 32px;
+    font-weight: normal;
+    text-transform: uppercase;
+    max-width: 280px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+
+    @include breakpoint(small){
+        font-size: 36px;
+        padding-top: 0;
+        line-height: 28px;
+        letter-spacing: 4px;
+        padding-bottom:0;
+    }
+
+    @include breakpoint(extra-small){
+        max-width: 100%;
+        text-align: center;
+        margin-bottom:5px;
+        line-height:1;
+    }
+}
+
+.subscribe-form__subtitle {
+    color: $alt-color;
+    font-family: $alt-font;
+    font-size: 15px;
+    
+    @include breakpoint(small){
+        font-size:14px;
+    }
+
+    @include breakpoint(extra-small){
+        text-align: center;
+    }
+}
+
+.subscribe-form__form {
+    width: 100%;
+    position: relative;
+
+    @include breakpoint(extra-small){
+        display: block;
+        max-width: 400px;
+        margin-right:auto;
+        margin-left:auto;
+    }
+
+}
+
+.subscribe-form__btn {
+    width: 162px;
+    position: absolute;
+    right: 37px;
+    top: 22px;
+    background-color: $alt-color;
+    color: #fff;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-family: $main-font;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @include breakpoint(small){
+        right: 22px;
+        width: 152px;
+    }
+
+    @include breakpoint(extra-small){
+        position: static;
+        width:100%;
+    }
+}
+
+.subscribe-form__input {
+    height: 92px;
+    width: 100%;
+    padding-left: 37px;
+    padding-right: 220px;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family:$main-font;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color:#000;
+    transition: color 300ms;
+
+    @include placeholder{
+        opacity: 0.5;
+    }
+
+    @include breakpoint(small){
+        padding-left: 22px;
+        padding-right: 180px;
+    }
+
+    @include breakpoint(extra-small){
+        height: 72px;
+        text-align: center;
+        padding-right:22px;
+    }
+
+    .formchimp-submit--error &{
+        color: red;
+    }
+}
+
+.subscribe-form__left {
+    min-width: 370px;
+    padding-right: 20px;
+
+    @include breakpoint(small){
+        min-width: 240px;
+        padding-right: 20px;
+    }
+
+    @include breakpoint(extra-small){
+        margin-bottom:30px;
+    }
+}
+
+
+
+.mc-response{
+    position: absolute;
+    top: 100%;
+    margin-top:10px;
+    left:0;
+    right:0;
+    color: #fff;
+    a{
+        color: #000;
+        text-decoration: underline;
+    }
+}
+
+.mc-error {
+    .mc-response {
+        color: red;
+
+    }
+}
+
+.subscribe-form__error{
+    position: absolute;
+    background-color: #fff;
+    left: 42px;
+    box-shadow: 0 8px 48px 0 rgba(0, 0, 0, 0.2);
+    top: 100%;
+    margin-top: -20px;
+    font-family: $alt-font;
+    font-size: 14px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 18px;
+        height: 18px;
+        margin-right: 15px;
+        fill: $alt-color;
+        * {
+            fill: $alt-color;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent #ffffff transparent;
+    }
+}

@@ -1,0 +1,241 @@
+.size-popup {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(#000, 0.5);
+    z-index: 200;
+    overflow-y: auto;
+    display: none;
+
+}
+
+.size-popup__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+
+    * {
+        transition: fill 300ms;
+    }
+
+    &:hover {
+        * {
+            fill: #000;
+        }
+    }
+
+    @include breakpoint(extra-small){
+        right:20px;
+        top:20px;
+    }
+
+    @include breakpoint(mobile-landscape){
+        right:10px;
+        top:10px;
+    }
+}
+
+.size-popup__inner{
+    padding-top: 110px;
+    padding-bottom: 110px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @include breakpoint(medium) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include breakpoint(mobile-landscape) {
+        padding-right:10px;
+        padding-left:10px;
+    }
+}
+
+.size-popup__container {
+    position: relative;
+    max-width: 1110px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
+    padding-left: 134px;
+    padding-right: 134px;
+    padding-top: 110px;
+    padding-bottom: 100px;
+
+    @include breakpoint(medium) {
+        padding-right: 90px;
+        padding-left: 90px;
+    }
+
+    @include breakpoint(small) {
+        padding-top:80px;
+        padding-bottom:30px;
+        padding-right:60px;
+        padding-left:60px;
+    }
+
+    @include breakpoint(extra-small) {
+        padding-right:30px;
+        padding-left:30px;
+    }
+
+    @include breakpoint(mobile-landscape) {
+        padding-right:15px;
+        padding-left:15px;
+    }
+}
+
+
+.size-popup__header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.size-popup__item {
+    width: 50%;
+    font-size: 70px;
+    letter-spacing: 10.34px;
+    line-height: 1;
+    color: $font-gray;
+    text-align: center;
+    font-family: $main-font;
+    text-transform: uppercase;
+    transition: color 300ms;
+    cursor: pointer;
+
+    &.size-popup__item--active{
+        color: #000;
+    }
+
+    @include breakpoint(small){
+        font-size:50px;
+        letter-spacing:6px;
+    }
+
+    @include breakpoint(extra-small){
+        font-size:40px;
+        letter-spacing:3px;
+    }
+
+    @include breakpoint(mobile-landscape){
+        font-size:30px;
+        letter-spacing:1px;
+    }
+}
+
+.size-popup__cat-header {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    background-color: #000;
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 10px;
+    letter-spacing: 5.4px;
+    line-height: 32px;
+    padding-top:42px;
+    padding-bottom:42px;
+    padding-right:35px;
+    padding-left:35px;
+    font-family:$main-font;
+
+    @include breakpoint(medium) {
+        padding-right:25px;
+        padding-left:25px;
+        font-size:30px;
+    }
+
+    @include breakpoint(small){
+        padding-top:20px;
+        padding-bottom:20px;
+        font-size:20px;
+        padding-right:0;
+        padding-left:0;
+    }
+
+    @include breakpoint(extra-small){
+        letter-spacing:1px;
+    }
+}
+
+.size-popup__subcategory{
+    cursor: pointer;
+    transition: color 300ms;
+    padding-top:12px;
+    padding-bottom:0;
+    padding-right:10px;
+    padding-left:10px;
+    margin-left:12px;
+    margin-right:12px;
+
+    &:not(.size-popup__subcategory--active):hover {
+        color: $font-gray;
+    }
+
+    @include breakpoint(medium){
+        margin-left:6px;
+        margin-right:6px;
+    }
+
+    @include breakpoint(small){
+        padding-top:4px;
+    }
+
+    @include breakpoint(extra-small){
+        margin-left:0;
+        margin-right:0;
+    }
+
+    @include breakpoint(mobile-landscape){
+        font-size:18px;;
+        padding-right:8px;
+        padding-left:8px;
+    }
+}
+
+.size-popup__subcategory--active{
+    color: $alt-color;
+}
+
+.size-popup__header{
+    margin-bottom: 40px;
+
+
+    @include breakpoint(small){
+        margin-bottom:20px;
+    }
+
+    @include breakpoint(mobile-landscape){
+        margin-bottom:10px;
+    }
+}
+
+.bc-sf-filter-option-range-amount-split{
+    width:16px!important;
+}
+
+.size-popup__footer-title {
+    font-size: 30px;
+    line-height: 1.5;
+    font-family: $main-font;
+    text-transform: uppercase;
+    font-weight:400;
+}
+
+.size-popup__footer-description {
+    font-size: 15px;
+    line-height: 1.8;
+
+    a{
+        color: $alt-color;
+    }
+}

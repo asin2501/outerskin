@@ -1,0 +1,169 @@
+.how-it-works {
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-image: url('./how-it-works-bottom.png');
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    align-items: flex-end;
+    background-size: 62%;
+
+    @media (max-width: 1700px) {
+        background-size: 64%;
+    }
+
+    @include breakpoint(small) {
+        padding-top: 40px;
+    }
+
+    @include breakpoint(extra-small) {
+        padding-bottom: 30px;
+        padding-right: 40px;
+        padding-left: 40px;
+        background-image: none;
+    }
+
+    @include breakpoint(mobile-landscape) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.how-it-works__rightside {
+    flex-basis: 350px;
+    flex-shrink: 0;
+    padding-bottom: 70px;
+    margin-left: 40px;
+
+    @include breakpoint(medium) {
+        margin-left: 0;
+    }
+
+    @include breakpoint(small) {
+        padding-bottom: 30px;
+        flex-basis: 300px;
+    }
+
+    @include breakpoint(extra-small) {
+        flex-basis: 450px;
+        flex-shrink: inherit;
+    }
+}
+
+.how-it-works__video-preview {
+    position: relative;
+    box-shadow: 0 28px 64px 0 rgba(0, 0, 0, 0.34);
+    margin-bottom: 46px;
+    cursor: pointer;
+    background-color: #000;
+
+    &:hover {
+        img {
+            opacity: 0.7;
+        }
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        transition: opacity 450ms;
+    }
+
+    @include breakpoint(small) {
+        margin-bottom: 26px;
+    }
+
+    @include breakpoint(extra-small) {
+        margin-bottom: 46px;
+    }
+}
+
+.how-it-works__leftside {
+    position: relative;
+    width: 625px;
+
+    @include breakpoint(extra-small) {
+        display: none;
+    }
+}
+
+.how-it-works__main-img {
+    position: relative;
+    padding-top: 125%;
+    background-size: contain;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+.how-it-works__title {
+    font-size: 70px;
+    letter-spacing: 10px;
+    line-height: 1;
+    font-family: $main-font;
+    font-weight: 400;
+    position: absolute;
+    z-index: 2;
+    left: 379px;
+    top: 66px;
+
+
+    @include breakpoint(medium) {
+        font-size: 50px;
+        letter-spacing: 5px;
+        &:not(.how-it-works__title--tablet) {
+            display: none;
+        }
+    }
+
+    @include breakpoint(small) {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    @include breakpoint(extra-small) {
+        font-size: 70px;
+        margin-bottom: 20px;
+    }
+
+    @include breakpoint(mobile-landscape) {
+        font-size: 50px;
+    }
+}
+
+.how-it-works__description {
+    p + p {
+        margin-top: 40px;
+        @include breakpoint(small) {
+            margin-top: 20px;
+        }
+    }
+
+    font-size: 17px;
+    line-height: 2;
+
+    @include breakpoint(small) {
+        line-height: 1.5;
+    }
+}
+
+.how-it-works__title--tablet {
+    position: static;
+    display: none;
+    margin-bottom: 30px;
+
+    @include breakpoint(medium) {
+        display: block;
+    }
+}
+
+.how-it-works__play-btn {
+    position: absolute;
+    margin-left: -25px;
+    margin-top: -25px;
+    top: 50%;
+    left: 50%;
+    z-index:1;
+
+}

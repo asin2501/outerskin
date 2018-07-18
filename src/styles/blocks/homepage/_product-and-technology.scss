@@ -1,0 +1,128 @@
+.product-and-technology {
+    background-color: $dark-bg;
+    @include breakpoint(extra-small) {
+        background-color: $bg-gray;
+    }
+}
+
+.product-and-technology__inner {
+    padding-right: 150px;
+    padding-left: 150px;
+    max-width: 1100px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+
+    @include breakpoint(extra-small) {
+        background-color: $dark-bg;
+    }
+
+    img {
+        display: block;
+    }
+
+    @include breakpoint(extra-small) {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+
+    @include breakpoint(small-tavlet-portrait) {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    @include breakpoint(mobile-landscape) {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+.product-and-technology__img {
+    width: 100%;
+}
+
+.product-and-technology__point {
+    @include breakpoint(mobile-landscape) {
+        .point__title{
+            display: none;
+        }
+    }
+    //@include breakpoint(mobile) {
+    //    display: none;
+    //}
+
+    &:nth-child(1) {
+        left: 60%;
+        top: 23%;
+
+        @include breakpoint(extra-small) {
+
+        }
+    }
+
+    &:nth-child(2) {
+        left: 36%;
+        top: 27%;
+        @include breakpoint(extra-small) {
+            left: 28%;
+        }
+    }
+    &:nth-child(3) {
+        left: 36%;
+        top: 58%;
+        @include breakpoint(extra-small) {
+            left: 28%;
+        }
+    }
+    &:nth-child(4) {
+        left: 60%;
+        top: 64%;
+    }
+}
+
+.product-and-technology__list {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    display: none;
+
+    @include breakpoint(extra-small) {
+        display: block;
+    }
+}
+
+.product-and-technology__mob-item {
+    display: flex;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    align-items: center;
+    
+    .technology-popup--mob {
+        margin-left: 20px;
+        @include breakpoint(mobile){
+            margin-left: 0px;
+        }
+    }
+
+    &:nth-last-child(odd) {
+        flex-direction: row-reverse;
+        text-align: right;
+
+        .technology-popup--mob {
+            margin-left: 0;
+            margin-right: 20px;
+
+            @include breakpoint(mobile){
+                margin-right: 0px;
+            }
+        }
+
+        .technology-popup--mob::before {
+            right: auto;
+            left: 100%;
+            transform: rotateZ(180deg);
+        }
+    }
+}

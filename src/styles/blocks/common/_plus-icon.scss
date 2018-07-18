@@ -1,0 +1,24 @@
+.plus-icon{
+    width:10px;
+    height:10px;
+}
+
+.plus-icon__vertical{
+    position: absolute;
+    top:0;
+    right:4px;
+    height:10px;
+    border-left:2px solid $alt-color;
+}
+
+.plus-icon__horisontal{
+    position: absolute;
+    top:4px;
+    right:0;
+    width:10px;
+    border-top:2px solid $alt-color;
+}
+
+.active .plus-icon__vertical{
+    opacity: 0;
+}

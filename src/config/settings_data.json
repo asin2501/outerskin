@@ -1,0 +1,987 @@
+{
+  "current": {
+    "type_base_size": "16px",
+    "color_primary": "#fcaf17",
+    "color_body_text": "#000",
+    "social_sharing_blog": true,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "https:\/\/twitter.com\/enerskin",
+    "social_facebook_link": "https:\/\/www.facebook.com\/enerskin",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/enerskin\/",
+    "social_snapchat_link": "",
+    "social_tumblr_link": "",
+    "social_youtube_link": "https:\/\/youtube.com\/enerskin",
+    "social_vimeo_link": "",
+    "cart_notes_enable": false,
+    "favicon": "",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Enerskin-compression-logo-homepage.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Roboto",
+    "checkout_body_font": "Roboto",
+    "checkout_accent_color": "#333333",
+    "checkout_button_color": "#fcaf17",
+    "checkout_error_color": "#ff6d6d",
+    "color_tertiary": "#ff5135",
+    "color_secondary": "#1c1c1c",
+    "color_quaternary": "#ffffff",
+    "topbar_enable": true,
+    "topbar_text": "Free shipping on orders of $99+",
+    "favicon_enable": true,
+    "main_menu": "",
+    "footer_menu_mobile_enable": true,
+    "footer_menu_1": "get-help",
+    "footer_menu_2": "usage",
+    "footer_menu_3": "technology",
+    "footer_menu_4": "shop",
+    "hero_enable": true,
+    "hero_1_enable": false,
+    "hero_1_headline": "Test",
+    "hero_1_headline_color": "rgba(0,0,0,0)",
+    "hero_1_subline": "Test",
+    "hero_1_subline_color": "rgba(0,0,0,0)",
+    "hero_1_button": "Test",
+    "hero_1_button_1_color": "rgba(0,0,0,0)",
+    "hero_1_button_1_font_color": "rgba(0,0,0,0)",
+    "hero_1_link": "https:\/\/www.enerskin.com\/collections\/all",
+    "hero_1_button_two": "",
+    "hero_1_button_2_color": "#474747",
+    "hero_1_button_2_font_color": "#ffffff",
+    "hero_1_link_two": "",
+    "hero_1_alignment": "hero__content--center",
+    "hero_2_enable": true,
+    "hero_2_headline": "E75 COMPRESSION",
+    "hero_2_headline_color": "#ffffff",
+    "hero_2_subline": "The Ultimate In Technology",
+    "hero_2_subline_color": "#9a9a9a",
+    "hero_2_button": "Shop Now",
+    "hero_2_button_1_color": "#fcaf17",
+    "hero_2_button_1_font_color": "#ffffff",
+    "hero_2_link": "\/collections\/e75",
+    "hero_2_button_two": "",
+    "hero_2_button_2_color": "#1c1c1c",
+    "hero_2_button_2_font_color": "#ffffff",
+    "hero_2_link_two": "",
+    "hero_2_alignment": "hero__content--center",
+    "hero_3_enable": true,
+    "hero_3_headline": "SILICONE TECH",
+    "hero_3_headline_color": "#ffffff",
+    "hero_3_subline": "",
+    "hero_3_subline_color": "#ffffff",
+    "hero_3_button": "LEARN MORE",
+    "hero_3_button_1_color": "#fcaf17",
+    "hero_3_button_1_font_color": "#ffffff",
+    "hero_3_link": "\/pages\/tech",
+    "hero_3_button_two": "",
+    "hero_3_button_2_color": "#1c1c1c",
+    "hero_3_button_2_font_color": "#ffffff",
+    "hero_3_link_two": "",
+    "hero_3_alignment": "hero__content--center",
+    "featured_video_enable": false,
+    "featured_video_headline": "",
+    "featured_video_id": "191877709",
+    "how_it_works_enable": true,
+    "how_it_works_headline": "How Enerskin Works",
+    "how_it_works_subline_mobile": "Enerskin’s cutting-edge products fuse the performance of compression gear with the protection of medical-grade silicon taping to produce the most advanced compression available.",
+    "how_it_works_subline": "Enerskin is the only athletic gear of its kind on the market. Powered by innovative technology, our cutting-edge products elevate your game in every aspect – from performance and resilience to endurance and recovery.",
+    "how_it_works_video_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/1431\/5122\/files\/homepage-360.mp4",
+    "how_it_works_breakdown_description_1_headline": "<a href=\"\/pages\/silicone\">Precision Silicone Muscle Mapping<\/a>",
+    "how_it_works_breakdown_description_1_text_mobile": "The E75 uses the latest research in sports medicine to develop the most effective muscle mapping support tape.  The patented silicon support tape takes the guesswork out of using kinesiology tape, offering enhanced performance and optimal support to the most critical muscles and joints.",
+    "how_it_works_breakdown_description_1_text": "Silicone + Compression. The E75 uses the latest research in sports medicine to develop the most effective muscle mapping support tape.  The patented silicone support tape takes the guesswork out of using kinesiology tape, offering enhanced performance and optimal support to the most critical muscles and joints.",
+    "how_it_works_breakdown_description_2_headline": "<a href=\"\/pages\/patents\">FDA Approved<\/a>",
+    "how_it_works_breakdown_description_2_text_mobile": "The new E75 collection has received FDA approval.  The certification validates the benefits offered by the E75 and raises the collection to the industries leading compression gear",
+    "how_it_works_breakdown_description_2_text": "The new E75 collection has received FDA approval.  The certification validates the benefits offered by the E75 and raises the collection to the industries leading compression gear",
+    "how_it_works_breakdown_description_3_headline": "<a href=\"\/pages\/tech\">Updated Design<\/a>",
+    "how_it_works_breakdown_description_3_text_mobile": "Better fit—better performance.  You spoke and we listened, the E75 is easier to wear!  Our revolutionary new Enerflex fabric makes getting it on and off a breeze.  For superior comfort even during the hardest workouts, with moisture and odor wicking that keeps your skin cool, dry, and fresh.",
+    "how_it_works_breakdown_description_3_text": "Better fit—better performance.  You spoke and we listened, the E75 is easier to wear!  Our revolutionary new Enerflex fabric makes getting it on and off a breeze.  For superior comfort even during the hardest workouts, with moisture and odor wicking that keeps your skin cool, dry, and fresh.",
+    "how_it_works_breakdown_description_4_headline": "<a href=\"\/pages\/performance\">New! Celtec Technology<\/a>",
+    "how_it_works_breakdown_description_4_text_mobile": "Germanium 23 Infused\nThe new E75 Collection is infused with Germanium to increase circulation, and reduce pain, stiffness, swelling, and fatigue.  The Germanium in the E75 activates on contact with skin, increasing circulation within just minutes, to help aid performance and recovery.",
+    "how_it_works_breakdown_description_4_text": "Germanium 23 Infused\nThe new E75 Collection is infused with Germanium to increase circulation, and reduce pain, stiffness, swelling, and fatigue.  The Germanium in the E75 activates on contact with skin, increasing circulation within just minutes, to help aid performance and recovery.",
+    "featured_collections_enable": true,
+    "featured_collection_1_headline": "Women",
+    "featured_collection_1_link": "\/collections\/e75-womens-compression-clothing",
+    "featured_collection_2_headline": "Men",
+    "featured_collection_2_link": "\/collections\/e75-mens-compression-clothing",
+    "testimonials_enable": true,
+    "testimonial_1_content": "“Playing for the NFL all I want to do is improve as an athlete. Enerskin helps me do just that. The second I’m on the field I know I can push myself through fatigue, soreness and limitation to perfect my body and my game.\"",
+    "testimonial_1_name": "Marques Colston",
+    "testimonial_1_title": "NFL PLAYER",
+    "testimonial_2_content": "“For any athlete the most important factor in training is being ready for the next day, both physically and mentally. With Enerskin I’m always ready to give my all every single day.”",
+    "testimonial_2_name": "Kateryna Bondarenko",
+    "testimonial_2_title": "PRO TENNIS PLAYER",
+    "testimonial_3_content": "“The greatest concern for any fighter is being faster.The Enerskin knee sleeves gives me a spring to my legs; helping me to go exactly where I need to be and then get the right push for the perfect contact.”",
+    "testimonial_3_name": "Randy Brown",
+    "testimonial_3_title": "UFC FIGHTER",
+    "featured_in_enable": true,
+    "technology_banner_headline": "<h1>Enerskin Tech<\/h1>",
+    "technology_section_1_headline": "Silicone",
+    "technology_section_1_content": "Enerskin’s cutting-edge products fuse the performance of compression gear with the protection of medical-grade taping to produce the only silicone taping compression hybrid on the market today.",
+    "technology_section_1_link": "\/pages\/silicone",
+    "technology_section_2_headline": "Gastex",
+    "technology_section_2_content": "GASTEX® is what happens when performance meets technology. Designed specifically for Enerskin, the GASTEX® trio of futuristic materials work together to form the ultimate compression wraps and gear.",
+    "technology_section_2_link": "\/pages\/gastex",
+    "technology_section_3_headline": "Performance",
+    "technology_section_3_content": "Enerskin’s one-of-a-kind technology revolutionizes compression gear. Our medical-grade taping conforms to the contours of your body, enhancing your performance while stabilizing your muscles.",
+    "technology_section_3_link": "\/pages\/performance",
+    "technology_section_4_headline": "Patents",
+    "technology_section_4_content": "Developed to improve on existing taping, sport taping, and compression performance gear. Enerskin is the first product that combines the strengths of all three technologies in one easily wearable gear.",
+    "technology_section_4_link": "\/pages\/patents",
+    "technology_performance_banner_headline": "Performance",
+    "technology_performance_banner_content": "Push the borders of limitation with the next generation in compression wear.",
+    "technology_performance_description_1_content": "The technology behind Enerskin is one-of-a-kind hybrid product that revolutionizes compression gear. Enerskin fits your muscles like a second skin supporting your ligaments and optimizing blood flow; all of which enhances your performance while stabilizing your muscles to prevent unwanted injuries. Engineered specifically to support key muscle groups and promote uninhibited flexibility, providing stability without hindering performance; Enerskin is the most innovative compression gear on the market today.",
+    "technology_performance_icon_1_content": "10 times more<br \/>\r\neffective recovery",
+    "technology_performance_icon_2_content": "Stabilize and<br \/>\r\nsupport joints",
+    "technology_performance_icon_3_content": "Reduce swelling<br \/>\r\nand soreness",
+    "technology_performance_icon_4_content": "Improve dynamic<br \/>\r\nbalance and endurance",
+    "technology_performance_section_1_headline": "Run",
+    "technology_performance_section_1_content": "Run longer with reduced fatigue and cramps.",
+    "technology_performance_section_2_headline": "Basketball",
+    "technology_performance_section_2_content": "Shoot quicker with responsive muscle control.",
+    "technology_performance_section_3_headline": "Fitness",
+    "technology_performance_section_3_content": "Lift more with faster recovery and less soreness.",
+    "technology_performance_section_4_headline": "Triathlon",
+    "technology_performance_section_4_content": "Push harder with support for all movements.",
+    "technology_performance_section_5_headline": "Fight",
+    "technology_performance_section_5_content": "Hit faster with more power in each swing.",
+    "technology_performance_section_6_headline": "Dance",
+    "technology_performance_section_6_content": "Move quicker and freely without any limitations.",
+    "technology_performance_description_2_content": "The technology behind Enerskin is one-of-a-kind hybrid product that revolutionizes compression gear. Enerskin fits your muscles like a second skin supporting your ligaments and optimizing blood flow; all of which enhances your performance while stabilizing your muscles to prevent unwanted injuries. Engineered specifically to support key muscle groups and promote uninhibited flexibility, providing stability without hindering performance; Enerskin is the most innovative compression gear on the market today.",
+    "technology_silicone_banner_headline": "Silicone",
+    "technology_silicone_banner_content": "Patented medical-grade silicone taping technology",
+    "technology_silicone_description_1_content": "Thanks to our patented silicone printing technology, Enerskin combines the stability of therapeutic taping with the durability of compression clothing to form the ultimate performance gear. Enerskin is the only gear of its kind on the market. Its medical-grade silicone taping supports your muscles, joints and ligaments, keeping them firmly in place as you work hard to stay in the game. Ideal for athletes recovering from injuries, Enerskin helps you focus on achieving your full potential.",
+    "technology_silicone_story_title": "Story",
+    "technology_silicone_story_content": "Enerskin’s silicone taping design is informed by medical and clinical studies on muscle performance. Each Enerskin product has a unique taping pattern to optimize the purpose of that product.",
+    "technology_silicone_muscle_title": "Muscle",
+    "technology_silicone_muscle_content": "Perfectly contoured to the muscles of your body, Enerskin’s silicone taping provides pain relief and optimal muscular protection. Enerskin’s sleek design minimizes discomfort and constriction associated with heavy, bulky braces..",
+    "technology_silicone_printing_title": "Printing",
+    "technology_silicone_printing_content": "Our patented silicone printing technology allows for multiple layers of silicone taping to be printed directly onto the Gastex® compression fabric. The result is a more durable product that’s made to last.",
+    "technology_silicone_compression_title": "Compression",
+    "technology_silicone_compression_content": "Silicone taping printed onto the Gastex® fabric increases the level of compression - up to 200% more than typical compression gear - and prevents the fabric from overstretching, so compression never diminishes.",
+    "technology_silicone_craft_title": "Craft",
+    "technology_silicone_craft_content": "Each Enerskin product is made with the user’s experience in mind. Thoughtfully designed and carefully crafted; the precision that goes into each product elevates your game wherever you play.",
+    "technology_silicone_function_title": "Function",
+    "technology_silicone_function_content": "With Enerskin, you’ll never sacrifice performance for protection. Enerskin lets athletes experience the benefits of therapeutic taping in a reusable form that saves money and doesn't damage their skin.",
+    "technology_gastex_banner_headline": "Gastex",
+    "technology_gastex_banner_content": "Practical an versatile, the next step in compression wear",
+    "technology_gastex_description_1_content": "Designed specifically for Enerskin, GASTEX® is a revolutionary fabric comprised of three unique materials; Cation, Lycra® and Silicone, which work in tandem with one another to create the ultimate form-fitting compression gear. GASTEX® is durable, yet completely elastic; offering maximum flexibility and support without compromising mobility and speed. With superior resistance to the elements, a high thread count and a sleek design, Gastex® is the fabric of the future.",
+    "technology_gastex_cation_title": "75%",
+    "technology_gastex_cation_subtitle": "CATION<br \/>\r\n[Polyester +<br \/>\r\nRayon ]",
+    "technology_gastex_cation_content": "Cation molds to your body’s unique form while keeping you cool. This special balance of ventilation and elasticity comes from a complex polyester-rayon combo. Don’t let its glossy finish and vibrant colors fool you; support and breathability are the name of the game.",
+    "technology_gastex_lycra_title": "25%",
+    "technology_gastex_lycra_subtitle": "Xtra Life<br \/>\r\nLYCRA&reg;<br \/>\r\nFiber",
+    "technology_gastex_lycra_content": "Xtra Life Lycra® maximizes protection without sacrificing movement. It repels chlorine 10x better than the typical Lycra fiber and allows for full, unrestricted range of motion with unparalleled durability.",
+    "technology_gastex_silicone_title": "+a",
+    "technology_gastex_silicone_subtitle": "Next-gen<br \/>\r\nSilicone",
+    "technology_gastex_silicone_content": "Next-gen silicone is the core component of Enerskin and the product of our research and development team. It pushes the limits of silicone to achieve superior elasticity and strength while limiting skin friction and irritation.",
+    "technology_patents_banner_headline": "Patents",
+    "technology_patents_banner_content": "Enerskin was developed to improve on existing taping, sport taping, and compression performance gear. enerskin is the first product in the u.s. market that combines the strengths of all three technologies in one easily wearable gear.",
+    "technology_patents_description_1_content": "<h4>INTERNATIONAL PATENTS AND USA PATENTS<\/h4>\r\n<br \/>\r\nInvention patent acquired (No. 10 - 0989829)<br \/>\r\nA sport taping gear with screen-printed silicone, urethane, and rubber integral pattern on highly elastic double-sided fabric.<br \/><br \/>\r\nInvention patent acquired (No. 10 - 0989828)<br \/>\r\nIt can disguise fatal scars less-visible.<br \/><br \/>\r\nInvention patent acquired (No.10 - 1200852)<br \/><br \/>\r\nApplied for U.S. patent (No.US - 2013 - 0160189 - A1)<br \/>\r\nTechnology that enables both sides of the highly elastic fabric to have subdivided screen-printing methods so that when a person wears it, it can support delicately measured pressure on designated part of his\/her body.<br \/><br \/>\r\nApplied for a new invention patent in 2013 (No.10 - 2013 - 0093696)<br \/><br \/>\r\nU.S. patent Issued in 2014 (Patent # 8,832,863)<br \/>\r\nSports taping tights include multi-layered coats of silicone or urethane on sections in the front and back of muscle parts applied by multi-step print coating to provide selective distribution of stronger fabric tension without necessitating cutting of main fabric, thereby maximizing the tightness of the contact of fabric with body, assisting and reinforcing the muscles and ligaments, enhancing the mobility of the body, protecting and increasing the power of muscles and ligaments and protecting the body.",
+    "e50_lp_title_1": "<em>New<\/em><br \/>\r\n<strong>Lighter<\/strong><br \/>\r\nE50",
+    "e50_lp_content_1": "The new Enerskin E50 is designed to be much lighter and even more flexible than the E70, all the while maintaining a highly effective amount of compression. The E50 is designed to be worn for low impact and high endurance training and post workout recovery, helping you get the rest your body deserves.",
+    "e50_lp_title_2": "Muscle",
+    "e50_lp_text_2": "Using Gastex in place of traditional compression fabric, Enerskin E50 is comprised of Cation, Lycra and Silicone; offering unrivaled support and protection to the muscles.",
+    "e50_lp_content_2": "With 20-30 mmHg, the E50 is ideal for athletes who are prone to chronic muscle cramps and fatigue. By eliminating muscle fatigue, Enerskin E50 can shorten the recovery time needed after exercising.",
+    "e50_lp_title_3": "Printing",
+    "e50_lp_text_3": "With reduced composition of silicone cells in the taping the E50 can be worn for a longer duration of time while reducing injuries to the joints and ligaments.",
+    "e50_lp_content_3": "By securing the joints and ligaments, Enerskin E50 protects your body during training with no damage to your skin. Whether it'd be for long distance running or to be worn through out the day, the E50 can be worn longer than the E70.",
+    "e50_lp_title_4": "Improve",
+    "e50_lp_text_4": "Enerskin E50 increases blood flow in the muscles and limits hyperextension of your muscles helping you optimize your movements when walking, running and jumping.",
+    "technology_about_us_banner_headline": "About Us",
+    "technology_about_us_banner_content": "Enerskin began in South Korea in 2006, as a solution for ice skaters seeking an alternative to bulky braces. By creating a high-tech compression silicone-taping hybrid, we are changing how athletes get back in the game after injury. Since the production of the first Enerskin prototype, we’ve continued perfecting our methods, and our products have grown exponentially in popularity. Olympic champions and professional athletes; doctors and personal trainers—amateurs and workout enthusiasts—have all experienced the benefits of the Enerskin edge.",
+    "technology_about_us_description_1_content": "Enerskin’s one-of-a-kind technology revolutionizes compression gear. Our medical-grade taping conforms to the contours of your body, enhancing your performance while stabilizing your muscles.\r\nEnerskin’s one-of-a-kind technology revolutionizes compression gear. Our medical-grade taping conforms to the contours of your body, enhancing your performance while stabilizing your muscles.",
+    "collection_features_enable": false,
+    "ajax_cart_method": "drawer",
+    "social_google_link": "",
+    "social_fancy_link": "",
+    "plus_enable_bogo_upsell": false,
+    "plus_bogo_upsell_1_product_1": "",
+    "plus_bogo_upsell_1_product_2": "",
+    "plus_bogo_upsell_2_product_1": "",
+    "plus_bogo_upsell_2_product_2": "",
+    "general_info": true,
+    "general_info_description_1_headline": "FDA CLASS II APPROVED",
+    "general_info_description_1_subline": "Insurance Covered",
+    "general_info_description_1_text_mobile": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo, quis nostrud aliquip ex ea commodo consequat.",
+    "general_info_description_1_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo, quis nostrud aliquip ex ea commodo consequat.",
+    "general_info_description_2_headline": "SUPPORT WITH KINESIO TAPE TECHNOLOGY",
+    "general_info_description_2_subline": "Medical Grade Silicon",
+    "general_info_description_2_text_mobile": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo, quis nostrud aliquip ex ea commodo consequat.",
+    "general_info_description_2_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo, quis nostrud aliquip ex ea commodo consequat.",
+    "general_info_description_3_headline": "INCREASED BLOOD CIRCULATION",
+    "general_info_description_3_subline": "Germanium 23 Infused",
+    "general_info_description_3_text_mobile": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo, quis nostrud aliquip ex ea commodo consequat.",
+    "general_info_description_3_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo, quis nostrud aliquip ex ea commodo consequat.",
+    "general_info_description_4_headline": "LIGHTWEIGHT AND DURABLE",
+    "general_info_description_4_subline": "Gastex Lining and Stitching",
+    "general_info_description_4_text_mobile": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo, quis nostrud aliquip ex ea commodo consequat.",
+    "general_info_description_4_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo, quis nostrud aliquip ex ea commodo consequat.",
+    "featured_product_enable": false,
+    "featured_product": "",
+    "e50_lp_content_4": "The new Enerskin is designed to be much lighter and even more... The new Enerskin is designed to be much lighter and even more... The new Enerskin is designed to be much lighter and even more...",
+    "e50_lp_content_5": "",
+    "featured_video_id_actual": "188168694",
+    "checkout_use_header_image": false,
+    "checkout_logo": "checkout_logo.png",
+    "checkout_use_body_background_image": false,
+    "checkout_use_sidebar_background_image": false,
+    "newsletter_form_action": "",
+    "newsletter_popup_enable": false,
+    "newsletter_popup_headline": "",
+    "logo_favicon": true,
+    "logo_enable": "0",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "",
+          "ribbon_text_1": "FREE Returns & FREE Shipping Available",
+          "ribbon_link_text": "more -",
+          "ribbon_link_url": "shopify:\/\/collections\/all",
+          "main_linklist": "header-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "form_bg": "",
+          "subscribe__title": "GET 10% OFF INSTANTLY",
+          "subscribe__subtitle": "Send us your e-mail for special promotions and offers",
+          "form-action": "https:\/\/enerskin.us16.list-manage.com\/subscribe\/post?u=e68c39b16520403907e1761b5&id=ec1b475156",
+          "logo": "",
+          "footer_linklist_1": "get-help",
+          "footer_linklist_2": "usage",
+          "footer_linklist_3": "technology",
+          "footer_linklist_4": "shop-1",
+          "address": "833 S. SPRING ST., FL 4 LOS ANGELES, CA 90014"
+        }
+      },
+      "1530796234139": {
+        "type": "collection-list",
+        "blocks": {
+          "1530796234139-0": {
+            "type": "collection",
+            "settings": {
+              "title": "Women",
+              "collection": "mens-all",
+              "img": "shopify:\/\/shop_images\/women_collection_2x_74aa3ca8-abf2-499e-af21-2ccb6aadefe3.png"
+            }
+          },
+          "1530796234139-1": {
+            "type": "collection",
+            "settings": {
+              "title": "Men",
+              "collection": "all-womens",
+              "img": "shopify:\/\/shop_images\/men_collections_2x_ce407e21-e9f9-4ab7-85ac-1f59b513304b.png"
+            }
+          },
+          "1530796234139-2": {
+            "type": "collection",
+            "settings": {
+              "title": "Outlet",
+              "collection": "e50-mens",
+              "img": "shopify:\/\/shop_images\/outlet_collections_2x_760610d7-80d2-45e6-94fe-3f58107cb189.png"
+            }
+          }
+        },
+        "block_order": [
+          "1530796234139-0",
+          "1530796234139-1",
+          "1530796234139-2"
+        ],
+        "settings": {
+          "title": "Collections"
+        }
+      },
+      "1530876606998": {
+        "type": "featured-products",
+        "blocks": {
+          "1530876611903": {
+            "type": "products",
+            "settings": {
+              "product": "e75-leg-compression-sleeve-set-unisex"
+            }
+          },
+          "1530876616473": {
+            "type": "products",
+            "settings": {
+              "product": "e75-mens-compression-shirt-long-sleeve"
+            }
+          },
+          "1530876621165": {
+            "type": "products",
+            "settings": {
+              "product": "e75-elbow-sleeve-set"
+            }
+          },
+          "1530876628093": {
+            "type": "products",
+            "settings": {
+              "product": "e75-womens-knee-compression-sleeve-set"
+            }
+          }
+        },
+        "block_order": [
+          "1530876611903",
+          "1530876616473",
+          "1530876621165",
+          "1530876628093"
+        ],
+        "settings": {
+        }
+      },
+      "1531120756112": {
+        "type": "materials",
+        "blocks": {
+          "1531122765802": {
+            "type": "Technology",
+            "settings": {
+              "point_title": "<p>FDA<br>APPROVED<\/p>",
+              "new_label": false,
+              "img": "shopify:\/\/shop_images\/img_FDA_APPROVED_2x_fd70be28-6488-4743-876c-dbd6c59e9070.png",
+              "title": "<p>FDA<\/p>\n<p>APPROVED<\/p>",
+              "text": "<p>The new E75 collection has received FDA approval. The certification validates the benefits offered by the E75 and raises the collection...<\/p>",
+              "link": ""
+            }
+          },
+          "1531131512006": {
+            "type": "Technology",
+            "settings": {
+              "point_title": "<p>PRECISION<br>SILICONE<br>MUSCLE<br>MAPPING<\/p>",
+              "new_label": false,
+              "img": "shopify:\/\/shop_images\/1.PNG",
+              "title": "<p>PRECISION SILICONE<br>MUSCLE MAPPING<\/p>",
+              "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>",
+              "link": ""
+            }
+          },
+          "1531131529925": {
+            "type": "Technology",
+            "settings": {
+              "point_title": "<p>CELTEC<br>TECHNOLOGY<\/p>",
+              "new_label": true,
+              "img": "shopify:\/\/shop_images\/img_UPDATED_DESIGN_2x_f76d93df-a844-4d4d-9d67-471336d29668.png",
+              "title": "<p>CELTEC<br>TECHNOLOGY<\/p>",
+              "text": "<p>Aliquam erat tellus, aliquet non pulvinar ut, sollicitudin et ligula. In hac habitasse platea dictumst.<\/p>",
+              "link": ""
+            }
+          },
+          "1531131542195": {
+            "type": "Technology",
+            "settings": {
+              "point_title": "<p>UPDATED<br>DESIGN<\/p>",
+              "new_label": false,
+              "img": "shopify:\/\/shop_images\/1_733cd0b2-7293-49bd-912d-0f2976136460.PNG",
+              "title": "<p>UPDATED<br>DESIGN<\/p>",
+              "text": "<p>Curabitur turpis nibh, convallis nec ex eget, volutpat vehicula augue. Quisque ornare vulputate orci laoreet commodo. Phasellus tempor nulla quis est consequat auctor. Sed porttitor blandit enim sit amet pharetra<\/p>",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1531122765802",
+          "1531131512006",
+          "1531131529925",
+          "1531131542195"
+        ],
+        "settings": {
+          "img": ""
+        }
+      },
+      "1531207748139": {
+        "type": "link-section",
+        "settings": {
+          "product": "e75-womens-long-sleeve-compression-shirt",
+          "product_img": "shopify:\/\/shop_images\/img_WOMEN_S_LONG_SLEEVE_COMPRESSION_SHIRT_2x_b9a7a89c-85b2-4551-a620-69da4456c374.png",
+          "img_1": "shopify:\/\/shop_images\/img_Targeted_Protection_2x_e29a7381-ccf4-468d-8f82-8d118387016f.png",
+          "title1": "<p>Targeted Protection<\/p>",
+          "link_name_1": "Shop Sleeves",
+          "url_1": "shopify:\/\/collections\/all",
+          "link_name_2": "",
+          "url_2": "",
+          "img_2": "shopify:\/\/shop_images\/img_Be_at_the_TOP_of_your_game_2x_4f2ac41b-3364-404a-981e-eeeeb469f024.png",
+          "title2": "<p>Be at the<\/p>\n<p>TOP of your<\/p>\n<p>game<\/p>",
+          "link_name_3": "Shop Men's Tops",
+          "url_3": "shopify:\/\/collections\/mens-tops",
+          "link_name_4": "Shop Women's Tops",
+          "url_4": "shopify:\/\/collections\/womens-tops"
+        }
+      },
+      "1531219118261": {
+        "type": "home-slider",
+        "blocks": {
+          "1531219163928": {
+            "type": "slide",
+            "settings": {
+              "subtitle": "<p>new<br>MEN'S<br>collection<\/p>",
+              "title": "e75",
+              "btntext": "Shop men's",
+              "btnurl": "shopify:\/\/pages\/e50-e70-men",
+              "img": "shopify:\/\/shop_images\/top_img_main_2x_c7c95368-62f7-4108-a67c-1878dc42aabf.png"
+            }
+          },
+          "1531222693726": {
+            "type": "slide",
+            "settings": {
+              "subtitle": "<p>new<br>WOMEN'S<br>collection<\/p>",
+              "title": "e75",
+              "btntext": "Shop women's",
+              "btnurl": "",
+              "img": "shopify:\/\/shop_images\/woman_img_main_slider_6x.png"
+            }
+          },
+          "1531222736864": {
+            "type": "slide",
+            "settings": {
+              "subtitle": "<p>old<\/p>\n<p>men's<\/p>\n<p>collection<\/p>",
+              "title": "e50",
+              "btntext": "Shop men's",
+              "btnurl": "",
+              "img": "shopify:\/\/shop_images\/top_img_main_2x_c7c95368-62f7-4108-a67c-1878dc42aabf.png"
+            }
+          },
+          "1531222770852": {
+            "type": "slide",
+            "settings": {
+              "subtitle": "<p>old<\/p>\n<p>women's<\/p>\n<p>collection<\/p>",
+              "title": "e50",
+              "btntext": "Shop women's",
+              "btnurl": "",
+              "img": "shopify:\/\/shop_images\/woman_img_main_slider_6x.png"
+            }
+          }
+        },
+        "block_order": [
+          "1531219163928",
+          "1531222693726",
+          "1531222736864",
+          "1531222770852"
+        ],
+        "settings": {
+        }
+      },
+      "1531291861137": {
+        "type": "how-it-work",
+        "settings": {
+          "title": "<p>HOW<\/p><p>ENERSKIN<\/p><p>WORKS<\/p>",
+          "mainimage": "shopify:\/\/shop_images\/men.png",
+          "videopreview": "shopify:\/\/shop_images\/videopreview_a773508e-ecce-4c69-b6f1-8e649d51f7ec.PNG",
+          "video_url": "https:\/\/www.youtube.com\/watch?v=gUg7stUIoZg",
+          "description": "<p><strong>Enerskin is the only athletic gear of its kind on the market.<\/strong><\/p>\n<p>Powered by innovative technology, our cutting-edge products elevate your game in every aspect &ndash; from performance and resilience to endurance and recovery.<\/p>"
+        }
+      },
+      "collection-template-bc-sf-filter": {
+        "type": "collection-template-bc-sf-filter",
+        "blocks": {
+          "1531404850706": {
+            "type": "linklist",
+            "settings": {
+              "linklist": "new-arrivals"
+            }
+          },
+          "1531406710301": {
+            "type": "linklist",
+            "settings": {
+              "linklist": "e75"
+            }
+          },
+          "1531723672166": {
+            "type": "linklist",
+            "settings": {
+              "linklist": "outlet"
+            }
+          }
+        },
+        "block_order": [
+          "1531404850706",
+          "1531406710301",
+          "1531723672166"
+        ],
+        "settings": {
+          "products_per_page": 12,
+          "products_per_row": 3,
+          "products_per_row_mobile": 2,
+          "show_vendor": false,
+          "show_price": true,
+          "show_sale_label": false,
+          "show_sold_out_label": false,
+          "active_image_swap": false,
+          "show_sorting": true
+        }
+      },
+      "product": {
+        "type": "product",
+        "blocks": {
+          "1531912334008": {
+            "type": "FAQ",
+            "settings": {
+              "question": "What is the difference between Enerskin sleeves and other compression sleeves?",
+              "answer": "We recommend using the sleeve 6-10 hours a day, depending on the type of activity and its intensity. For users with sensitive skin, we recommend applying 100% Aloe Vera gel before using Enerskin sleeves. We do not recommend wearing Enerskin sleeves while sleeping."
+            }
+          },
+          "1531912361184": {
+            "type": "FAQ",
+            "settings": {
+              "question": "How many hours a day can I wear the product?",
+              "answer": "We recommend using the sleeve 6-10 hours a day, depending on the type of activity and its intensity. For users with sensitive skin, we recommend applying 100% Aloe Vera gel before using Enerskin sleeves. We do not recommend wearing Enerskin sleeves while sleeping."
+            }
+          },
+          "1531912367640": {
+            "type": "FAQ",
+            "settings": {
+              "question": "I had knee surgery. Can I wear Enerskin products?",
+              "answer": "We recommend using the sleeve 6-10 hours a day, depending on the type of activity and its intensity. For users with sensitive skin, we recommend applying 100% Aloe Vera gel before using Enerskin sleeves. We do not recommend wearing Enerskin sleeves while sleeping."
+            }
+          },
+          "1531912375353": {
+            "type": "FAQ",
+            "settings": {
+              "question": "My Enerskin product will not stay in place. How can I prevent product slippage?",
+              "answer": "We recommend using the sleeve 6-10 hours a day, depending on the type of activity and its intensity. For users with sensitive skin, we recommend applying 100% Aloe Vera gel before using Enerskin sleeves. We do not recommend wearing Enerskin sleeves while sleeping."
+            }
+          }
+        },
+        "block_order": [
+          "1531912334008",
+          "1531912361184",
+          "1531912367640",
+          "1531912375353"
+        ],
+        "settings": {
+          "shipping": "<p><b>Enerskin stands by every product we make.<\/b>If for any reason you are not 100% satisfied with your Enerskin product, contact cs@enerskin.com.  Returns must be unwashed and unused  in original packaging with tags attached.  Returns are accepted within 30 days of the purchase date for a refund.  Any merchandise returned after the returnable period will only be accepted at our discretion for a store credit.<\/p><p>Returns are subject to a restocking fee of 10%.<\/p>",
+          "care_instructions": "<p>Returns must be unwashed and unused  in original packaging with tags attached.  Returns are accepted within 30 days of the purchase date for a refund.  Any merchandise returned after the returnable period will only be accepted at our discretion for a store credit. Returns are subject to a restocking fee of 10%.<\/p>"
+        }
+      },
+      "sizepopup": {
+        "type": "sizepopup",
+        "blocks": {
+          "1531744465231": {
+            "type": "size_chart",
+            "settings": {
+              "category": "MEN E75",
+              "subcategory": "ELBOW",
+              "upper_title_1": "Step 1",
+              "title_1": "Measure yourself",
+              "image_1": "shopify:\/\/shop_images\/step1.PNG",
+              "text_1": "Notice: This is performance gear, not apparel. Please measure your size as accurately as possible. When choosing a size, please keep in mind that Enerskin's compression gear is designed to be tight fitting.",
+              "upper_title_2": "Step 2",
+              "title_2": "Find your size",
+              "image_2": "shopify:\/\/shop_images\/step2.PNG",
+              "text_2": "",
+              "upper_title_3": "Step 3",
+              "title_3": "Find your size",
+              "image_3": "",
+              "text_3": ""
+            }
+          },
+          "1531744489390": {
+            "type": "size_chart",
+            "settings": {
+              "category": "MEN E75",
+              "subcategory": "CALF",
+              "upper_title_1": "Step 1",
+              "title_1": "Measure yourself",
+              "image_1": "shopify:\/\/shop_images\/step1.PNG",
+              "text_1": "Notice: This is performance gear, not apparel. Please measure your size as accurately as possible. When choosing a size, please keep in mind that Enerskin's compression gear is designed to be tight fitting.",
+              "upper_title_2": "Step 2",
+              "title_2": "Find your size",
+              "image_2": "shopify:\/\/shop_images\/step2.PNG",
+              "text_2": "",
+              "upper_title_3": "",
+              "title_3": "",
+              "image_3": "",
+              "text_3": ""
+            }
+          },
+          "1531813471813": {
+            "type": "size_chart",
+            "settings": {
+              "category": "MEN E75",
+              "subcategory": "KNEE",
+              "upper_title_1": "Step 1",
+              "title_1": "Measure yourself",
+              "image_1": "shopify:\/\/shop_images\/LOOK-12_1826_2x_679dec1c-38ba-421d-932a-0a4dc07e9e13.jpg",
+              "text_1": "Notice: This is performance gear, not apparel. Please measure your size as accurately as possible. When choosing a size, please keep in mind that Enerskin's compression gear is designed to be tight fitting.",
+              "upper_title_2": "Step 2",
+              "title_2": "Find your size",
+              "image_2": "shopify:\/\/shop_images\/step2.PNG",
+              "text_2": "",
+              "upper_title_3": "",
+              "title_3": "",
+              "image_3": "",
+              "text_3": ""
+            }
+          },
+          "1531813515884": {
+            "type": "size_chart",
+            "settings": {
+              "category": "MEN E75",
+              "subcategory": "LEG",
+              "upper_title_1": "Step 1",
+              "title_1": "Measure yourself",
+              "image_1": "shopify:\/\/shop_images\/LOOK-12_1826_2x_679dec1c-38ba-421d-932a-0a4dc07e9e13.jpg",
+              "text_1": "Notice: This is performance gear, not apparel. Please measure your size as accurately as possible. When choosing a size, please keep in mind that Enerskin's compression gear is designed to be tight fitting.",
+              "upper_title_2": "Step 2",
+              "title_2": "Find your size",
+              "image_2": "shopify:\/\/shop_images\/step2.PNG",
+              "text_2": "",
+              "upper_title_3": "",
+              "title_3": "",
+              "image_3": "",
+              "text_3": ""
+            }
+          },
+          "1531813544873": {
+            "type": "size_chart",
+            "settings": {
+              "category": "MEN E75",
+              "subcategory": "SHORTS",
+              "upper_title_1": "Step 1",
+              "title_1": "Measure yourself",
+              "image_1": "shopify:\/\/shop_images\/LOOK-12_1826_2x_679dec1c-38ba-421d-932a-0a4dc07e9e13.jpg",
+              "text_1": "Notice: This is performance gear, not apparel. Please measure your size as accurately as possible. When choosing a size, please keep in mind that Enerskin's compression gear is designed to be tight fitting.",
+              "upper_title_2": "Step 2",
+              "title_2": "Find your size",
+              "image_2": "shopify:\/\/shop_images\/step2.PNG",
+              "text_2": "",
+              "upper_title_3": "Step 2",
+              "title_3": "Find your size",
+              "image_3": "",
+              "text_3": ""
+            }
+          },
+          "1531813576173": {
+            "type": "size_chart",
+            "settings": {
+              "category": "MEN E75",
+              "subcategory": "TOP",
+              "upper_title_1": "Step 1",
+              "title_1": "Measure yourself",
+              "image_1": "shopify:\/\/shop_images\/LOOK-12_1826_2x_679dec1c-38ba-421d-932a-0a4dc07e9e13.jpg",
+              "text_1": "Notice: This is performance gear, not apparel. Please measure your size as accurately as possible. When choosing a size, please keep in mind that Enerskin's compression gear is designed to be tight fitting.",
+              "upper_title_2": "Step 2",
+              "title_2": "Find your size",
+              "image_2": "shopify:\/\/shop_images\/step2.PNG",
+              "text_2": "",
+              "upper_title_3": "Step 2",
+              "title_3": "Find your size",
+              "image_3": "",
+              "text_3": ""
+            }
+          },
+          "1531744505302": {
+            "type": "size_chart",
+            "settings": {
+              "category": "WOMEN E75",
+              "subcategory": "ELBOW",
+              "upper_title_1": "Step 1",
+              "title_1": "Measure yourself",
+              "image_1": "shopify:\/\/shop_images\/step1.PNG",
+              "text_1": "Notice: This is performance gear, not apparel. Please measure your size as accurately as possible. When choosing a size, please keep in mind that Enerskin's compression gear is designed to be tight fitting.",
+              "upper_title_2": "Step 2",
+              "title_2": "Find your size",
+              "image_2": "shopify:\/\/shop_images\/step2.PNG",
+              "text_2": "",
+              "upper_title_3": "",
+              "title_3": "",
+              "image_3": "",
+              "text_3": ""
+            }
+          },
+          "1531813845824": {
+            "type": "size_chart",
+            "settings": {
+              "category": "WOMEN E75",
+              "subcategory": "CALF",
+              "upper_title_1": "Step 1",
+              "title_1": "Measure yourself",
+              "image_1": "shopify:\/\/shop_images\/LOOK-13_1916_2x_92148e1e-3db4-4db0-a757-7e58bc54d6cd.jpg",
+              "text_1": "Notice: This is performance gear, not apparel. Please measure your size as accurately as possible. When choosing a size, please keep in mind that Enerskin's compression gear is designed to be tight fitting.",
+              "upper_title_2": "Step 2",
+              "title_2": "Find your size",
+              "image_2": "shopify:\/\/shop_images\/step2.PNG",
+              "text_2": "",
+              "upper_title_3": "Step 2",
+              "title_3": "Find your size",
+              "image_3": "",
+              "text_3": ""
+            }
+          },
+          "1531813943031": {
+            "type": "size_chart",
+            "settings": {
+              "category": "WOMEN E75",
+              "subcategory": "KNEE",
+              "upper_title_1": "Step 1",
+              "title_1": "Measure yourself",
+              "image_1": "shopify:\/\/shop_images\/silicone_2-img-2_2x_62f3dd08-025e-4d9b-951d-7c8c6e5b497e.jpg",
+              "text_1": "Notice: This is performance gear, not apparel. Please measure your size as accurately as possible. When choosing a size, please keep in mind that Enerskin's compression gear is designed to be tight fitting.",
+              "upper_title_2": "Step 2",
+              "title_2": "Find your size",
+              "image_2": "shopify:\/\/shop_images\/step2.PNG",
+              "text_2": "",
+              "upper_title_3": "Step 2",
+              "title_3": "Find your size",
+              "image_3": "",
+              "text_3": ""
+            }
+          },
+          "1531813968638": {
+            "type": "size_chart",
+            "settings": {
+              "category": "WOMEN E75",
+              "subcategory": "LEG",
+              "upper_title_1": "Step 1",
+              "title_1": "Measure yourself",
+              "image_1": "shopify:\/\/shop_images\/step1.PNG",
+              "text_1": "Notice: This is performance gear, not apparel. Please measure your size as accurately as possible. When choosing a size, please keep in mind that Enerskin's compression gear is designed to be tight fitting.",
+              "upper_title_2": "Step 2",
+              "title_2": "Find your size",
+              "image_2": "shopify:\/\/shop_images\/step2.PNG",
+              "text_2": "",
+              "upper_title_3": "Step 2",
+              "title_3": "Find your size",
+              "image_3": "",
+              "text_3": ""
+            }
+          },
+          "1531813991038": {
+            "type": "size_chart",
+            "settings": {
+              "category": "WOMEN E75",
+              "subcategory": "SHORTS",
+              "upper_title_1": "Step 1",
+              "title_1": "Measure yourself",
+              "image_1": "shopify:\/\/shop_images\/step1.PNG",
+              "text_1": "Notice: This is performance gear, not apparel. Please measure your size as accurately as possible. When choosing a size, please keep in mind that Enerskin's compression gear is designed to be tight fitting.",
+              "upper_title_2": "Step 2",
+              "title_2": "Find your size",
+              "image_2": "shopify:\/\/shop_images\/step2.PNG",
+              "text_2": "",
+              "upper_title_3": "Step 2",
+              "title_3": "Find your size",
+              "image_3": "",
+              "text_3": ""
+            }
+          },
+          "1531814016680": {
+            "type": "size_chart",
+            "settings": {
+              "category": "WOMEN E75",
+              "subcategory": "TOP",
+              "upper_title_1": "Step 1",
+              "title_1": "Measure yourself",
+              "image_1": "shopify:\/\/shop_images\/step1.PNG",
+              "text_1": "Notice: This is performance gear, not apparel. Please measure your size as accurately as possible. When choosing a size, please keep in mind that Enerskin's compression gear is designed to be tight fitting.",
+              "upper_title_2": "Step 2",
+              "title_2": "Find your size",
+              "image_2": "shopify:\/\/shop_images\/step2.PNG",
+              "text_2": "",
+              "upper_title_3": "Step 2",
+              "title_3": "Find your size",
+              "image_3": "",
+              "text_3": ""
+            }
+          }
+        },
+        "block_order": [
+          "1531744465231",
+          "1531744489390",
+          "1531813471813",
+          "1531813515884",
+          "1531813544873",
+          "1531813576173",
+          "1531744505302",
+          "1531813845824",
+          "1531813943031",
+          "1531813968638",
+          "1531813991038",
+          "1531814016680"
+        ],
+        "settings": {
+          "footer_title": "Need help?",
+          "footer_text": "<p>Still not sure what you need? Our Enerskin staff can help you find the perfect size.<\/p><p>Email us at <a href='mailto:cs@enerskin.com'>cs@enerskin.com<\/a><\/p>"
+        }
+      },
+      "technology-discover-page": {
+        "type": "technology-discover-page",
+        "settings": {
+          "silicone_title": "<p>SILICONE<\/p><p>MUSCLE MAPPING<\/p>",
+          "silicone_text": "Thanks to our patented silicone printing technology, Enerskin combines the stability of therapeutic taping with the durability of compression clothing to form the ultimate performance gear.",
+          "silicone_button_url": "shopify:\/\/pages\/silicone-new",
+          "silicone_button_text": "Find out more",
+          "silicone_image": "shopify:\/\/shop_images\/silicone_2-img-2_2x_62f3dd08-025e-4d9b-951d-7c8c6e5b497e.jpg",
+          "celtec_title": "<p>Celtec<\/p><p>Technology<\/p>",
+          "celtec_label": "NEW!",
+          "celtec_text": "<p>The technology behind Enerskin is one-of-a-kind hybrid product that revolutionizes compression gear.<\/p><p>Enerskin fits your muscles like a second skin supporting your ligaments and optimizing blood flow; all of which enhances your performance while stabilizing your muscles to prevent unwanted injuries. <\/p>",
+          "celtec_button_url": "#",
+          "celtec_button_text": "Find out more",
+          "celtec_image": "shopify:\/\/shop_images\/new_2-img_2x_d4fd2f7c-31c7-4903-b226-307b117ec624.jpg",
+          "enerflex_title": "<p>Enerflex<\/p><p>Compression<\/p>",
+          "enerflex_text": "<p>Enerskin fits your muscles like a second skin supporting your ligaments and optimizing blood flow; all of which enhances your performance while stabilizing your muscles to prevent unwanted injuries. <\/p>",
+          "enerflex_button_url": "shopify:\/\/pages\/enerflex-compression",
+          "enerflex_button_text": "Find out more",
+          "enerflex_image": "shopify:\/\/shop_images\/LOOK-13_191622_2x_d0a40c99-0e51-471f-8e1f-9705fbff16dc.jpg",
+          "fda_title": "<p>FDA<\/p><p>approved<\/p>",
+          "fda_text": "<p>Thanks to our patented silicone printing technology, Enerskin combines the stability of therapeutic taping with the durability of compression clothing to form the ultimate performance gear.<\/p>",
+          "fda_button_url": "#",
+          "fda_button_text": "Find out more",
+          "fda_image": "shopify:\/\/shop_images\/fda-img_2x_c0b6b874-8b5f-4284-84af-ff480ae77b08.jpg",
+          "chart_title": "<p>Brand Comprassion chart<\/p>",
+          "chart_image": "shopify:\/\/shop_images\/chart-2.jpg"
+        }
+      },
+      "silicone-page": {
+        "type": "silicone-page",
+        "settings": {
+          "silicone_title": "<p>Silicone<\/p>",
+          "silicone_subtitle": "<p>Patented medical-grade<\/p>\n<p>Silicone taping technology<\/p>",
+          "box_first_title": "Patented silicone printing technology",
+          "box_first_text": "Enerskin combines the stability of therapeutic taping with the durability of compression clothing to form the ultimate performance gear.",
+          "box_second_title": "Medical-grade silicone taping",
+          "box_second_text": "Being the only gear of its kind on the market, Enerskin supports your muscles, joints and ligaments, keeping them firmly in place as you work hard to stay in the game. Ideal for athletes recovering from injuries, Enerskin helps you focus on achieving your full potential.",
+          "silicone_image": "shopify:\/\/shop_images\/LOOK-4_0623_2x_1973f91f-74b9-4abc-873b-d76d202baef0.jpg",
+          "story_title": "<p>The story<\/p><p>behind technology<\/p>",
+          "story_text": "<p>Enerskin’s silicone taping design is informed by medical and clinical studies on muscle performance. Each Enerskin product has a unique taping pattern to optimize the purpose of that product.<\/p>",
+          "story_image": "shopify:\/\/shop_images\/THE-STORY-BEHIND-TECHNOLOGY-img_2x_b030c085-444c-42ce-ae83-9f39f32f5c27.jpg",
+          "muscle_title": "<p>Muscle<\/p>",
+          "muscle_text": "<p>Perfectly contoured to the muscles of your body, Enerskin’s silicone taping provides pain relief and optimal muscular protection. Enerskin’s sleek design minimizes discomfort and constriction associated with heavy, bulky braces.<\/p>",
+          "muscle_image": "shopify:\/\/shop_images\/MUSCLE_2x_26b98fa4-9fdc-45cd-96d3-b99912e5f92b.png",
+          "printing_title": "<p>Printing<\/p>",
+          "printing_text": "<p>Our patented silicone printing technology allows for multiple layers of silicone taping to be printed directly onto the Gastex® compression fabric. The result is a more durable product that’s made to last.<\/p>",
+          "printing_image": "shopify:\/\/shop_images\/PRINTING_2x_1c25e9b6-146f-4ad4-8472-98d4a82735d3.jpg",
+          "compression_title": "<p>Compression<\/p>",
+          "compression_text": "<p>Silicone taping printed onto the Gastex® fabric increases the level of compression - up to 200% more than typical compression gear - and prevents the fabric from overstretching, so compression never diminishes.<\/p>",
+          "compression_image": "shopify:\/\/shop_images\/Compression_2x_405ce1e7-5a1b-486c-9bd9-cacec362aee7.jpg",
+          "craft_title": "<p>Craft<\/p><p>& Function<\/p>",
+          "craft_block_title_1": "Thoughtfully designed and carefully crafted",
+          "craft_text_1": "Each Enerskin product is made with the user’s experience in mind. The precision that goes into each product elevates your game wherever you play.",
+          "craft_block_title_2": "Never sacrifice performance for protection",
+          "craft_text_2": "Enerskin lets athletes experience the benefits of therapeutic taping in a reusable form that saves money and doesn't damage their skin.",
+          "craft_button_text": "Shop now",
+          "craft_button_url": "",
+          "craft_image": "shopify:\/\/shop_images\/LOOK-1_0141_2_2x_c239a041-f28c-41fa-83a7-de8baa29c036.jpg"
+        }
+      },
+      "enerflex-compression-page": {
+        "type": "enerflex-compression-page",
+        "blocks": {
+          "1531898034032": {
+            "type": "brand_logo",
+            "settings": {
+              "brand_logo": "shopify:\/\/shop_images\/logo1.png"
+            }
+          },
+          "1531898057486": {
+            "type": "brand_logo",
+            "settings": {
+              "brand_logo": "shopify:\/\/shop_images\/logo2.png"
+            }
+          },
+          "1531898064475": {
+            "type": "brand_logo",
+            "settings": {
+              "brand_logo": "shopify:\/\/shop_images\/logo3.png"
+            }
+          },
+          "1531898071868": {
+            "type": "brand_logo",
+            "settings": {
+              "brand_logo": "shopify:\/\/shop_images\/logo4.png"
+            }
+          },
+          "1531898077775": {
+            "type": "brand_logo",
+            "settings": {
+              "brand_logo": "shopify:\/\/shop_images\/logo5.png"
+            }
+          },
+          "1531898088236": {
+            "type": "brand_logo",
+            "settings": {
+              "brand_logo": "shopify:\/\/shop_images\/logo6.png"
+            }
+          }
+        },
+        "block_order": [
+          "1531898034032",
+          "1531898057486",
+          "1531898064475",
+          "1531898071868",
+          "1531898077775",
+          "1531898088236"
+        ],
+        "settings": {
+          "enerflex_title": "<p>Enerflex<\/p><p>Compression<\/p>",
+          "enerflex_text": "Push the borders of limitation with the next generation in compression wear.",
+          "enerflex_image": "shopify:\/\/shop_images\/LOOK-13_1916_2x_92148e1e-3db4-4db0-a757-7e58bc54d6cd.jpg",
+          "enerflex_image_bottom": "shopify:\/\/shop_images\/LOOK-12_1826_2x_679dec1c-38ba-421d-932a-0a4dc07e9e13.jpg",
+          "enerflex_text_bottom": "<p>The technology behind Enerskin is one-of-a-kind hybrid product that revolutionez compression gear. Enerskin fits your muscles like a second skin supporting your ligaments and optimizing blood flow; all of which enchances your performance while stabilizing your muscles to prevent unwanted injuries. Engineered specifically to support key muscle groups and promote uninhibited flexibility, providing stability without hindering performance; Enerskin is the most innovative compression gear on the market today.<\/p>",
+          "enerflex_feature_bg": "shopify:\/\/shop_images\/LOOK-4_0593-compression.jpg",
+          "feature_title_1": "10 times more effective recovery",
+          "feature_title_2": "Stabilize and support joints",
+          "feature_title_3": "Reduce swelling and soreness",
+          "feature_title_4": "Improve dynamic balance and endurance",
+          "enerflex_sport_img_01": "shopify:\/\/shop_images\/Run-img_2x_a3db57cf-7657-4b7a-9f27-56e4624b1e5e.jpg",
+          "enerflex_sport_img_02": "shopify:\/\/shop_images\/LOOK-11_1652_2x_296688c3-4e03-4ea9-a0eb-5ff9ed0f4820.jpg",
+          "enerflex_sport_img_03": "shopify:\/\/shop_images\/shutterstock_229418986_2x_e3e66626-ad04-4c17-b2ef-cb6527bf8b9a.jpg",
+          "enerflex_sport_title_1": "",
+          "enerflex_sport_text_1": "",
+          "enerflex_sport_title_2": "<p>Fitness<\/p>",
+          "enerflex_sport_text_2": "Lift more with faster recovery and less soreness",
+          "enerflex_sport_title_3": "<p>Basketball<\/p>",
+          "enerflex_sport_text_3": "Shoot quicker with responsive muscle control.",
+          "enerflex_sport_img_04": "shopify:\/\/shop_images\/Triathlon_2x_cf697e2b-d08d-4bb9-99c8-ff545a5f1816.jpg",
+          "enerflex_sport_img_05": "shopify:\/\/shop_images\/Dance-img_2x_a31dcb0a-4587-4252-a1b3-09a75e17cd53.jpg",
+          "enerflex_sport_img_06": "shopify:\/\/shop_images\/Martial-Arts-img_2x_df3df4e6-0df6-4ea8-b713-0f8e8db7f585.jpg",
+          "enerflex_sport_title_4": "<p>Triathlon<\/p>",
+          "enerflex_sport_text_4": "Push harder with support for all movements.",
+          "enerflex_sport_title_5": "<p>Dance<\/p>",
+          "enerflex_sport_text_5": "Move quicker and freely without any limitations.",
+          "enerflex_sport_title_6": "<p>Martial<\/p><p>Arts<\/p>",
+          "enerflex_sport_text_6": "Hit faster with more power in each swing.",
+          "chart_section_title_1": "<p>tested & Proven Performance<\/p><p>Enhancement<\/p>",
+          "chart_title_1": "Anaerobic power",
+          "chart_image_1": "shopify:\/\/shop_images\/chart-01-_2x_c5d8bb0b-7023-4b28-9764-4a56f417b287.jpg",
+          "chart_title_2": "Cardiorespiratory Endurance",
+          "chart_image_2": "shopify:\/\/shop_images\/chart-02-_2x_81971316-e0bb-4269-abb6-876d8aad284a.jpg",
+          "chart_option_1": "Test resalts with Eneskin",
+          "chart_option_2": "Test resalts without Eneskin",
+          "chart_info": "<p>We put Enerskin to the test and saw what it could really do. The following data was gathered through public health trials and rehabilitation research centers in the United States and South Korea.<\/p>",
+          "chart_section_title_2": "<p>Step into the next level<\/p><p>of performance<\/p>",
+          "chart_title_3": "Basic physical 1",
+          "chart_image_3": "shopify:\/\/shop_images\/chart-03-_2x_600fdf98-11b1-4297-9a4e-2f3bab6ab324.jpg",
+          "chart_title_4": "Basic physical 2",
+          "chart_image_4": "shopify:\/\/shop_images\/chart-04-_2x_582c162a-a38d-4c9d-aa75-dd1d4094387e.jpg",
+          "chart_info_2": "<p>We put Enerskin to the test and saw what it could really do. The following data was gathered through public health trials and rehabilitation research centers in the United States and South Korea.<\/p>",
+          "comparison_title": "<p>Brand Comparison Chart<\/p>",
+          "comparison_image": "shopify:\/\/shop_images\/chart-2.jpg"
+        }
+      }
+    },
+    "content_for_index": [
+      "1531219118261",
+      "1531120756112",
+      "1530876606998",
+      "1531291861137",
+      "1531207748139",
+      "1530796234139"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "ajax_cart_method": "drawer",
+      "cart_notes_enable": true,
+      "color_primary": "#747474",
+      "color_secondary": "#bbb"
+    }
+  }
+}

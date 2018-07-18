@@ -1,0 +1,43 @@
+.mobile-search {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+
+    transform: translateX(-100%);
+    transition: transform 400ms;
+
+    @include breakpoint(mobile-landscape){
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+}
+
+.mobile-search-opened .mobile-search{
+    transform: translateX(0);
+}
+
+.mobile-search__close-btn {
+    height: 25px;
+    margin-left:15px;
+
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+
+
+    svg {
+        display: block;
+        width: 25px;
+        height: 25px;
+        fill: #000;
+    }
+}

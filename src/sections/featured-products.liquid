@@ -1,0 +1,37 @@
+<section class="featured-products">
+  <div class="container">
+    <div class="featured-products__row">
+        {% for block in section.blocks %}
+          <div class="featured-products__col">
+            {% include 'product_card', _product: all_products[block.settings.product] %}
+          </div>
+        {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Featured products",
+    "settings": [
+    ],
+    "max_blocks":4,
+    "blocks":[{
+      "name":"product",
+      "type":"products",
+      "settings":[
+        {
+            "type":"product",
+            "id":"product",
+            "label":"Select Product"
+        }
+      ]
+    }],
+    "presets": [
+      {
+        "name": "Featured products",
+        "category": "Homepage"
+      }
+    ]
+  }
+{% endschema %}

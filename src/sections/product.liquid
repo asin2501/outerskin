@@ -1,0 +1,325 @@
+<div class="big-container" section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true" itemscope itemtype="http://schema.org/Product">
+    <meta itemprop="name" content="{{ product.title }}{% unless product.has_only_default_variant %} - {{ current_variant.title }}{% endunless %}">
+    <meta itemprop="url" content="{{ shop.url }}{{ current_variant.url }}">
+    <meta itemprop="brand" content="{{ product.vendor }}">
+    <meta itemprop="image" content="{{ featured_image | img_url: '600x600' }}">
+    <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
+    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+        <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+    </div>
+    <div class="product">
+        {%- assign current_variant = product.selected_or_first_available_variant -%}
+        {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
+
+        <div class="product__col-images">
+            <div class="gallery">
+                <div class="gallery__col gallery__col--main-col">
+                    <div class="gallery__img gallery__img--big js-open-images-popup" style="background-image:url({{ product.featured_image | img_url:'900x' }});"></div>
+                </div>
+                {% for img in product.images %}
+                    {% if forloop.index != 0 %}
+                        <div class="gallery__col">
+                            <div class="gallery__img js-open-images-popup" style="background-image:url({{ img | img_url:'600x' }});">
+                                <div class="gallery__img-plus"></div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="product__info-col">
+            <div class="product__collection">
+                {%- for tag in product.tags -%}
+                    {%- assign first_letter = tag | first | upcase -%}
+                    {%- if first_letter == 'E' -%}
+                        {% assign prod_collection = tag %}
+                        {{ tag }}
+                    {%- endif -%}
+                {%- endfor -%}
+            </div>
+            <h1 class="product__title">{{ product.title }}</h1>
+            <p class="product__prices" data-price-wrapper>
+                {% if product.compare_at_price_max > product.price %}
+                    <span class="product__price product__price--selected" data-product-price>{{ product.price | money }}</span>
+                    <span data-compare-price class="product__price product__price--compared" data-compare-price>
+                            {% if product.compare_at_price > product.price %}
+                                {{ product.compare_at_price | money }}
+                            {% endif %}
+                        </span>
+                {% else %}
+                    <span class="product__price">{{ product.price | money }}</span>
+                {% endif %}
+            </p>
+            <form action="/cart/add" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="properties[collection]" value="E75">
+                <div class="product__controls">
+                    <div class="product__controls-left">
+                        {% unless product.has_only_default_variant %}
+                            {% for option in product.options_with_values %}
+                                <div class="value-selector js">
+
+                                    {% for value in option.values %}
+                                        <div class="value-selector__item">
+                                            <input id="{{ value }}"
+                                                   type="radio" name="{{ option.name }}"
+                                                   value="{{ value }}"
+                                                   data-index="option{{ option.position }}"
+                                                   data-single-option-selector
+                                                   {% if option.selected_value == value %}checked{% endif %}
+                                                    class="value-selector__radio"
+                                            >
+                                            <label class="value-selector__label" for="{{ value }}">{{ value }}</label>
+                                        </div>
+                                    {% endfor %}
+
+                                </div>
+
+                            {% endfor %}
+                        {% endunless %}
+
+
+                        <select name="id" class="no-js hidden" data-product-select>
+                            {% for variant in product.variants %}
+                                <option
+                                        {% if variant == current_variant %}selected="selected"{% endif %}
+                                        {% unless variant.available %}disabled="disabled"{% endunless %}
+                                        value="{{ variant.id }}">
+                                    {{ variant.title }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                        <div class="qty-widget js-qty-widget" data-variant-id="{{product.selected_or_first_available_variant.id }}">
+                            <button class="qty-widget__btn qty-widget__btn--minus  js-qty-minus" type="button">-</button>
+                            <input class="qty-widget__input js-qty-input" type="text" id="Quantity" name="quantity" value="1">
+                            <button class="qty-widget__btn qty-widget__btn--plus js-qty-plus" type="button">+</button>
+                        </div>
+
+                        <button
+                                class="add-to-cart-btn js-add-to-cart"
+                                id="add-to-cart"
+                                type="submit"
+                                name="add"
+                                data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                                data-collection="{{ prod_collection }}"
+                                data-add-to-cart
+                                data-add-to-cart-text
+                                {% unless current_variant.available %}disabled="disabled"{% endunless %}>
+                            {% if current_variant.available %}
+                                {{ 'products.product.add_to_cart' | t }}
+                            {% else %}
+                                {{ 'products.product.sold_out' | t }}
+                            {% endif %}
+                        </button>
+                    </div>
+                    <div class="product__controls-right size-info">
+                        <h6 class="size-info__title">The sizing is not standard</h6>
+                        <p class="size-info__description">Please check our size guide for proper fit</p>
+                        <a class="size-info__link js-open-size-popup" href="">{% include 'icon-info' %}FIND YOUR SIZE</a>
+                    </div>
+                </div>
+            </form>
+            <div class="product__description">
+                {{ product.description }}
+            </div>
+            <div class="product-accordion" id="product-accordion">
+                {% assign my_value = product.metafields.sf_spec.spec %}
+                {% if my_value %}
+                    <div class="product-accordion__item">
+                        <div class="product-accordion__head js-accordion-head">product specs</div>
+                        <div class="product-accordion__body js-accordion-body">
+                            <div class="product-accordion__text">
+                                    {{ my_value }}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if section.settings.shipping %}
+                    <div class="product-accordion__item">
+                        <div class="product-accordion__head js-accordion-head">shipping/returns</div>
+                        <div class="product-accordion__body js-accordion-body">
+                            <div class="product-accordion__text">
+                            {{ section.settings.shipping }}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if section.settings.care_instructions %}
+                    <div class="product-accordion__item">
+                        <div class="product-accordion__head js-accordion-head">Care Instructions</div>
+                        <div class="product-accordion__body js-accordion-body">
+                            <div class="product-accordion__text">{{ section.settings.care_instructions }}</div>
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="product-accordion__item">
+                    <div class="product-accordion__head js-accordion-head">FAQ</div>
+                    <div class="product-accordion__body js-accordion-body">
+                        <ul class="product-faq">
+                            {% for block in section.blocks %}
+                                <li class="product-faq__item">
+                                    <div class="product-faq__q">{{ block.settings.question }}</div>
+                                    <div class="product-faq__a">{{ block.settings.answer }}</div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-accordion__item">
+                    <div class="product-accordion__head js-accordion-head product-accordion__head--review"><span>Customer Reviews</span><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>
+                    <div class="product-accordion__body js-accordion-body">
+                        <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% unless product == empty %}
+    <script type="application/json" data-product-json>{{ product | json }}</script>
+    {% endunless %}
+    </div>
+
+    {% assign preview = product.metafields.sf_how_to_wear.video_preview %}
+    {% assign url = product.metafields.sf_how_to_wear.video_url %}
+
+    {% if preview != blank or product.metafields.sf_how_to_wear['step1_image'] != blank %}
+        <section class="how-to-wear">
+            <div class="how-to-wear__title">
+                <p>HOW</p>
+                <p>to wear</p>
+            </div>
+            <div class="how-to-wear__list">
+                {% if preview != blank and url != blank %}
+                    <div class="how-to-wear__item">
+                        <a href="{{ url }}" class="how-to-wear__img how-to-wear__img--video js-youtube-popup" style="background-image:url({{ preview }});">
+                            <span class="play-btn"></span>
+                        </a>
+                    </div>
+                {% endif %}
+                {% for i in (1..5) %}
+                    {% assign mf_name_1 = 'step' | append: i | append: '_image' %}
+                    {% assign mf_name_2 = 'step' | append: i | append: '_description' %}
+                    {% assign image = product.metafields.sf_how_to_wear[mf_name_1] %}
+                    {% assign description = product.metafields.sf_how_to_wear[mf_name_2] %}
+                    {% if image != blank or description != blank %}
+                        <div class="how-to-wear__item">
+                            <div class="how-to-wear__img" style="background-image:url({{ image }});">
+                                <span class="how-to-wear__number">{{ i }}</span>
+                            </div>
+                            <p class="how-to-wear__description">{{ description }}</p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+</div>
+
+<div class="product-images" id="images-popup">
+    <button class="product-images__close" id="close-images-popup">{% include 'black-close-icon' %}</button>
+    <div class="product-images__scroll">
+        {% for img in product.images %}
+            <img src="{{ img | img_url:'master' }}" alt="" class="product-images__img">
+        {% endfor %}
+    </div>
+</div>
+<section class="featured-products featured-products--prod-page">
+    <div class="container">
+        <h4 class="featured-products__title">Related Products</h4>
+        <div class="featured-products__row">
+            {% assign product_list = '' %}
+            {% for i in (1..4) %}
+                {% assign product_metafield = 'product_' | append: i %}
+                {% if product.metafields.sf_related_products[product_metafield] %}
+                    {% assign product_list = product_list | append: ',' | append: product.metafields.sf_related_products[product_metafield] %}
+                {% endif %}
+            {% endfor %}
+
+            {% assign product_list = product_list | remove_first: "," %}
+            {% assign product_handels = product_list | split:',' %}
+            {% assign length = product_handels | size %}
+
+            {% assign length = product_handels | size %}
+            {% assign rest = 4 | minus: length %}
+
+            {% if rest > 0 %}
+                {% if collection %}
+                    {% assign product_collection = collection %}
+                {% else %}
+                    {% assign product_collection = product.collections | first %}
+                {% endif %}
+                {% for prod in product_collection.products %}
+
+                    {% if rest == 0 %}
+                        {% break %}
+                    {% endif %}
+
+                    {% unless product_list contains prod.handle %}
+                    {% unless product.handle == prod.handle %}
+                    {% if rest == 5 and forloop.index == 1 %}
+                        {% assign seraprator = '' %}
+                    {% else %}
+                        {% assign seraprator = ',' %}
+                    {% endif %}
+
+                    {% assign product_list = product_list | append: seraprator | append: prod.handle %}
+                    {% assign rest = rest | minus: 1 %}
+
+                    {% endunless %}
+                    {% endunless %}
+                {% endfor %}
+            {% endif %}
+
+            {% assign first_symbol = product_list | first %}
+            {% if first_symbol == ',' %}
+                {% assign product_list = product_list | remove_first: "," %}
+            {% endif %}
+
+            {% assign product_handels = product_list | split:',' %}
+
+            {% for product_handel in product_handels %}
+                {% if all_products[product_handel] %}
+                    <div class="featured-products__col">
+                        {% include 'product_card', _product: all_products[product_handel] %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Product pages",
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "shipping",
+            "label": "Shipping/Returns",
+            "default": "<p><b>Enerskin stands by every product we make.</b>If for any reason you are not 100% satisfied with your Enerskin product, contact cs@enerskin.com.  Returns must be unwashed and unused  in original packaging with tags attached.  Returns are accepted within 30 days of the purchase date for a refund.  Any merchandise returned after the returnable period will only be accepted at our discretion for a store credit.</p><p>Returns are subject to a restocking fee of 10%.</p>"
+        },
+        {
+        "type": "richtext",
+        "id": "care_instructions",
+        "label": "Care Instructions",
+        "default": "<p>Returns must be unwashed and unused  in original packaging with tags attached.  Returns are accepted within 30 days of the purchase date for a refund.  Any merchandise returned after the returnable period will only be accepted at our discretion for a store credit. Returns are subject to a restocking fee of 10%.</p>"
+        }
+    ],
+    "blocks":[
+        {
+            "type":"FAQ",
+            "name":"FAQ",
+            "settings":[{
+                "type":"text",
+                "id":"question",
+                "label":"Question"
+            },
+            {
+                "type":"textarea",
+                "id":"answer",
+                "label":"Answer"
+            }]
+        }
+    ]
+}
+{% endschema %}

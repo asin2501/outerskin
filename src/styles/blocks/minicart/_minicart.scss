@@ -1,0 +1,90 @@
+.minicart {
+    position: absolute;
+    right: 25px;
+    top: 100%;
+    opacity: 0;
+    visibility: hidden;
+    max-width: 395px;
+    width: 100%;
+    background-color: #fff;
+    padding: 35px 40px;
+    box-shadow: 0 8px 48px 0 rgba(0, 0, 0, 0.16);
+    transform: translateY(15px);
+    transition: .3s all;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 3px;
+        background-color: $alt-color;
+    }
+
+    &.minicart--opened {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    @include breakpoint(medium) {
+        right: 73px;
+    }
+
+    @include breakpoint(small) {
+        right: 0;
+    }
+
+    @include breakpoint(small-tablet-portrait) {
+        padding: 35px 20px;
+    }
+}
+
+.minicart__body {
+    height: 230px;
+    overflow-y: auto;
+}
+
+.minicart__footer {
+    padding-top: 12px;
+}
+
+.minicart__subtotal {
+    margin-bottom: 3px;
+    text-align: right;
+    font-family: $main-font;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 28px;
+    color: #000;
+}
+
+.minicart__subtotal-value {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.minicart__text-info {
+    font-family: $alt-font;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.1px;
+    text-align: right;
+    color: $font-gray;
+}
+
+.minicart__buttons {
+    margin-top: 20px;
+
+    .btn {
+        + .btn {
+            margin-top: 20px;
+        }
+    }
+}

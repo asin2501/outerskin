@@ -1,0 +1,154 @@
+.celtec-technology {
+    position: relative;
+    padding-bottom: 100px;
+    background-color: #000;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+       // width: 165px; //11vw
+        width: 11vw;
+        //height: 160px; //11vw
+        height: 11vw;
+        background-image: url(celtec-shape-01.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        transform: translateY(-45%);
+
+        @include breakpoint(medium) {
+            display: none;
+        }
+    }
+
+    .technology-discover__title {
+        position: relative;
+        color: $alt-color;
+
+        .celtec-technology__label {
+            position: absolute;
+            left: -23px;
+            top: 0;
+            padding-top: 3px;
+            padding-left: 17px;
+            padding-right: 14px;
+            font-family: $main-font;
+            font-weight: normal;
+            font-size: 46px;
+            color: #fff;
+            background-color: $alt-color;
+            height: 55px;
+            line-height: 55px;
+            text-align: center;
+            transform: translateX(-100%);
+        }
+
+        @include breakpoint(medium) {
+            text-align: center;
+
+            .celtec-technology__label {
+                display: inline-block;
+                margin-bottom: 15px;
+                position: static;
+                transform: none;
+                font-size: 35px;
+                height: 45px;
+                line-height: 45px;
+            }
+        }
+    }
+
+    @include breakpoint(medium) {
+        padding-top: 35px;
+        padding-bottom: 50px;
+    }
+}
+
+.celtec-technology__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @include breakpoint(medium) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include breakpoint(extra-small) {
+        padding: 0 20px;
+    }
+}
+
+.celtec-technology__content,
+.celtec-technology__image {
+    width: 50%;
+
+    @include breakpoint(medium) {
+        width: 100%;
+    }
+}
+
+.celtec-technology__content {
+    padding-top: 145px;
+    padding-left: 85px;
+    font-size: 17px;
+
+    .btn {
+        margin-top: 30px;
+    }
+
+    @include breakpoint(medium) {
+        max-width: 600px;
+        padding-left: 0;
+        padding-top: 0px;
+        text-align: center;
+    }
+
+    @include breakpoint(extra-small) {
+        padding-top: 0;
+    }
+}
+
+.celtec-technology__image {
+    margin-top: -45px;
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    @include breakpoint(medium) {
+        margin-top: 0;
+        img {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.celtec-technology__text {
+    max-width: 397px;
+    margin-top: 16px;
+    letter-spacing: 0.2px;
+    font-size: 17px;
+    line-height: 2.1;
+    color: #fff;
+
+    p {
+        + p {
+            margin-top: 35px;
+        }
+    }
+
+    @include breakpoint(medium) {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

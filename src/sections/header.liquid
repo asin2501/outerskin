@@ -1,0 +1,101 @@
+<header class="header" id="header">
+  <div class="header__top-ribbon">
+    <span class="header__top-ribbon-text1">{{ section.settings.ribbon_text_1 }}</span>
+    <a href="{{ section.settings.ribbon_link_url }}" class="header__top-ribbon-text2">{{ section.settings.ribbon_link_text }}</a>
+  </div>
+  <div class="header__container">
+    <a href="/" itemprop="url" class="header__logo">
+        {% if section.settings.logo != blank %}
+          <img src="{{ section.settings.logo | img_url: image_size }}" itemprop="logo">
+        {% else %}
+            {% include 'logo_header' %}
+        {% endif %}
+    </a>
+
+    <nav class="header__menu" id="desktopmenu">
+        {% if section.settings.main_linklist %}
+          <ul class="header-menu">
+              {% for link in linklists[section.settings.main_linklist].links %}
+                <li class="header-menu__item">
+                  <a href="{{ link.url }}" class="header-menu__link {% if link.active %}header-menu__link--active{% endif %}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+          </ul>
+        {% endif %}
+    </nav>
+
+    <div class="header__user-bar">
+      <form class="header-search-form" action="/search">
+        <div class="header-search-form__inner">
+          <input type="text" name="q" placeholder="Search" class="header-search-form__input js-search-input" id="">
+          <button type="submit" class="header-search-form__icon">{% include 'magnifying-glass' %}</button>
+        </div>
+      </form>
+      <a href="/search" class="header__icon header__icon--search" id="mobil-search-icon">{% include 'magnifying-glass' %}</a>
+      <a href="/account" class="header__icon header__icon--user">{% include 'user-icon' %}</a>
+      <a href="/cart" class="header__icon header__icon--cart js-toggle-cart">{% include 'shopping-bag-icon' %}{% if cart.item_count > 0 %}<span id="cart-counter" class="header-cart-count">{{ cart.item_count }}</span>{% endif %}</a>
+      <a href="#" class="mobile-btn" id="mobile-btn">
+        <span class="mobile-btn__line"></span>
+        <span class="mobile-btn__line"></span>
+        <span class="mobile-btn__line"></span>
+      </a>
+    </div>
+    {% include 'minicart' %}
+  </div>
+  <div class="mobile-search" id="mobile-search">
+    <form class="header-search-form header-search-form--mobile" action="/search">
+      <input type="text" name="q" placeholder="Search" class="header-search-form__input">
+      <button type="submit" class="header-search-form__icon">{% include 'magnifying-glass' %}</button>
+    </form>
+    <button type="button" class="mobile-search__close-btn" id="search-close">{% include 'icon-close' %}</button>
+  </div>
+  <div class="mobile-menu">
+      {% if section.settings.main_linklist %}
+        <ul class="header-menu header-menu--mobile">
+            {% for link in linklists[section.settings.main_linklist].links %}
+              <li class="header-menu__item">
+                <a href="{{ link.url }}" class="header-menu__link {% if link.active %}header-menu__link--active{% endif %}">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+        </ul>
+
+      {% endif %}
+  </div>
+</header>
+
+{% schema %}
+  {
+    "name": "Header",
+    "class": "header-section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo image"
+      },
+      {
+        "type": "text",
+        "id": "ribbon_text_1",
+        "label": "Top Ribbon Text 1",
+        "default":"FREE Returns & FREE Shipping Available"
+      },
+      {
+        "type": "text",
+        "id": "ribbon_link_text",
+        "label": "Top Ribbon Link Text",
+        "default":"more -"
+      },
+      {
+        "type": "url",
+        "id": "ribbon_link_url",
+        "label": "Top Ribbon Link URL"
+      },
+      {
+        "type": "link_list",
+        "id": "main_linklist",
+        "label": "Menu",
+        "default": "main-menu"
+      }
+    ]
+  }
+{% endschema %}

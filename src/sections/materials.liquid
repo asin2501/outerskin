@@ -1,0 +1,106 @@
+{%- capture img_url -%}
+    {% if section.settings.img %}
+        {{ section.settings.img | img_url:'master' }}
+    {% else %}
+        {{ 'prod_material.png' | asset_img_url:'master' }}
+    {% endif %}
+{%- endcapture -%}
+<section class="product-and-technology" id="section-material-teckh">
+    <div class="product-and-technology__inner">
+        <img src="{{ img_url }}" alt="" class="product-and-technology__img">
+        <div class="product-and-technology__points">
+            {% for block in section.blocks %}
+                <div class="point {% if forloop.index == 2 or forloop.index == 3 %}point--left{% endif %} product-and-technology__point  js-point">
+                    <div class="point__circle">
+                        <div class="point__inner" style="background-image:url({{ block.settings.img | img_url:'master' }});"></div>
+                    </div>
+                    <div class="point__plus"></div>
+                    <div class="point__title">
+                        {% if block.settings.new_label %}<div class="point__new-label">New!</div>{% endif %}
+                        {{ block.settings.point_title }}</div>
+                    <div class="technology-popup js-tech-popup  {% if forloop.index == 3 or forloop.index == 4 %}technology-popup--bottom{% endif %}">
+                        <div class="technology-popup__title">{{ block.settings.title }}</div>
+                        <div class="technology-popup__description">{{ block.settings.text }}</div>
+                        <div class="technology-popup__btn-row">
+                            <a href="{{ block.settings.url }}" class="btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="product-and-technology__list">
+        {% for block in section.blocks %}
+            <div class="product-and-technology__mob-item">
+                <div class="point point--mob-point ">
+                    <div class="point__circle">
+                        <div class="point__inner" style="background-image:url({{ block.settings.img | img_url:'master' }});"></div>
+                    </div>
+                </div>
+                <div class="technology-popup technology-popup--mob">
+                    <div class="technology-popup__title">{{ block.settings.title }}</div>
+                    <div class="technology-popup__description">{{ block.settings.text }}</div>
+                    <div class="technology-popup__btn-row">
+                        <a href="{{ block.settings.url }}" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% schema %}
+{
+    "name":"Product&Technology",
+    "settings": [{
+        "type": "image_picker",
+        "id": "img",
+        "label": "Product Image"
+    }],
+    "blocks":[
+        {
+            "type":"Technology",
+            "name":"Technology",
+            "settings":[
+                {
+                    "type": "richtext",
+                    "id": "point_title",
+                    "label": "Point Title"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "new_label",
+                    "label": "New Label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "img",
+                    "label": "Technology Image"
+                },
+                {
+                    "type": "richtext",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "label": "Text"
+                },
+                {
+                    "type": "url",
+                    "id": "link",
+                    "label": "Link"
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "name": "Product&Technology",
+            "category": "Homepage"
+        }
+    ]
+}
+{% endschema %}

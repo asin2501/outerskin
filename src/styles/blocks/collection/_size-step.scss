@@ -1,0 +1,43 @@
+.size-step {
+    padding-top: 35px;
+    padding-bottom: 26px;
+    &:not(:last-child) {
+        border-bottom: 1px solid #E5E5E5;
+    }
+
+    @include breakpoint(mobile-landscape){
+        padding-top:20px;
+        padding-bottom:10px;
+    }
+}
+
+.size-step__uppertitle {
+    color: $alt-color;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 3.33px;
+    line-height: 29px;
+    font-family: $main-font;
+    text-transform: uppercase;
+}
+
+.size-step__title {
+    font-family: $main-font;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.size-step__img {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.size-step__description {
+    font-family:$alt-font;
+    font-size: 15px;
+    line-height: 24px;
+}

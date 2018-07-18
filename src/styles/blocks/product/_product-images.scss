@@ -1,0 +1,48 @@
+.product-images{
+    position: fixed;
+    top:0;
+    z-index:1000;
+    height:100vh;
+    left:0;
+    right:0;
+    overflow-y: auto;
+    background-color: #fff;
+    display: none;
+}
+
+.product-images__img{
+    display: block;
+    width:100%;
+
+    & + .product-images__img{
+        margin-top:50px;
+    }
+}
+
+.product-images__close{
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    cursor: pointer;
+    *{
+    fill: #000;
+    }
+
+    //svg {
+        * {
+            transition: fill 300ms;
+        }
+    //}
+
+    &:hover {
+        //svg {
+            * {
+                fill: $alt-color;
+            }
+        //}
+    }
+}

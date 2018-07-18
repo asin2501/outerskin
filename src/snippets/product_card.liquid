@@ -1,0 +1,31 @@
+<a class="product-card" href="{{ _product.url }}">
+    <div class="product-card__img">
+        <div class="product-card__img-bg" style="background-image:url({{ _product.featured_image | img_url:'master' }});"></div>
+        <div class="product-card__plus"></div>
+    </div>
+    <div class="product-card__info">
+        <div class="product-card__collection">
+            {%- for tag in _product.tags -%}
+                {%- assign first_letter = tag | first | upcase -%}
+                {%- if first_letter == 'E' -%}
+                    {{ tag }}
+                {%- endif -%}
+            {%- endfor -%}
+        </div>
+        <div class="product-card__title">
+            {{ _product.title }}
+        </div>
+        <p class="product-card__prices">
+            {%- if _product.compare_at_price_max > _product.price -%}
+                <span class="product-card__price product-card--selected">{{ _product.price | money }}</span>
+                <span data-compare-price class="product-card__price product-card__price--compared">
+                            {%- if _product.compare_at_price > _product.price -%}
+                                {{ _product.compare_at_price | money }}
+                            {%- endif -%}
+                        </span>
+            {%- else -%}
+                <span class="product-card__price">{{ _product.price | money }}</span>
+            {%- endif -%}
+        </p>
+    </div>
+</a>

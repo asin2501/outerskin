@@ -1,0 +1,56 @@
+@import url('_variables.scss');
+@import url('_fonts.scss');
+@import url('_typography.scss');
+@import url('_utils.scss');
+
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html,
+body,
+.scoll-wrapper{
+    height: 100%;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.scoll-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+a,img, span {
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    line-height: 1;
+    text-decoration: none;
+}
+

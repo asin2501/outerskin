@@ -1,0 +1,114 @@
+.silicone-feature {
+
+}
+
+.silicone-feature--bg-gray {
+    padding-bottom: 50px;
+    background-color: #f7f7f7;
+
+    @include breakpoint(extra-small) {
+        padding-bottom: 20px;
+    }
+}
+
+.silicone-feature--offset-top {
+    margin-top: -20px;
+
+    @include breakpoint(medium) {
+        margin-top: 30px;
+    }
+}
+
+.silicone-feature__content {
+    padding-top: 80px;
+    padding-left: 140px;
+
+    &.silicone-feature__content--right {
+        padding-left: 40px;
+        padding-top: 160px;
+
+        .silicone-feature__text {
+            max-width: 415px;
+        }
+    }
+
+    @include breakpoint(medium) {
+        padding-left: 0;
+        padding-top: 100px;
+
+        &.silicone-feature__content--right {
+            padding-top: 100px;
+            padding-left: 0;
+        }
+    }
+
+    @include breakpoint(extra-small) {
+        padding-top: 50px;
+
+        &.silicone-feature__content--right {
+            padding-top: 50px;
+        }
+    }
+}
+
+.silicone-feature__text {
+    max-width: 350px;
+    margin-top: 17px;
+    letter-spacing: 0.1px;
+    line-height: 2.1;
+
+    @include breakpoint(medium) {
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.silicone-feature__image {
+    margin-left: -20px;
+
+    &.silicone-feature__image--left {
+        margin-left: 0;
+        padding-left: 115px;
+        padding-right: 108px;
+        padding-top: 53px;
+    }
+
+    @include breakpoint(medium) {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+
+        &.silicone-feature__image--left {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 0;
+        }
+    }
+}
+
+.silicone-feature--compression {
+    margin-top: 50px;
+
+    .silicone-feature__content {
+        padding-top: 95px;
+    }
+
+    @include breakpoint(medium) {
+        margin-top: 0;
+
+        .silicone-feature__content {
+            padding-top: 100px;
+        }
+    }
+
+    @include breakpoint(extra-small) {
+
+        .silicone-feature__content {
+            padding-top: 50px;
+        }
+    }
+}

@@ -1,0 +1,337 @@
+<div class="silicone">
+
+    <section class="silicone-main">
+        <div class="silicone-main__container">
+            <div class="silicone-main__content">
+                <h2 class="h2">{{ section.settings.silicone_title }}</h2>
+                <div class="silicone__subtitle">{{ section.settings.silicone_subtitle }}</div>
+                <div class="silicone-box">
+                    <h3 class="silicone-box__title">{{ section.settings.box_first_title }}</h3>
+                    <p>{{ section.settings.box_first_text }}</p>
+
+                    <h3 class="silicone-box__title">{{ section.settings.box_second_title }}</h3>
+                    <p>{{ section.settings.box_second_text }}</p>
+                </div>
+            </div>
+            
+            <div class="silicone-main__image">
+                {% if section.settings.silicone_image %}
+                    <img src="{{ section.settings.silicone_image | img_url: "1600x" }}" alt="">
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <section class="silicone-story">
+        <div class="silicone-story__image">
+            {% if section.settings.story_image %}
+                <img src="{{ section.settings.story_image | img_url: "1600x" }}" alt="">
+            {% endif %}
+        </div>
+
+        <div class="silicone-story__content">
+            <h2 class="h2 title-underline">{{ section.settings.story_title }}</h2>
+            <div class="silicone-story__text">
+                {{ section.settings.story_text }}
+            </div>
+        </div>
+    </section>
+
+    <section class="silicone-feature">
+        <div class="silicone__container">
+            <div class="silicone__row">
+                <div class="silicone__col">
+                    <div class="silicone-feature__content">
+                        <h2 class="h2 title-underline">{{ section.settings.muscle_title }}</h2>
+                        <div class="silicone-feature__text">
+                            {{ section.settings.muscle_text }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="silicone__col">
+                    <div class="silicone-feature__image">
+                        {% if section.settings.muscle_image %}
+                            <div class="silicone-box silicone-box--image">
+                                <img src="{{ section.settings.muscle_image | img_url: "1400x" }}" alt="">
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="silicone-feature silicone-feature--bg-gray silicone-feature--offset-top">
+        <div class="silicone__container">
+            <div class="silicone__row">
+                <div class="silicone__col silicone__col--image">
+                    <div class="silicone-feature__image silicone-feature__image--left">
+                        {% if section.settings.printing_image %}
+                            <img src="{{ section.settings.printing_image | img_url: "1400x" }}" alt="">
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="silicone__col">
+                    <div class="silicone-feature__content silicone-feature__content--right">
+                        <h2 class="h2 title-underline">{{ section.settings.printing_title }}</h2>
+                        <div class="silicone-feature__text">
+                            {{ section.settings.printing_text }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="silicone-feature silicone-feature--compression">
+        <div class="silicone__container">
+            <div class="silicone__row">
+                <div class="silicone__col">
+                    <div class="silicone-feature__content">
+                        <h2 class="h2 title-underline">{{ section.settings.compression_title }}</h2>
+                        <div class="silicone-feature__text">
+                            {{ section.settings.compression_text }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="silicone__col">
+                    <div class="silicone-feature__image">
+                        {% if section.settings.compression_image %}
+                            <div class="silicone-box silicone-box--image">
+                                <img src="{{ section.settings.compression_image | img_url: "1400x" }}" alt="">
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="silicone-craft">
+        <div class="silicone-craft__container">
+            <div class="silicone-craft__image">
+                {% if section.settings.craft_image %}
+                    <img src="{{ section.settings.craft_image | img_url: "1400x" }}" alt="">
+                {% endif %}
+            </div> 
+
+            <div class="silicone-craft__content">
+                <h2 class="h2 title-underline">{{ section.settings.craft_title }}</h2>
+                <div class="silicone-craft__text">
+                    {% if section.settings.craft_block_title_1 %}
+                        <h3 class="silicone-craft__text-title">{{ section.settings.craft_block_title_1 }}</h3>
+                    {% endif %}
+
+                    {% if section.settings.craft_text_1 %}
+                        <p>{{ section.settings.craft_text_1 }}</p>
+                    {% endif %}
+
+                    {% if section.settings.craft_block_title_2 %}
+                        <h3 class="silicone-craft__text-title">{{ section.settings.craft_block_title_2 }}</h3>
+                    {% endif %}
+
+                    {% if section.settings.craft_text_2 %}
+                        <p>{{ section.settings.craft_text_2 }}</p>
+                    {% endif %}
+
+                    {% if section.settings.craft_button_text and section.settings.craft_button_url %}
+                        <a href="{{ section.settings.craft_button_url }}" class="btn">{{ section.settings.craft_button_text }}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+{% schema %}
+
+{
+	"name": "Silicone page",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Silicone main"
+		},
+        {
+            "type": "richtext",
+            "id": "silicone_title",
+            "label": "Silicone title",
+            "default": "<p>Silicone</p>"
+        },
+        {
+            "type": "richtext",
+            "id": "silicone_subtitle",
+            "label": "Silicone subtitle",
+            "default": "<p>FDA</p><p>approved</p>" 
+        },
+        {
+        	"type": "text",
+        	"id": "box_first_title",
+        	"label": "Box first title",
+        	"default": "Patented silicone printing technology"
+        },
+        {
+        	"type": "textarea",
+        	"id": "box_first_text",
+        	"label": "Box first text",
+        	"default": "Enerskin combines the stability of therapeutic taping with the durability of compression clothing to form the ultimate performance gear."
+        },
+     	{
+        	"type": "text",
+        	"id": "box_second_title",
+        	"label": "Box second title",
+        	"default": "Medical-grade silicone taping"
+        },
+        {
+        	"type": "textarea",
+        	"id": "box_second_text",
+        	"label": "Box second text",
+        	"default": "Being the only gear of its kind on the market, Enerskin supports your muscles, joints and ligaments, keeping them firmly in place as you work hard to stay in the game. Ideal for athletes recovering from injuries, Enerskin helps you focus on achieving your full potential."
+        },
+        {
+        	"type": "image_picker",
+        	"id": "silicone_image",
+        	"label": "Silicone image"
+        },
+        {
+            "type": "header",
+            "content": "The story"
+        },
+        {
+            "type": "richtext",
+            "id": "story_title",
+            "label": "The story title",
+            "default": "<p>The story</p><p>behind technology</p>"
+        },
+        {
+            "type": "richtext",
+            "id": "story_text",
+            "label": "Story text",
+            "default": "<p>Enerskin’s silicone taping design is informed by medical and clinical studies on muscle performance. Each Enerskin product has a unique taping pattern to optimize the purpose of that product.</p>"
+        },
+        {
+            "type": "image_picker",
+            "id": "story_image",
+            "label": "The story image"
+        },
+        {
+            "type": "header",
+            "content": "Muscle"
+        },
+        {
+            "type": "richtext",
+            "id": "muscle_title",
+            "label": "The muscle title",
+            "default": "<p>Muscle</p>"
+        },
+        {
+            "type": "richtext",
+            "id": "muscle_text",
+            "label": "Muscle text",
+            "default": "<p>Perfectly contoured to the muscles of your body, Enerskin’s silicone taping provides pain relief and optimal muscular protection. Enerskin’s sleek design minimizes discomfort and constriction associated with heavy, bulky braces.</p>"
+        },
+        {
+            "type": "image_picker",
+            "id": "muscle_image",
+            "label": "The muscle image"
+        },
+        {
+            "type": "header",
+            "content": "Printing"
+        },
+        {
+            "type": "richtext",
+            "id": "printing_title",
+            "label": "The printing title",
+            "default": "<p>Printing</p>"
+        },
+        {
+            "type": "richtext",
+            "id": "printing_text",
+            "label": "printing text",
+            "default": "<p>Our patented silicone printing technology allows for multiple layers of silicone taping to be printed directly onto the Gastex® compression fabric. The result is a more durable product that’s made to last.</p>"
+        },
+        {
+            "type": "image_picker",
+            "id": "printing_image",
+            "label": "The printing image"
+        },
+        {
+            "type": "header",
+            "content": "Compression"
+        },
+        {
+            "type": "richtext",
+            "id": "compression_title",
+            "label": "The compression title",
+            "default": "<p>Compression</p>"
+        },
+        {
+            "type": "richtext",
+            "id": "compression_text",
+            "label": "compression text",
+            "default": "<p>Silicone taping printed onto the Gastex® fabric increases the level of compression - up to 200% more than typical compression gear - and prevents the fabric from overstretching, so compression never diminishes.</p>"
+        },
+        {
+            "type": "image_picker",
+            "id": "compression_image",
+            "label": "The compression image"
+        },
+        {
+            "type": "header",
+            "content": "Craft & Function"
+        },
+        {
+            "type": "richtext",
+            "id": "craft_title",
+            "label": "The craft title",
+            "default": "<p>Craft</p><p>& Function</p>"
+        },
+        {
+            "type": "text",
+            "id": "craft_block_title_1",
+            "label": "First text title",
+            "default": "Thoughtfully designed and carefully crafted"
+        },
+        {
+            "type": "textarea",
+            "id": "craft_text_1",
+            "label": "Craft first text",
+            "default": "Each Enerskin product is made with the user’s experience in mind. The precision that goes into each product elevates your game wherever you play."
+        },
+        {
+            "type": "text",
+            "id": "craft_block_title_2",
+            "label": "Second text title",
+            "default": "Never sacrifice performance for protection"
+        },
+        {
+            "type": "textarea",
+            "id": "craft_text_2",
+            "label": "Craft second text",
+            "default": "Enerskin lets athletes experience the benefits of therapeutic taping in a reusable form that saves money and doesn't damage their skin."
+        },
+        {
+            "type": "text",
+            "id": "craft_button_text",
+            "label": "Craft button text",
+            "default": "Shop now"
+        },
+        {
+            "type": "url",
+            "id": "craft_button_url",
+            "label": "Craft button url"
+        },
+        {
+            "type": "image_picker",
+            "id": "craft_image",
+            "label": "The craft image"
+        }
+	]
+}
+
+{% endschema %}
